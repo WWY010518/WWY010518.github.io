@@ -4,36 +4,11 @@
   
     
     <entry>
-      <title>Markdown语法格式（.md后缀-使用typora）</title>
-      <link href="/posts/1.html"/>
-      <url>/posts/1.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Markdown语法格式"><a href="#Markdown语法格式" class="headerlink" title="Markdown语法格式"></a>Markdown语法格式</h1><h2 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#标题1 （大）</span><span class="token comment">##标题2</span><span class="token comment">###标题3</span><span class="token comment">####标题4 （小）</span>以此类推 最高标题6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">```代码块名称<span class="token punctuation">(</span>可以输入各种语言java、c++、html等<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="加粗："><a href="#加粗：" class="headerlink" title="加粗："></a>加粗：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//加粗**加粗**//代码高亮显示<span class="token operator">==</span>高亮<span class="token operator">==</span>//删除线~~删除线~~//斜体  *斜体内容*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="引用："><a href="#引用：" class="headerlink" title="引用："></a>引用：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//引用语法<span class="token operator">&gt;</span>作者：泽<span class="token operator">&gt;&gt;</span>作者：泽<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>作者：泽<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="分割线："><a href="#分割线：" class="headerlink" title="分割线："></a>分割线：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//分割线---***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="图片插入："><a href="#图片插入：" class="headerlink" title="图片插入："></a>图片插入：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//在线图片与本地图片<span class="token operator">!</span><span class="token punctuation">[</span>照片名子<span class="token punctuation">]</span>（/image/me.png）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="超链接："><a href="#超链接：" class="headerlink" title="超链接："></a>超链接：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//超链接语法<span class="token punctuation">[</span>超链接名字<span class="token punctuation">]</span>（https://gihub.com/yerenping）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="列表："><a href="#列表：" class="headerlink" title="列表："></a>列表：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//无需列表- 目录1  -后加空格- 目录2- 目录3//有序列表  <span class="token number">1</span>+. +名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a>表格：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">右键》插入》表格用代码过于复杂不推荐使用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 其他 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>计算机操作系统</title>
+      <title>计算机操作系统原理笔记</title>
       <link href="/posts/2.html"/>
       <url>/posts/2.html</url>
       
-        <content type="html"><![CDATA[<h1 id="计算机操作系统"><a href="#计算机操作系统" class="headerlink" title="计算机操作系统"></a>计算机操作系统</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="一-操作系统绪论"><a href="#一-操作系统绪论" class="headerlink" title="一.操作系统绪论"></a>一.操作系统绪论</h1><h2 id="操作系统概念"><a href="#操作系统概念" class="headerlink" title="操作系统概念"></a>操作系统概念</h2><pre><code>定义：操作系统是计算机系统中的一个系统软件，操作系统是管理和控制计算机操作系统中的硬件和软件资源，利用这些资源来组织计算机的工作流程，为用户提供一个足够功能、使用方法、可扩展、可管理、安全的工作环境，是用户和计算机之间的一个接口。特征：并发、共享、虚拟、异步。</code></pre><h2 id="操作系统发展历程"><a href="#操作系统发展历程" class="headerlink" title="操作系统发展历程"></a>操作系统发展历程</h2><pre><code>手工操作(无操作系统)---单道批处理---多道批处理---分时系统---实时系统---微机操作系统的发展。    </code></pre><h3 id="单道批处理"><a href="#单道批处理" class="headerlink" title="单道批处理"></a>单道批处理</h3><pre><code>原理：计算机自动的一个接一个的处理作业，直到磁带上所有的作业都完成，虽然对作业的处理是成批的，但是内存中只有一个作业。特征：内存中一道程序数目、独占CPU、没有作业和进程调度、程序次序严格对应。</code></pre><h3 id="多道批处理"><a href="#多道批处理" class="headerlink" title="多道批处理"></a>多道批处理</h3><pre><code>原理：用户提交的作业存放在外存上，并排成一个队列，作业调度程序根据一定的算法，选择若干的作业调入内存，使它们共享CPU和内存资源。特征：内存中多道程序、交替占用CPU、需要作业和进程调度、程序次序不严格对应。</code></pre><h3 id="多道批处理-1"><a href="#多道批处理-1" class="headerlink" title="多道批处理"></a>多道批处理</h3><pre><code>原理：用户提交的作业存放在外存上，并排成一个队列，作业调度程序根据一定的算法，选择若干的作业调入内存，使它们共享CPU和内存资源。特征：内存中多道程序、交替占用CPU、需要作业和进程调度、程序次序不严格对应。</code></pre><p>###分时系统<br>    特征：多路性、独立性、及时性、交互性。<br>###实时系统<br>    特征：多路性、独立性、及时性、交互性、可靠性。</p>]]></content>
       
       
       <categories>
@@ -54,23 +29,23 @@
     
     
     <entry>
-      <title>测试</title>
-      <link href="/posts/3.html"/>
-      <url>/posts/3.html</url>
+      <title>Markdown语法格式（.md后缀-使用typora）</title>
+      <link href="/posts/1.html"/>
+      <url>/posts/1.html</url>
       
         <content type="html"><![CDATA[<h1 id="Markdown语法格式"><a href="#Markdown语法格式" class="headerlink" title="Markdown语法格式"></a>Markdown语法格式</h1><h2 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#标题1 （大）</span><span class="token comment">##标题2</span><span class="token comment">###标题3</span><span class="token comment">####标题4 （小）</span>以此类推 最高标题6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">```代码块名称<span class="token punctuation">(</span>可以输入各种语言java、c++、html等<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="加粗："><a href="#加粗：" class="headerlink" title="加粗："></a>加粗：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//加粗**加粗**//代码高亮显示<span class="token operator">==</span>高亮<span class="token operator">==</span>//删除线~~删除线~~//斜体  *斜体内容*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="引用："><a href="#引用：" class="headerlink" title="引用："></a>引用：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//引用语法<span class="token operator">&gt;</span>作者：泽<span class="token operator">&gt;&gt;</span>作者：泽<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>作者：泽<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="分割线："><a href="#分割线：" class="headerlink" title="分割线："></a>分割线：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//分割线---***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="图片插入："><a href="#图片插入：" class="headerlink" title="图片插入："></a>图片插入：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//在线图片与本地图片<span class="token operator">!</span><span class="token punctuation">[</span>照片名子<span class="token punctuation">]</span>（/image/me.png）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="超链接："><a href="#超链接：" class="headerlink" title="超链接："></a>超链接：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//超链接语法<span class="token punctuation">[</span>超链接名字<span class="token punctuation">]</span>（https://gihub.com/yerenping）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="列表："><a href="#列表：" class="headerlink" title="列表："></a>列表：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//无需列表- 目录1  -后加空格- 目录2- 目录3//有序列表  <span class="token number">1</span>+. +名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a>表格：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">右键》插入》表格用代码过于复杂不推荐使用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
           
-          <category> 测试 </category>
+          <category> 其他 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 测试 </tag>
+            <tag> Markdown </tag>
             
         </tags>
       
