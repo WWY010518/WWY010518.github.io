@@ -52,6 +52,31 @@
     </entry>
     
     
+    
+    <entry>
+      <title>测试</title>
+      <link href="/posts/3.html"/>
+      <url>/posts/3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Markdown语法格式"><a href="#Markdown语法格式" class="headerlink" title="Markdown语法格式"></a>Markdown语法格式</h1><h2 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#标题1 （大）</span><span class="token comment">##标题2</span><span class="token comment">###标题3</span><span class="token comment">####标题4 （小）</span>以此类推 最高标题6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">```代码块名称<span class="token punctuation">(</span>可以输入各种语言java、c++、html等<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="加粗："><a href="#加粗：" class="headerlink" title="加粗："></a>加粗：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//加粗**加粗**//代码高亮显示<span class="token operator">==</span>高亮<span class="token operator">==</span>//删除线~~删除线~~//斜体  *斜体内容*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="引用："><a href="#引用：" class="headerlink" title="引用："></a>引用：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//引用语法<span class="token operator">&gt;</span>作者：泽<span class="token operator">&gt;&gt;</span>作者：泽<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>作者：泽<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="分割线："><a href="#分割线：" class="headerlink" title="分割线："></a>分割线：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//分割线---***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="图片插入："><a href="#图片插入：" class="headerlink" title="图片插入："></a>图片插入：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//在线图片与本地图片<span class="token operator">!</span><span class="token punctuation">[</span>照片名子<span class="token punctuation">]</span>（/image/me.png）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="超链接："><a href="#超链接：" class="headerlink" title="超链接："></a>超链接：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//超链接语法<span class="token punctuation">[</span>超链接名字<span class="token punctuation">]</span>（https://gihub.com/yerenping）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="列表："><a href="#列表：" class="headerlink" title="列表："></a>列表：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//无需列表- 目录1  -后加空格- 目录2- 目录3//有序列表  <span class="token number">1</span>+. +名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a>表格：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">右键》插入》表格用代码过于复杂不推荐使用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
