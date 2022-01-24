@@ -15,6 +15,8 @@
           
           <category> 技术架构 </category>
           
+          <category> Unity框架 </category>
+          
       </categories>
       
       
@@ -67,6 +69,8 @@
           
           <category> 游戏引擎 </category>
           
+          <category> GUI解决方案 </category>
+          
       </categories>
       
       
@@ -74,7 +78,7 @@
             
             <tag> Unity </tag>
             
-            <tag> UI解决方案 </tag>
+            <tag> GUI解决方案 </tag>
             
         </tags>
       
@@ -84,8 +88,8 @@
     
     <entry>
       <title>Unity相关_基于Lua的热更新解决方案</title>
-      <link href="/posts/1544.html"/>
-      <url>/posts/1544.html</url>
+      <link href="/posts/03008.html"/>
+      <url>/posts/03008.html</url>
       
         <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
       
@@ -94,6 +98,8 @@
           
           <category> 游戏引擎 </category>
           
+          <category> 热更新 </category>
+          
       </categories>
       
       
@@ -101,7 +107,9 @@
             
             <tag> Unity </tag>
             
-            <tag> 热更新 </tag>
+            <tag> Lua </tag>
+            
+            <tag> AssetBundle </tag>
             
         </tags>
       
@@ -160,18 +168,18 @@
     
     
     <entry>
-      <title>Unity相关_MVC系列框架</title>
-      <link href="/posts/03009.html"/>
-      <url>/posts/03009.html</url>
+      <title>游戏MVC系列框架</title>
+      <link href="/posts/2051.html"/>
+      <url>/posts/2051.html</url>
       
         <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
       
       
       <categories>
           
-          <category> 游戏引擎 </category>
-          
           <category> 技术架构 </category>
+          
+          <category> Unity框架 </category>
           
       </categories>
       
@@ -182,6 +190,8 @@
             
             <tag> 游戏框架 </tag>
             
+            <tag> MVC </tag>
+            
         </tags>
       
     </entry>
@@ -189,18 +199,18 @@
     
     
     <entry>
-      <title>Unity相关_程序基础框架</title>
-      <link href="/posts/03008.html"/>
-      <url>/posts/03008.html</url>
+      <title>游戏程序基础框架</title>
+      <link href="/posts/2050.html"/>
+      <url>/posts/2050.html</url>
       
         <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
       
       
       <categories>
           
-          <category> 游戏引擎 </category>
-          
           <category> 技术架构 </category>
+          
+          <category> Unity框架 </category>
           
       </categories>
       
@@ -229,6 +239,8 @@
           
           <category> 游戏引擎 </category>
           
+          <category> 数据持久化 </category>
+          
       </categories>
       
       
@@ -256,6 +268,8 @@
           
           <category> 游戏引擎 </category>
           
+          <category> GUI解决方案 </category>
+          
       </categories>
       
       
@@ -263,7 +277,7 @@
             
             <tag> Unity </tag>
             
-            <tag> UI解决方案 </tag>
+            <tag> GUI解决方案 </tag>
             
         </tags>
       

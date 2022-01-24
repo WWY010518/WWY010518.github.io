@@ -6,7 +6,7 @@
   <link href="http://wwy010518.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwy010518.github.io/"/>
-  <updated>2022-01-24T14:53:37.185Z</updated>
+  <updated>2022-01-24T14:59:49.759Z</updated>
   <id>http://wwy010518.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wwy010518.github.io/posts/2049.html"/>
     <id>http://wwy010518.github.io/posts/2049.html</id>
     <published>2022-01-24T13:00:00.000Z</published>
-    <updated>2022-01-24T14:53:37.185Z</updated>
+    <updated>2022-01-24T14:59:49.759Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ET框架笔记"><a href="#ET框架笔记" class="headerlink" title="ET框架笔记"></a>ET框架笔记</h1>]]></content>
     
@@ -34,6 +34,8 @@
     
     
     <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="Unity框架" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/Unity%E6%A1%86%E6%9E%B6/"/>
     
     
     <category term="ET" scheme="http://wwy010518.github.io/tags/ET/"/>
@@ -71,7 +73,7 @@
     <link href="http://wwy010518.github.io/posts/1542.html"/>
     <id>http://wwy010518.github.io/posts/1542.html</id>
     <published>2021-12-12T13:00:00.000Z</published>
-    <updated>2022-01-24T14:35:53.664Z</updated>
+    <updated>2022-01-24T15:01:24.715Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -85,19 +87,21 @@
     
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
     
+    <category term="GUI解决方案" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/GUI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
     
-    <category term="UI解决方案" scheme="http://wwy010518.github.io/tags/UI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <category term="GUI解决方案" scheme="http://wwy010518.github.io/tags/GUI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
   </entry>
   
   <entry>
     <title>Unity相关_基于Lua的热更新解决方案</title>
-    <link href="http://wwy010518.github.io/posts/1544.html"/>
-    <id>http://wwy010518.github.io/posts/1544.html</id>
+    <link href="http://wwy010518.github.io/posts/03008.html"/>
+    <id>http://wwy010518.github.io/posts/03008.html</id>
     <published>2021-10-28T13:00:00.000Z</published>
-    <updated>2022-01-24T14:43:09.722Z</updated>
+    <updated>2022-01-24T15:02:31.999Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -111,10 +115,14 @@
     
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
     
+    <category term="热更新" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
     
-    <category term="热更新" scheme="http://wwy010518.github.io/tags/%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    <category term="Lua" scheme="http://wwy010518.github.io/tags/Lua/"/>
+    
+    <category term="AssetBundle" scheme="http://wwy010518.github.io/tags/AssetBundle/"/>
     
   </entry>
   
@@ -170,11 +178,11 @@
   </entry>
   
   <entry>
-    <title>Unity相关_MVC系列框架</title>
-    <link href="http://wwy010518.github.io/posts/03009.html"/>
-    <id>http://wwy010518.github.io/posts/03009.html</id>
+    <title>游戏MVC系列框架</title>
+    <link href="http://wwy010518.github.io/posts/2051.html"/>
+    <id>http://wwy010518.github.io/posts/2051.html</id>
     <published>2020-12-15T13:00:00.000Z</published>
-    <updated>2022-01-24T14:53:18.085Z</updated>
+    <updated>2022-01-24T14:59:35.646Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -186,23 +194,25 @@
     
     
     
-    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
     
-    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    <category term="Unity框架" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/Unity%E6%A1%86%E6%9E%B6/"/>
     
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
     
     <category term="游戏框架" scheme="http://wwy010518.github.io/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
     
+    <category term="MVC" scheme="http://wwy010518.github.io/tags/MVC/"/>
+    
   </entry>
   
   <entry>
-    <title>Unity相关_程序基础框架</title>
-    <link href="http://wwy010518.github.io/posts/03008.html"/>
-    <id>http://wwy010518.github.io/posts/03008.html</id>
+    <title>游戏程序基础框架</title>
+    <link href="http://wwy010518.github.io/posts/2050.html"/>
+    <id>http://wwy010518.github.io/posts/2050.html</id>
     <published>2020-11-20T13:00:00.000Z</published>
-    <updated>2022-01-24T14:53:01.485Z</updated>
+    <updated>2022-01-24T14:59:43.342Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -214,9 +224,9 @@
     
     
     
-    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
     
-    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    <category term="Unity框架" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/Unity%E6%A1%86%E6%9E%B6/"/>
     
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
@@ -230,7 +240,7 @@
     <link href="http://wwy010518.github.io/posts/1543.html"/>
     <id>http://wwy010518.github.io/posts/1543.html</id>
     <published>2020-05-24T13:00:00.000Z</published>
-    <updated>2022-01-24T14:38:54.178Z</updated>
+    <updated>2022-01-24T15:01:03.200Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -243,6 +253,8 @@
     
     
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="数据持久化" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/"/>
     
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
@@ -256,7 +268,7 @@
     <link href="http://wwy010518.github.io/posts/1541.html"/>
     <id>http://wwy010518.github.io/posts/1541.html</id>
     <published>2020-01-24T13:00:00.000Z</published>
-    <updated>2022-01-24T14:33:50.990Z</updated>
+    <updated>2022-01-24T15:01:43.490Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -270,10 +282,12 @@
     
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
     
+    <category term="GUI解决方案" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/GUI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
     
-    <category term="UI解决方案" scheme="http://wwy010518.github.io/tags/UI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <category term="GUI解决方案" scheme="http://wwy010518.github.io/tags/GUI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
   </entry>
   
