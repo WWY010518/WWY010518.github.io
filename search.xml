@@ -22,6 +22,8 @@
             
             <tag> ET </tag>
             
+            <tag> 游戏框架 </tag>
+            
         </tags>
       
     </entry>
@@ -169,6 +171,8 @@
           
           <category> 游戏引擎 </category>
           
+          <category> 技术架构 </category>
+          
       </categories>
       
       
@@ -195,6 +199,8 @@
       <categories>
           
           <category> 游戏引擎 </category>
+          
+          <category> 技术架构 </category>
           
       </categories>
       

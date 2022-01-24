@@ -6,7 +6,7 @@
   <link href="http://wwy010518.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwy010518.github.io/"/>
-  <updated>2022-01-24T14:25:44.686Z</updated>
+  <updated>2022-01-24T14:53:37.185Z</updated>
   <id>http://wwy010518.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wwy010518.github.io/posts/2049.html"/>
     <id>http://wwy010518.github.io/posts/2049.html</id>
     <published>2022-01-24T13:00:00.000Z</published>
-    <updated>2022-01-24T14:25:44.686Z</updated>
+    <updated>2022-01-24T14:53:37.185Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ET框架笔记"><a href="#ET框架笔记" class="headerlink" title="ET框架笔记"></a>ET框架笔记</h1>]]></content>
     
@@ -37,6 +37,8 @@
     
     
     <category term="ET" scheme="http://wwy010518.github.io/tags/ET/"/>
+    
+    <category term="游戏框架" scheme="http://wwy010518.github.io/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
@@ -172,7 +174,7 @@
     <link href="http://wwy010518.github.io/posts/03009.html"/>
     <id>http://wwy010518.github.io/posts/03009.html</id>
     <published>2020-12-15T13:00:00.000Z</published>
-    <updated>2022-01-24T14:40:55.051Z</updated>
+    <updated>2022-01-24T14:53:18.085Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -185,6 +187,8 @@
     
     
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
     
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
@@ -198,7 +202,7 @@
     <link href="http://wwy010518.github.io/posts/03008.html"/>
     <id>http://wwy010518.github.io/posts/03008.html</id>
     <published>2020-11-20T13:00:00.000Z</published>
-    <updated>2022-01-24T14:39:54.638Z</updated>
+    <updated>2022-01-24T14:53:01.485Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -211,6 +215,8 @@
     
     
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
     
     
     <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
