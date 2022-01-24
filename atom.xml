@@ -6,7 +6,7 @@
   <link href="http://wwy010518.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwy010518.github.io/"/>
-  <updated>2022-01-24T13:44:17.238Z</updated>
+  <updated>2022-01-24T14:25:44.686Z</updated>
   <id>http://wwy010518.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ET框架笔记</title>
+    <link href="http://wwy010518.github.io/posts/2049.html"/>
+    <id>http://wwy010518.github.io/posts/2049.html</id>
+    <published>2022-01-24T13:00:00.000Z</published>
+    <updated>2022-01-24T14:25:44.686Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ET框架笔记"><a href="#ET框架笔记" class="headerlink" title="ET框架笔记"></a>ET框架笔记</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;ET框架笔记&quot;&gt;&lt;a href=&quot;#ET框架笔记&quot; class=&quot;headerlink&quot; title=&quot;ET框架笔记&quot;&gt;&lt;/a&gt;ET框架笔记&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="ET" scheme="http://wwy010518.github.io/tags/ET/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机操作系统原理笔记</title>
@@ -37,6 +61,58 @@
     
     
     <category term="操作系统" scheme="http://wwy010518.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity相关_FairyGUI</title>
+    <link href="http://wwy010518.github.io/posts/1542.html"/>
+    <id>http://wwy010518.github.io/posts/1542.html</id>
+    <published>2021-12-12T13:00:00.000Z</published>
+    <updated>2022-01-24T14:35:53.664Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+    <category term="UI解决方案" scheme="http://wwy010518.github.io/tags/UI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity相关_基于Lua的热更新解决方案</title>
+    <link href="http://wwy010518.github.io/posts/1544.html"/>
+    <id>http://wwy010518.github.io/posts/1544.html</id>
+    <published>2021-10-28T13:00:00.000Z</published>
+    <updated>2022-01-24T14:43:09.722Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+    <category term="热更新" scheme="http://wwy010518.github.io/tags/%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
@@ -92,35 +168,11 @@
   </entry>
   
   <entry>
-    <title>ET框架笔记</title>
-    <link href="http://wwy010518.github.io/posts/2049.html"/>
-    <id>http://wwy010518.github.io/posts/2049.html</id>
-    <published>2021-01-24T13:00:00.000Z</published>
-    <updated>2022-01-24T06:28:09.882Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ET框架笔记"><a href="#ET框架笔记" class="headerlink" title="ET框架笔记"></a>ET框架笔记</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;ET框架笔记&quot;&gt;&lt;a href=&quot;#ET框架笔记&quot; class=&quot;headerlink&quot; title=&quot;ET框架笔记&quot;&gt;&lt;/a&gt;ET框架笔记&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    <category term="技术架构" scheme="http://wwy010518.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
-    
-    
-    <category term="ET" scheme="http://wwy010518.github.io/tags/ET/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>unity入门</title>
-    <link href="http://wwy010518.github.io/posts/1537.html"/>
-    <id>http://wwy010518.github.io/posts/1537.html</id>
-    <published>2019-09-30T13:00:00.000Z</published>
-    <updated>2022-01-24T14:18:52.297Z</updated>
+    <title>Unity相关_MVC系列框架</title>
+    <link href="http://wwy010518.github.io/posts/03009.html"/>
+    <id>http://wwy010518.github.io/posts/03009.html</id>
+    <published>2020-12-15T13:00:00.000Z</published>
+    <updated>2022-01-24T14:40:55.051Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
     
@@ -135,7 +187,231 @@
     <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
     
     
-    <category term="unity" scheme="http://wwy010518.github.io/tags/unity/"/>
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+    <category term="游戏框架" scheme="http://wwy010518.github.io/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity相关_程序基础框架</title>
+    <link href="http://wwy010518.github.io/posts/03008.html"/>
+    <id>http://wwy010518.github.io/posts/03008.html</id>
+    <published>2020-11-20T13:00:00.000Z</published>
+    <updated>2022-01-24T14:39:54.638Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+    <category term="游戏框架" scheme="http://wwy010518.github.io/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity相关_数据持久化</title>
+    <link href="http://wwy010518.github.io/posts/1543.html"/>
+    <id>http://wwy010518.github.io/posts/1543.html</id>
+    <published>2020-05-24T13:00:00.000Z</published>
+    <updated>2022-01-24T14:38:54.178Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+    <category term="数据持久化" scheme="http://wwy010518.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity相关_UGUI</title>
+    <link href="http://wwy010518.github.io/posts/1541.html"/>
+    <id>http://wwy010518.github.io/posts/1541.html</id>
+    <published>2020-01-24T13:00:00.000Z</published>
+    <updated>2022-01-24T14:33:50.990Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+    <category term="UI解决方案" scheme="http://wwy010518.github.io/tags/UI%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity进阶</title>
+    <link href="http://wwy010518.github.io/posts/1540.html"/>
+    <id>http://wwy010518.github.io/posts/1540.html</id>
+    <published>2019-11-13T13:00:00.000Z</published>
+    <updated>2022-01-24T14:34:00.323Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity核心</title>
+    <link href="http://wwy010518.github.io/posts/1539.html"/>
+    <id>http://wwy010518.github.io/posts/1539.html</id>
+    <published>2019-10-05T13:00:00.000Z</published>
+    <updated>2022-01-24T14:34:07.674Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity基础</title>
+    <link href="http://wwy010518.github.io/posts/1538.html"/>
+    <id>http://wwy010518.github.io/posts/1538.html</id>
+    <published>2019-09-25T13:00:00.000Z</published>
+    <updated>2022-01-24T14:34:17.174Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity入门</title>
+    <link href="http://wwy010518.github.io/posts/1537.html"/>
+    <id>http://wwy010518.github.io/posts/1537.html</id>
+    <published>2019-08-30T13:00:00.000Z</published>
+    <updated>2022-01-24T14:38:31.824Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="http://wwy010518.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    
+    <category term="Unity" scheme="http://wwy010518.github.io/tags/Unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#进阶</title>
+    <link href="http://wwy010518.github.io/posts/1028.html"/>
+    <id>http://wwy010518.github.io/posts/1028.html</id>
+    <published>2019-08-02T13:00:00.000Z</published>
+    <updated>2022-01-24T14:38:26.890Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="编程语言" scheme="http://wwy010518.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="C#" scheme="http://wwy010518.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#核心</title>
+    <link href="http://wwy010518.github.io/posts/1027.html"/>
+    <id>http://wwy010518.github.io/posts/1027.html</id>
+    <published>2019-07-15T13:00:00.000Z</published>
+    <updated>2022-01-24T14:38:17.660Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="编程语言" scheme="http://wwy010518.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="C#" scheme="http://wwy010518.github.io/tags/C/"/>
     
   </entry>
   
@@ -143,8 +419,8 @@
     <title>C#基础</title>
     <link href="http://wwy010518.github.io/posts/1026.html"/>
     <id>http://wwy010518.github.io/posts/1026.html</id>
-    <published>2019-05-19T13:00:00.000Z</published>
-    <updated>2022-01-24T14:21:02.246Z</updated>
+    <published>2019-07-02T13:00:00.000Z</published>
+    <updated>2022-01-24T14:38:11.238Z</updated>
     
     <content type="html"><![CDATA[<p>将之前的笔记记录在博客上</p><h1 id="复杂数据类型"><a href="#复杂数据类型" class="headerlink" title="复杂数据类型"></a>复杂数据类型</h1><p>特点：数据(变量)集合、自定义；</p><h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>  枚举是一个被命名的整形常量集合,可以声明再命名空间、类和结构体中。</p><h3 id="枚举声明"><a href="#枚举声明" class="headerlink" title="枚举声明"></a>枚举声明</h3><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">enum 变量名{  名1,//枚举中默认是0下面累加  名2=4,//可以赋值,下面数值接着从此开始  名3}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="枚举的类型转换"><a href="#枚举的类型转换" class="headerlink" title="枚举的类型转换"></a>枚举的类型转换</h3><p>1.枚举和int互转后是数值的转换<br>2.枚举转换成string是枚举名<br>3.string转换成枚举,必须有这个字符串名的枚举名,实例如下：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Enum.Parse(typeof(声明枚举类型名),"Other");<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>  数组是储存一组相同的数值集合,下标从0开始。</p><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>声明：变量类型【】 数组名=new 变量类型【数组长度】{ 1,2,3,4……(第数组长度-1个) }；<br>获取长度：数组名.length;</p><h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>声明：变量类型【,】 二维数组名=new 变量类型【行,列】{ { 1,1,1… },{ 1,1,1…. },{ 1,1,1…. }… };<br>获取长度:数组名.length(维度);</p><h3 id="交叉数组"><a href="#交叉数组" class="headerlink" title="交叉数组"></a>交叉数组</h3><p>  即数组的数组。</p><h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public struct 结构体名{  变量类型 变量名    构造函数(可选)    函数}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>结构体和类相同点：<br>1.两者都拥有成员,包括：构造函数、方法、属性、字段、常量、枚举类型、事件、以及事件处理函数。<br>2.两者的成员都有其各自的存取范围。例如,可以将某一个成员声明为Public,而将另一个成员声明为Private。<br>3.两者都可以实现接口。<br>4.两者都可以公开一个默认属性,然而前提是这个属性至少要取得一个自变量。<br>5.两者都可以声明和触发事件,而且两者都可以声明委托(Delegate)。<br>6.两者都是container类型,这表示它们可以包含其他数据类型作为成员。</p><p>区别：<br>1.结构是实值类型(Value Types),而类则是引用类型(Reference Types)。<br>2.结构使用栈存储(Stack Allocation),而类使用堆存储(Heap Allocation)。<br>3.所有结构成员默认都是Public,而类的变量和常量数则默认位Private,不过其他类成员默认都是Public。<br>4.结构成员不能被声明位Protected,而类成员可以。<br>5.结构变量声明不能指定初始值、使用New关键字货对数组进行初始化,但是类变量声明可以。<br>6.结构不能声明默认的构造函数,也就是不拥有参数的非共享构造函数,但是类则无此限制。<br>7.二者都可以拥有共享构造函数,结构的共享构造函数不能带有参数,但是类的共享构造函数则可以带或者不带参数。<br>8.结构不允许声明析构函数(Destructor),类则无此限制。<br>9.结构的实例(Instance)声明,不允许对包含的变量进行初始化设定,类则可以在声明类的实例时,同时进行变量初始化。<br>1.结构是隐式继承自ValueType类,而且不能继承任何其他类型,类则可以继续自ValueType以外的任何类。<br>11.结构是无法被继承的,类则可以。<br>12.结构永远不会终止,因此CLR不会在任何结构上调用Finalize方法。类则是由内存回收进程加以终止,当内存回收进程检测到没有任何作用的类时,它就会调用类的Finalize方法。<br>13.结构不需要构造函数,类则需要构造函数。<br>14.结构只能在一种情况下使用非共享构造函数,那就是非共享构造函数会接受参数。但是类则无此限制,它可以使用带参数或不带参数的非共享构造函数。<br>15.每一个结构都具有无参数的隐含公共构造函数,此构造函数会将结构的所有成员初始化为其默认值。不需要重新定义这个行为。在“实例和变量”层面上,由于结构是数值类型的,因此每一个结构变量会永远的绑定到结构实例上。然而类是引用类型的,而且对象变量可引用不同的类实例,在此方面的区别,会对使用将结构和类造成如下的影响：<br>16.结构变量会隐式的使用结构的无参数构造函数来初始化成员,这就意味语句 Struct S = new Struct()。<br>17.当您将一个结构变量赋值给另一个,或者将结构实例传递到程序变量时,所有变量成员的值会复制到新的结构中。当您将一个对象变量赋值给另一个,或者将对象变量传递给程序时,则只是复制指针。<br>18.您可以将Null值赋值给结构变量,但是该实例会一直与该变量保持关联。虽然变量成员会因此赋值而重新初始化,但是您还是可以调用变量的方法并访问其数据成员。相反的,如果您将对象变量设定为Null,您就会中断它与任何类型实例的关联,而且除非您再将另一个实例赋值给它,否则无法通过变量访问任何成员。<br>19.您可以在不同时间将不同的类的实例赋值给同一个对象变量,而且在同一时间可有好几个对象变量引用相同的类实例,如果您对类成员值做了改变,则其他指向相同实例的对象变量也会发生改变。然而,结构成员则会封装在他们自己的实例中,变更结构成员值并不会对其他任何结构变量的成员造成影响,甚至也不会影响相同结构声明的其他实例。<br>20.两个结构必须以成员对成员的比较方式来执行相等比较。两个对象变量可以使用Equals方法来加以比较。Equals会判断两个变量是否指向相同的实例。</p><p>如何选择结构还是类:<br>1.堆栈的空间有限,对于大量的逻辑的对象,创建类要比创建结构好一些<br>2.结构表示如点、矩形和颜色这样的轻量对象,例如,如果声明一个含有 1000 个点对象的数组,则将为引用每个对象分配附加的内存。在此情况下,结构的成本较低。<br>3.在表现抽象和多级别的对象层次时,类是最好的选择。<br>4.大多数情况下该类型只是一些数据时,结构时最佳的选择。</p><h1 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h1><h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><p>  其他类型、结构体；<br>存储位置：栈空间–系统分配,自动回收,小而快<br>特点：在赋值时,把内容拷贝给对方,它变我不变,内存地址不变。</p><h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><p>  string、数组、类<br>存储位置：手动申请和释放,大而慢<br>特点：在赋值时,让俩者指向一个值,它变我也变,指向堆中相同内存地址。</p><h2 id="特殊引用类型string"><a href="#特殊引用类型string" class="headerlink" title="特殊引用类型string"></a>特殊引用类型string</h2><p>  string在赋值时也会再分配一个内存空间。</p><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>  函数可以写在类中和结构体中。</p><h2 id="函数基础"><a href="#函数基础" class="headerlink" title="函数基础"></a>函数基础</h2><p>基本语法：static 返回类型 函数名(参数类型 参数名1….){ 代码逻辑；return 返回值  }</p><h2 id="ref和out"><a href="#ref和out" class="headerlink" title="ref和out"></a>ref和out</h2><p>  在函数内部传入,里面变了,外面也变了。<br>声明：函数参数的修饰符；<br>区别：ref传入的参数必须初始化,out传入的变量必须在内部赋值；</p><h2 id="变长参数和参数默认值"><a href="#变长参数和参数默认值" class="headerlink" title="变长参数和参数默认值"></a>变长参数和参数默认值</h2><p>变长参数声明：params 变量类型[] 变量名；<br>参数默认值：可选参数,在方法声明时就进行赋值,可选参数必须写在普通参数后面；</p><h2 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h2><p>定义：重载和返回值无关,和参数类型、个数、顺序有关；</p><h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p>定义：就是让函数自己调用自己,但是需要留出出口,否则就是死循环</p><h2 id="扩展方法"><a href="#扩展方法" class="headerlink" title="扩展方法"></a>扩展方法</h2><p>  声明扩展方法,扩展方法必须是静态的,Add有三个参数,this 必须有,string表示我要扩展的类型(一般是类),stringName表示对象名,三个参数this和扩展的类型必不可少,对象名可以自己随意取如果需要传递参数,//再增加一个变量即可</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public static string Add(this string 变量名){  return ""}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
     
@@ -169,8 +445,8 @@
     <title>C#入门</title>
     <link href="http://wwy010518.github.io/posts/1025.html"/>
     <id>http://wwy010518.github.io/posts/1025.html</id>
-    <published>2019-05-18T13:00:00.000Z</published>
-    <updated>2022-01-24T10:16:42.059Z</updated>
+    <published>2019-06-18T13:00:00.000Z</published>
+    <updated>2022-01-24T14:38:01.387Z</updated>
     
     <content type="html"><![CDATA[<p>将之前的笔记记录在博客上</p><h1 id="C-基础知识"><a href="#C-基础知识" class="headerlink" title="C#基础知识"></a>C#基础知识</h1><h2 id="主流语言的应用领域"><a href="#主流语言的应用领域" class="headerlink" title="主流语言的应用领域"></a>主流语言的应用领域</h2><p>C: 嵌入式硬件开发<br>C++: 游戏客户端、服务器、软件<br>C#: 游戏客户端、服务器、软件、网站</p><p>Java: 安卓、服务器、软件、网站<br>JavaScript: H5游戏、网站、服务器<br>PHP: 网站、服务器<br>Python: 网站、服务器、辅助开发</p><p>SQL: 数据库<br>Go: 服务器<br>Objective-C: 苹果(mac、ios)相关<br>Swift: 苹果(mac、ios)相关</p><h2 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h2><h3 id="IDE是什么"><a href="#IDE是什么" class="headerlink" title="IDE是什么"></a>IDE是什么</h3><p>IDE(Integrated Development Environment )<br>集成开发环境<br>它就是一类用于程序开发的软件，这一类软件一般包括了代码编辑、编译器、调<br>试器、图形用户界面等等工具，只要安装了这种软件我们就可以进行程序开发了。<br>它的主要作用简单讲就是让计算机能识别你写的程序代码，能够响应你输入的代<br>码命令，听从你的指令和你进行交流。</p><h3 id="常用的IDE-集成开发环境-软件"><a href="#常用的IDE-集成开发环境-软件" class="headerlink" title="常用的IDE(集成开发环境)软件"></a>常用的IDE(集成开发环境)软件</h3><p>Visual Studio:一般Windows操作系统使用的软件都由它来进行开发，可用于开发基于C、C++、C#等等语言的软件;<br>Eclipse和IntelliJ IDEA:一般主要用于开发Java语言的相关软件;<br>Android Studio: 谷歌推出，主要用于开发安卓应用;<br>Xcode:苹果推出，主要用于开发苹果应用;</p><h1 id="第一个应用程序"><a href="#第一个应用程序" class="headerlink" title="第一个应用程序"></a>第一个应用程序</h1><h2 id="理解写代码这件事"><a href="#理解写代码这件事" class="headerlink" title="理解写代码这件事"></a>理解写代码这件事</h2><p>通过写代码命令，不停的相互调用系统的或者自定义的一些API，让计算<br>机通过这些命令来执行一些行为，从而实现一些特定的需求。<br>比如说做游戏，通过代码相互调用，让图片能够显示在屏幕上，让图片能<br>够动起来</p><h2 id="注释的三种方式"><a href="#注释的三种方式" class="headerlink" title="注释的三种方式"></a>注释的三种方式</h2><p>1.两杠注释:用于注释一行信息<br>2.星号注释:用于注释多行信息<br>3.三杠注释:用于注释类、命名空间等</p><h2 id="快捷注释的方法"><a href="#快捷注释的方法" class="headerlink" title="快捷注释的方法"></a>快捷注释的方法</h2><p>1.上方工具栏<br>2.快捷键<br>CTRL + K + C 注释<br>CTRL + K + U 取消注释</p><h2 id="折叠代码"><a href="#折叠代码" class="headerlink" title="折叠代码"></a>折叠代码</h2><p>由#region #endregion配对出现</p><h2 id="控制台输入打印语句"><a href="#控制台输入打印语句" class="headerlink" title="控制台输入打印语句"></a>控制台输入打印语句</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Console.Write():输出Console.WriteLine:换行输出Console.ReadKey:检测用户按下Console.ReadLine:用户输入回车<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><h3 id="有符号的整形变量"><a href="#有符号的整形变量" class="headerlink" title="有符号的整形变量"></a>有符号的整形变量</h3><p>sbyte: -128-127(字节占1);<br>short:  -32768-32767(字节占2);<br>int: -21亿-21亿多(字节占4);<br>long: -9百万兆-9百万兆(字节占8);</p><h3 id="无符号的整数变量"><a href="#无符号的整数变量" class="headerlink" title="无符号的整数变量"></a>无符号的整数变量</h3><p>byte:0-255(字节占1);<br>ushort: 0-65535(字节占2);<br>uint: 0-42亿多(字节占4);<br>ulong: 0-18百万兆(字节占8);</p><h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>float: (字节占4)存储7-8位有效数字，根据编译器不同，有效数字不一样，会四舍五入，后面加f;<br>double:(字节占8) 存储15-17位有效数字;<br>decimal:(字节占16)存输27-2位有效数字，不建议使用，后面加m; </p><h3 id="特殊类型"><a href="#特殊类型" class="headerlink" title="特殊类型"></a>特殊类型</h3><p>bool:非真即假(字节占1);<br>char:存储单个字符(字节占2);<br>string:存储多个字符，没有上限(长度可变);</p><h2 id="变量的本质"><a href="#变量的本质" class="headerlink" title="变量的本质"></a>变量的本质</h2><p>  数据传递只能通过电信号，变量的本质是二进制，都是0和1，1bit(一位或者一个数)要不就是0又不就是1，而一个字节(byte)占8位，1byte=0000 0000<br>通过sizeof获取变量占用的内存空间(例如:sizeof(int);;<br>1byte=8bit;<br>1kb=1024byte;<br>1mb=1024kb;<br>1gb=1024mb;<br>1tb=1024gb;</p><h3 id="进制转换-整数，左侧第一位表示符号"><a href="#进制转换-整数，左侧第一位表示符号" class="headerlink" title="进制转换(整数，左侧第一位表示符号)"></a>进制转换(整数，左侧第一位表示符号)</h3><p>十进制转二进制:不停除2;<br>二进制转十进制:从右往左看，该位不为0，则加上2的n次方(第一位为0);</p><h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><p>1.不能重名;<br>2.不能以数字开头;<br>3.不能是关键字;<br>4.不能有特殊符号(下划线除外);</p><p>驼峰命名法(变量)、帕斯卡命名法(函数、类)</p><h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p>关键字const，必须初始化，不能被修改。</p><h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><p>  是字符串的一部分，用来表示一些特殊含义，如单引号、引号、空行</p><h2 id="固定写法"><a href="#固定写法" class="headerlink" title="固定写法"></a>固定写法</h2><h3 id="常用的转义字符"><a href="#常用的转义字符" class="headerlink" title="常用的转义字符"></a>常用的转义字符</h3><p>':单引号;<br>":双引号<br>\n:换行<br>\:斜杠</p><h3 id="不常用的转义字符"><a href="#不常用的转义字符" class="headerlink" title="不常用的转义字符"></a>不常用的转义字符</h3><p>\t:制表符(空一个tab键)<br>\b:光标退格<br>\0:空字符<br>\a:警告音</p><h3 id="取消转义字符"><a href="#取消转义字符" class="headerlink" title="取消转义字符"></a>取消转义字符</h3><p>  在字符串前面加一个@(例如@”\你好")</p><h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><p>  不同变量类型之间的相互转换</p><h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><p>  不同类型之间的自动转换，大范围转小范围</p><h3 id="相同大类型之间的转换"><a href="#相同大类型之间的转换" class="headerlink" title="相同大类型之间的转换"></a>相同大类型之间的转换</h3><p>  特殊类型不存在隐式转换</p><h3 id="不同大类型之间的转换"><a href="#不同大类型之间的转换" class="headerlink" title="不同大类型之间的转换"></a>不同大类型之间的转换</h3><h4 id="无符号和有符号之间"><a href="#无符号和有符号之间" class="headerlink" title="无符号和有符号之间"></a>无符号和有符号之间</h4><p>  有符号的变量不能隐式转换无符号的;<br>  无符号的变量隐式转换有符号的前提是范围一定是涵盖的;</p><h4 id="浮点数和整数之间"><a href="#浮点数和整数之间" class="headerlink" title="浮点数和整数之间"></a>浮点数和整数之间</h4><p>  浮点数可以转任何类型整数;<br>  整数不能转换浮点型(不能存小数);</p><h4 id="特殊类型和其他类型"><a href="#特殊类型和其他类型" class="headerlink" title="特殊类型和其他类型"></a>特殊类型和其他类型</h4><p>  char类型可以隐式转换成整数和浮点型(ASCII码);<br>  bool和string不能和其他类型互相转换;</p><h2 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h2><p>  手动转换。</p><h3 id="括号强转"><a href="#括号强转" class="headerlink" title="括号强转"></a>括号强转</h3><p>  小范围转大范围，在前面加(),括号强转会出现问题和损失精度，bool和string不能用此转换。</p><h3 id="Parse法"><a href="#Parse法" class="headerlink" title="Parse法"></a>Parse法</h3><p>  把字符串类型转换成对应类型，前提能转换，否则报错。<br>语法:变量类型.Parse(“字符串”)</p><h3 id="Convert法"><a href="#Convert法" class="headerlink" title="Convert法"></a>Convert法</h3><p>  更准确的把各个类型之间转换，精度比括号转好，会四舍五入，前提是变量和常量必须正确。<br>语法:Convert.To目标类型(变量或者常量)</p><h3 id="其他类型转string"><a href="#其他类型转string" class="headerlink" title="其他类型转string"></a>其他类型转string</h3><p>作用:拼接打印;<br>语法:变量.ToString();</p><h1 id="异常捕获"><a href="#异常捕获" class="headerlink" title="异常捕获"></a>异常捕获</h1><p>  避免程序报错造成卡死</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">try{  }catch{  }finally{  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><p>赋值运算符:=<br>算数运算符:+ - * / %<br>复合运算符:+= -+ *= /= %=<br>自增运算符:a++(先用再加)  ++a(先加再用)</p><h3 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h3><p>1.乘除大于加减;<br>2.括号优先;</p><h2 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h2><p>方法一:+号拼接;<br>方法二:string.Format(“{0}”，18);<br>控制台打印拼接:支持类似方法二;</p><h2 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h2><p>  只要是数值就可以进行条件运算符比较大小等等，特殊类型只能与同类型进行==和！=比较(char不一样)。<br>条件运算符:&gt; &lt; == != &gt;= &lt;=;</p><h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>逻辑运算符:&amp;&amp; || !</p><h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p>  ！优先级最高，&amp;&amp;优先级高于||，逻辑运算符优先级低于算数运算符和条件运算符。</p><h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>位与:&amp;(连接俩个数值进行位计算，转换成2进制计算，有0则0)<br>位或:|(有1则1)<br>异或:^(对位运算，相同为0，不同为1)<br>位取反:~(0变1，1变0，反码补码问题)<br>左右移:&lt;&lt;(左移几位，右边加几个0)   &gt;&gt;(右移几位，右边去几个数)</p><h2 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h2><p>语法:空位(bool类型)？空位:空位;</p><h1 id="条件分支语句"><a href="#条件分支语句" class="headerlink" title="条件分支语句"></a>条件分支语句</h1><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">if(){  }else if(){  }else{  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">switch(){  case 变量:  break;  default:  break;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">while(循环跳出条件){  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do-while循环"></a>do-while循环</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">do{  }while();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">for(int i=1;i&lt;条件;i++){}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="foreach循环"><a href="#foreach循环" class="headerlink" title="foreach循环"></a>foreach循环</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">foreach(var i in 集合需要继承自一个接口){  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h1 id="知识补充"><a href="#知识补充" class="headerlink" title="知识补充"></a>知识补充</h1><h2 id="控制台相关"><a href="#控制台相关" class="headerlink" title="控制台相关"></a>控制台相关</h2><p>1.Console.Readkey().Keycahr-可以保存输入的字符;<br>2.Console.Clear()-清空控制台;<br>3.Console.SetWindowSize(宽，高);<br>4.Console.SetBufferSize(宽，高)-缓冲区大小;<br>5.Console.SetCursorPosition(x，y)-设置光标的位置<br>6.Console.ForegroundColor=ConsoleColor.颜色-设置文件颜色<br>7.Console.BackgroundColor=ConsoleColor.颜色–设置背景颜色，想立马改变用clear<br>8.Console.CursorVisiable=false-设置光标显隐<br>9.Environment.Exit(0)-关闭控制台</p><h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><p>语法:Random 变量名=new Random();<br>生成非负数:变量名.Next(最小到最大，范围不包括最大);</p>]]></content>
     
