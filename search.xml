@@ -49,7 +49,7 @@
       
         <tags>
             
-            <tag> 操作系统 </tag>
+            <tag> 计算机操作系统 </tag>
             
         </tags>
       
@@ -153,6 +153,8 @@
       <categories>
           
           <category> CS基础 </category>
+          
+          <category> 数据结构和算法 </category>
           
       </categories>
       
@@ -397,6 +399,8 @@
           
           <category> 编程语言 </category>
           
+          <category> C# </category>
+          
       </categories>
       
       
@@ -421,6 +425,8 @@
       <categories>
           
           <category> 编程语言 </category>
+          
+          <category> C# </category>
           
       </categories>
       
@@ -447,6 +453,8 @@
           
           <category> 编程语言 </category>
           
+          <category> C# </category>
+          
       </categories>
       
       
@@ -471,6 +479,8 @@
       <categories>
           
           <category> 编程语言 </category>
+          
+          <category> C# </category>
           
       </categories>
       
