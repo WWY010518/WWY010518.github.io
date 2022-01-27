@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity基础 | 憨憨</title><meta name="keywords" content="Unity"><meta name="author" content="憨憨"><meta name="copyright" content="憨憨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="模板">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity基础 | 憨憨</title><meta name="keywords" content="Unity"><meta name="author" content="憨憨"><meta name="copyright" content="憨憨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="3D数学数学计算Mathf公共类Math：是C#中封装好的用于数学计算的工具)类) —— 位于System命名空间中；Mathf：是Unity中封装好的用于数学计算的工具)结构体) —— 位于UnityEngine命名空间中，Mathf 是Unity专门封装的，不仅包含Math中的方法，还多了一些适用于游戏开发的方法，使用Mathf中的方法用于Unity游戏开发中的数学计算即可； API 知识点三">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity基础">
 <meta property="og:url" content="http://wwy010518.github.io/posts/1538.html">
 <meta property="og:site_name" content="憨憨">
-<meta property="og:description" content="模板">
+<meta property="og:description" content="3D数学数学计算Mathf公共类Math：是C#中封装好的用于数学计算的工具)类) —— 位于System命名空间中；Mathf：是Unity中封装好的用于数学计算的工具)结构体) —— 位于UnityEngine命名空间中，Mathf 是Unity专门封装的，不仅包含Math中的方法，还多了一些适用于游戏开发的方法，使用Mathf中的方法用于Unity游戏开发中的数学计算即可； API 知识点三">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg">
 <meta property="article:published_time" content="2019-09-25T13:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-25T07:37:04.234Z">
+<meta property="article:modified_time" content="2022-01-27T13:16:45.578Z">
 <meta property="article:author" content="憨憨">
 <meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-01-25 15:37:04'
+  postUpdate: '2022-01-27 21:16:45'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -147,10 +147,1011 @@
       }
     }
     detectApple()
-    document.addEventListener('pjax:complete', detectApple)})(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><meta name="generator" content="Hexo 5.2.0">
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="憨憨" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="憨憨" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/Windows/"><i class="fa-fw fa fa-desktop"></i><span> Windows</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s4.ax1x.com/2022/01/24/7o1K0O.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">憨憨</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/Windows/"><i class="fa-fw fa fa-desktop"></i><span> Windows</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Unity基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-25T13:00:00.000Z" title="发表于 2019-09-25 21:00:00">2019-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-25T07:37:04.234Z" title="更新于 2022-01-25 15:37:04">2022-01-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/">游戏引擎</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/">Unity</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Unity基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">憨憨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wwy010518.github.io/posts/1538.html">http://wwy010518.github.io/posts/1538.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wwy010518.github.io" target="_blank">憨憨</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Unity/">Unity</a></div><div class="post_share"><div class="social-share" data-image="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://s4.ax1x.com/2022/01/22/7fZRxA.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fZRxA.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://s4.ax1x.com/2022/01/22/7fZcPe.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fZcPe.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1539.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Unity核心</div></div></a></div><div class="next-post pull-right"><a href="/posts/1537.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Unity入门</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/1537.html" title="Unity入门"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-08-30</div><div class="title">Unity入门</div></div></a></div><div><a href="/posts/1539.html" title="Unity核心"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-05</div><div class="title">Unity核心</div></div></a></div><div><a href="/posts/1541.html" title="Unity相关_UGUI"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-24</div><div class="title">Unity相关_UGUI</div></div></a></div><div><a href="/posts/1540.html" title="Unity进阶"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-13</div><div class="title">Unity进阶</div></div></a></div><div><a href="/posts/1543.html" title="Unity相关_数据持久化"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-24</div><div class="title">Unity相关_数据持久化</div></div></a></div><div><a href="/posts/1542.html" title="Unity相关_FairyGUI"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-12</div><div class="title">Unity相关_FairyGUI</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">憨憨</div><div class="author-info__description">故事总需要个起点</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://wwy010518.github.io"><i class="fab fa-home"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/WWY010518/WWY010518.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=3179342661&amp;website=www.qtxml.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">你会是我生命中很重要的人么</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.</span> <span class="toc-text">模板</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/2049.html" title="ET框架笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="ET框架笔记"/></a><div class="content"><a class="title" href="/posts/2049.html" title="ET框架笔记">ET框架笔记</a><time datetime="2022-01-24T13:00:00.000Z" title="发表于 2022-01-24 21:00:00">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/513.html" title="计算机操作系统原理笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7f7vPe.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="计算机操作系统原理笔记"/></a><div class="content"><a class="title" href="/posts/513.html" title="计算机操作系统原理笔记">计算机操作系统原理笔记</a><time datetime="2022-01-08T13:00:00.000Z" title="发表于 2022-01-08 21:00:00">2022-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1542.html" title="Unity相关_FairyGUI"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Unity相关_FairyGUI"/></a><div class="content"><a class="title" href="/posts/1542.html" title="Unity相关_FairyGUI">Unity相关_FairyGUI</a><time datetime="2021-12-12T13:00:00.000Z" title="发表于 2021-12-12 21:00:00">2021-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/03008.html" title="Unity相关_基于Lua的热更新解决方案"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Unity相关_基于Lua的热更新解决方案"/></a><div class="content"><a class="title" href="/posts/03008.html" title="Unity相关_基于Lua的热更新解决方案">Unity相关_基于Lua的热更新解决方案</a><time datetime="2021-10-28T13:00:00.000Z" title="发表于 2021-10-28 21:00:00">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1.html" title="Markdown语法格式（.md后缀-使用typora）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fN86P.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Markdown语法格式（.md后缀-使用typora）"/></a><div class="content"><a class="title" href="/posts/1.html" title="Markdown语法格式（.md后缀-使用typora）">Markdown语法格式（.md后缀-使用typora）</a><time datetime="2021-09-28T13:00:00.000Z" title="发表于 2021-09-28 21:00:00">2021-09-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 憨憨</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></head></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/Windows/"><i class="fa-fw fa fa-desktop"></i><span> Windows</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s4.ax1x.com/2022/01/24/7o1K0O.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">憨憨</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/Windows/"><i class="fa-fw fa fa-desktop"></i><span> Windows</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Unity基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-25T13:00:00.000Z" title="发表于 2019-09-25 21:00:00">2019-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-27T13:16:45.578Z" title="更新于 2022-01-27 21:16:45">2022-01-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/">游戏引擎</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/">Unity</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Unity基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="3D数学"><a href="#3D数学" class="headerlink" title="3D数学"></a>3D数学</h1><h2 id="数学计算Mathf公共类"><a href="#数学计算Mathf公共类" class="headerlink" title="数学计算Mathf公共类"></a>数学计算Mathf公共类</h2><p>Math：是C#中封装好的用于数学计算的工具)类) —— 位于System命名空间中；<br>Mathf：是Unity中封装好的用于数学计算的工具)结构体) —— 位于UnityEngine命名空间中，Mathf 是Unity专门封装的，不仅包含Math中的方法，还多了一些适用于游戏开发的方法，使用Mathf中的方法用于Unity游戏开发中的数学计算即可；</p>
+<p>API</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点三 Mathf中的常用方法——一般计算一次
+//1.π - PI
+print(Mathf.PI);
+
+//2.取绝对值 - Abs
+print(Mathf.Abs(-10));
+print(Mathf.Abs(-20));
+print(Mathf.Abs(1));
+//3.向上取整 - CeilToInt
+float f = 1.3f;
+int i = (int)f;
+print(i);
+print(Mathf.CeilToInt(f));
+print(Mathf.CeilToInt(1.00001f));
+
+//4.向下取整 - FloorToInt
+print(Mathf.FloorToInt(9.6f));
+
+//5.钳制函数 - Clamp
+print(Mathf.Clamp(10, 11, 20));
+print(Mathf.Clamp(21, 11, 20));
+print(Mathf.Clamp(15, 11, 20));
+
+//6.获取最大值 - Max
+print(Mathf.Max(1, 2, 3, 4, 5, 6, 7, 8));
+print(Mathf.Max(1, 2));
+
+//7.获取最小值 - Min
+print(Mathf.Min(1, 2, 3, 4, 545, 6, 1123, 123));
+print(Mathf.Min(1.1f, 0.4f));
+
+//8.一个数的n次幂 - Pow
+print("一个数的n次方" + Mathf.Pow(4, 2));
+print("一个数的n次方" + Mathf.Pow(2, 3));
+
+//9.四舍五入 - RoundToInt
+print("四舍五入" + Mathf.RoundToInt(1.3f));
+print("四舍五入" + Mathf.RoundToInt(1.5f));
+
+//10.返回一个数的平方根 - Sqrt
+print("返回一个数的平方根" + Mathf.Sqrt(4));
+print("返回一个数的平方根" + Mathf.Sqrt(16));
+print("返回一个数的平方根" + Mathf.Sqrt(64));
+
+//11.判断一个数是否是2的n次方 - IsPowerOfTwo
+print("判断一个数是否是2的n次方" + Mathf.IsPowerOfTwo(4));
+print("判断一个数是否是2的n次方" + Mathf.IsPowerOfTwo(8));
+print("判断一个数是否是2的n次方" + Mathf.IsPowerOfTwo(3));
+print("判断一个数是否是2的n次方" + Mathf.IsPowerOfTwo(1));
+
+//12.判断正负数 - Sign
+print("判断正负数" + Mathf.Sign(0));
+print("判断正负数" + Mathf.Sign(10));
+print("判断正负数" + Mathf.Sign(-10));
+print("判断正负数" + Mathf.Sign(3));
+print("判断正负数" + Mathf.Sign(-2));
+
+知识点四 Mathf中的常用方法——一般不停计算
+//插值运算 - Lerp
+//Lerp函数公式
+result = Mathf.Lerp(start, end, t);
+//t为插值系数，取值范围为 0~1
+result = start + (end - start)*t
+
+//插值运算用法一
+//每帧改变start的值——变化速度先快后慢，位置无限接近，但是不会得到end位置
+start = Mathf.Lerp(start, 10, Time.deltaTime);
+
+//插值运算用法二
+//每帧改变t的值——变化速度匀速，位置每帧接近，当t&gt;=1时，得到结果
+time += Time.deltaTime;
+result = Mathf.Lerp(start, 10, time);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/Mathf.html">UnityEngine.Mathf - Unity 脚本手册 Scripting API)</a></p>
+<h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p>1.角度和弧度都是度量角的单位：<br>角度：1°<br>弧度：1 radian<br>圆一周的角度：360°<br>圆一周的弧度：2π radian</p>
+<p>2.角度和弧度的转换关系：<br>π rad = 180°<br>1 rad = (180 / π)°=&gt; 1 rad = 180 / 3.14 ≈ 57.3°；<br>1°= (π / 180) rad =&gt; 1°= 3.14 / 180 ≈ 0.01745 rad；<br>由此可以得出<br>弧度 * 57.3 = 对应角度<br>角度 * 0.01745 = 对应弧</p>
+<p>3.角度弧度相关API：</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 弧度、角度相互转化
+//弧度转角度
+float rad = 1;
+float anger = rad * Mathf.Rad2Deg;
+//角度转弧度
+anger = 1;
+rad = anger * Mathf.Deg2Rad;
+
+知识点二 三角函数)可以让物体做曲线运动)
+//注意：Mathf中的三角函数相关函数，传入的参数需要时弧度值
+print(Mathf.Sin(30 * Mathf.Deg2Rad));//0.5
+print(Mathf.Cos(60 * Mathf.Deg2Rad));//0.5
+
+知识点三 反三角函数
+//注意：反三角函数得到的结果是 正弦或者余弦值对应的弧度
+rad = Mathf.Asin(0.5f);
+print(rad * Mathf.Rad2Deg);
+rad = Mathf.Acos(0.5f);
+print(rad * Mathf.Rad2Deg);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="坐标系说明"><a href="#坐标系说明" class="headerlink" title="坐标系说明"></a>坐标系说明</h2><p>1.世界坐标系：<br>原点：世界的中心点<br>轴向：世界坐标系的三个轴向是固定的</p>
+<p>2.物体坐标系：<br>原点：物体的中心点)建模时决定)<br>轴向：<br>物体右方为x轴正方向<br>物体上方为y轴正方向<br>物体前方为z轴正方向</p>
+<p>3.屏幕坐标系：<br>原点：屏幕左下角<br>轴向：<br>向右为x轴正方向<br>向上为y轴正方向<br>最大宽高：<br>Screen.width<br>Screen.height</p>
+<p>4.视口坐标系：<br>原点：屏幕左下角<br>轴向：<br>向右为x轴正方向<br>向上为y轴正方向<br>特点：<br>左下角为)0,0)<br>右上角为)1,1)<br>和屏幕坐标类似，将坐标单位化</p>
+<p>汇总</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 世界坐标系
+//目前学习的和世界坐标系相关的
+//this.transform.position;
+//this.transform.rotation;
+//this.transform.eulerAngles;
+//this.transform.lossyScale(全局缩放大小，只能得);
+//修改他们 会是相对世界坐标系的变化
+
+知识点二 物体坐标系
+//相对父对象的物体坐标系的位置 本地坐标 相对坐标
+//this.transform.localPosition;
+//this.transform.localEulerAngles;
+//this.transform.localRotation;
+//this.transform.localScale;
+//修改他们 会是相对父对象物体坐标系的变化
+
+知识点三 屏幕坐标系
+//Input.mousePosition
+//Screen.width;
+//Screen.height;
+
+知识点四 视口坐标系
+//摄像机上的 视口范围
+
+坐标转换相关
+//世界转本地
+//this.transform.InverseTransformDirection
+//this.transform.InverseTransformPoint
+//this.transform.InverseTransformVector
+
+//本地转世界
+//this.transform.TransformDirection
+//this.transform.TransformPoint  
+//this.transform.TransformVector
+
+//世界转屏幕
+//Camera.main.WorldToScreenPoint
+//屏幕转世界
+//Camera.main.ScreenToWorldPoint
+
+//世界转视口
+//Camera.main.WorldToViewportPoint
+//视口转世界
+//Camera.main.ViewportToWorldPoint
+
+//视口转屏幕
+//Camera.main.ViewportToScreenPoint
+
+//屏幕转视口
+//Camera.main.ScreenToViewportPoint;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Vector3向量"><a href="#Vector3向量" class="headerlink" title="Vector3向量"></a>Vector3向量</h2><p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/Vector3.html">UnityEngine.Vector3 - Unity 脚本手册 Scripting API</a></p>
+<h3 id="向量模长和单位向量"><a href="#向量模长和单位向量" class="headerlink" title="向量模长和单位向量"></a>向量模长和单位向量</h3><p>1.标量：<br>有数值大小，没有方向</p>
+<p>2.向量：<br>有数值大小，有方向的矢量</p>
+<p>3.两点决定一向量：<br>A点：(Xa,Ya,Za)<br>B点：(Xb,Yb,Zb)<br>从A指向B的向量为AB向量<br>B-A = (Xb-Xa, Yb-Ya, Zb-Za)<br>从B指向A的向量为BA向量<br>A-B = (Xa-Xb, Ya-Yb, Za-Zb)<br>口诀：终点减起点</p>
+<p>4.零向量和负向量：<br>零向量<br>(0,0,0)<br>零向量是唯一一个大小为0的向量<br>负向量<br>(x,y,z)的负向量为(-x,-y,-z)<br>负向量和原向量大小相等<br>负向量和原向量方向相反</p>
+<p>5.向量的模长：<br>向量的模长就是向量的长度<br>向量是由两个点算出，所以向量的模长就是两个点的距离<br>模长公式：<br>A向量(x,y,z)<br>模长 = √x² + y² + z²</p>
+<p>6.单位向量：<br>模长为1的向量为单位向量<br>任意一个向量经过归一化就是单位向量<br>只需要方向，不想让模长影响计算结果时使用单位向量<br>归一化公式：<br>A向量(x,y,z)<br>模长 = √x² + y² + z²<br>单位向量 = (x/模长, y/模长, z/模长)</p>
+<p>7.向量模长和单位向量相关API：</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 向量
+//三维向量 - Vector3
+//Vector3有两种几何意义
+//1.位置 —— 代表一个点
+print(this.transform.position);
+
+//2.方向 —— 代表一个方向
+print(this.transform.forward);
+print(this.transform.up);
+
+Vector3 v = new Vector3(1, 2, 3);
+Vector2 v2 = new Vector2(1, 2);
+
+知识点二 两点决定一向量
+//A和B此时 几何意义 是两个点
+Vector3 A = new Vector3(1, 2, 3);
+Vector3 B = new Vector3(5, 1, 5);
+//求向量
+//此时 AB和 BA 他们的几何意义 是两个向量
+Vector3 AB = B - A;
+Vector3 BA = A - B;
+
+知识点三 零向量和负向量
+print(Vector3.zero);
+
+print(Vector3.forward);
+print(-Vector3.forward);
+
+知识点四 向量的模长
+//Vector3中提供了获取向量模长的成员属性
+//magnitude
+print(AB.magnitude);
+Vector3 C = new Vector3(5, 6, 7);
+print(C.magnitude);
+
+print(Vector3.Distance(A, B));
+
+知识点五 单位向量
+//Vector3中提供了获取单位向量的成员属性
+//normalized
+print(AB.normalized);
+print(AB / AB.magnitude);
+
+总结
+//模长相当于可以得到 两点之间的距离  单位向量 主要是用来进行移动计算的 它不会影响我们想要的移动效果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="向量加减乘除"><a href="#向量加减乘除" class="headerlink" title="向量加减乘除"></a>向量加减乘除</h3><p>1.向量加法：向量A + 向量B = (Xa + Xb, Ya + Yb)；<br>位置+位置：两个位置相加没有任何几何意义<br>向量+向量：两个向量相加得到一个新向量；向量 + 向量 = 向量)向量相加，首尾相连)<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7XBRTf.png" alt="向量+向量"><br>位置+向量：位置加向量得到一个新位置；位置 + 向量 = 位置；向量 + 位置 = 位置)位置和向量相加=平移位置)<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7XB7Xn.png" alt="位置+向量"></p>
+<p>2.向量减法<br>向量A - 向量B = (Xa - Xb, Ya - Yb, Za);<br>位置-位置：两个位置相减得到一个新向量；位置 - 位置 = 向量)两点决定一向量，终点 - 起点)；<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7XDEtO.png" alt="位置-位置"><br>向量-向量：两个向量相减得到一个新向量；向量 - 向量 = 向量)向量相减，头连头，尾指尾，A - B = B头指A头)；<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7XDujA.png" alt="向量-向量"><br>位置-向量：位置减向量相当于 加负向量；位置 + (-向量)=位置)位置减向量 = 平移位置)；<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7XDY9g.png" alt="位置-向量"><br>向量-位置：向量减位置没有任何几何意义</p>
+<p>3.向量乘除<br>向量只会和标量进行乘除法运算<br>向量A<em>标量a = (x</em>a, y<em>a, z</em>a);<br>向量A/标量a = (x/a, y/a, z/a);<br>向量 *or/ 标量 = 向量;<br>向量 *or/ 正数，方向不变，放大缩小模长;<br>向量 *or/ 负数，方向相反，放大缩小模长;<br>向量 * 0，得到零向量;</p>
+<p>4.知识点：</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 向量加法
+        //this.transform.position += new Vector3(1, 2, 3);
+        this.transform.Translate(Vector3.forward * 5);
+
+知识点二 向量减法
+        //this.transform.position -= new Vector3(1, 2, 3);
+        this.transform.Translate(-Vector3.forward * 5);
+
+知识点三 向量乘除标量
+        this.transform.localScale *= 2;
+        this.transform.localScale /= 2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="向量点乘"><a href="#向量点乘" class="headerlink" title="向量点乘"></a>向量点乘</h3><p>1.点乘计算公式：<br>向量A·向量B = Xa<em>Xb + Ya</em>Yb + Za*Zb=标量；<br>点乘可以得到一个向量：在自己向量上投影的长度)我们可以用这个规律判断敌方的大致方位)；<br>点乘结果 &gt; 0 两个向量夹角为锐角；<br>点乘结果 = 0 两个向量夹角为直角；<br>点乘结果 &lt; 0 两个向量夹角为钝；</p>
+<p>2.公式推导：<br>Cosβ = 直角边 / 单位向量B模长<br>直角边 = Cosβ * 单位向量B模长)直角边 = 单位向量A · 单位向量B);<br>↓<br>Cosβ * 单位向量B模长 = 单位向量A · 单位向量B;<br>↓<br>Cosβ = 单位向量A · 单位向量B;<br>↓<br>推出结果：β = Acos(单位向量A · 单位向量B);<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7XyMu9.png" alt="公式推导"></p>
+<p>3.点乘API</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 通过点乘判断对象方位)判断前后)
+        //Vector3 提供了计算点乘的方法
+        Debug.DrawRay(this.transform.position, this.transform.forward, Color.red);
+        Debug.DrawRay(this.transform.position, target.position - this.transform.position, Color.red);
+        //得到两个向量的点乘结果
+        //向量 a 点乘 AB 的结果
+        float dotResult = Vector3.Dot(this.transform.forward, target.position - this.transform.position);
+        if( dotResult &gt;= 0 )
+        {
+            print("它在我前方");
+        }
+        else
+        {
+            print("它在我后方");
+        }
+
+知识点二 通过点乘推导公式算出夹角)判断夹角，但是夹角为0-180之间，不能判断左右)
+        //步骤
+        //1.用单位向量算出点乘结果
+        dotResult = Vector3.Dot(this.transform.forward, (target.position - this.transform.position).normalized);
+        //2.用反三角函数得出角度
+        print("角度-" + Mathf.Acos(dotResult) * Mathf.Rad2Deg);
+
+        //Vector3中提供了 得到两个向量之间夹角的方法 
+        print("角度2-" + Vector3.Angle(this.transform.forward, target.position - this.transform.position));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="向量叉乘"><a href="#向量叉乘" class="headerlink" title="向量叉乘"></a>向量叉乘</h3><p>1.叉乘计算公式：<br>向量A x 向量B = (YaZb - ZaYb,ZaXb - XaZb,XaYb - YaX)=向量；</p>
+<p>2.几何意义<br>A x B 得到的向量同时垂直A和B；<br>A x B 向量垂直于A和B组成的平面；<br>A x B = -(B x A)；</p>
+<p>3.叉乘API</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 叉乘计算
+        print(Vector3.Cross(A.position, B.position));
+        
+知识点二 叉乘几何意义
+        //假设向量 A和B 都在 XZ平面上
+        //向量A 叉乘 向量 B
+        //y大于0 证明 B在A右侧
+        //y小于0 证明 B在A左侧
+        Vector3 C = Vector3.Cross(A.position, B.position);
+        if( C.y &gt; 0)
+        {
+            print("B在A的右侧");
+        }
+        else
+        {
+            print("B在A的左侧");
+        }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="向量插值运算"><a href="#向量插值运算" class="headerlink" title="向量插值运算"></a>向量插值运算</h3><p>插值API:</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 线性插值
+        //公式result = start + (end - start) * t
+
+        //1.先快后慢 每帧改变start位置 位置无限接近 但不会得到end位置
+        A.position = Vector3.Lerp(A.position, target.position, Time.deltaTime);
+
+        //2.匀速 每帧改变时间  当t&gt;=1时 得到结果
+        //这种匀速移动 当time&gt;=1时  我改变了 目标位置后  它会直接瞬移到我们的目标位置
+        //应该相当于Vector3.MoveToWards()
+        if(nowTarget != target.position)
+        {
+            nowTarget = target.position;
+            time = 0;
+            startPos = B.position;
+        }
+        time += Time.deltaTime;
+        B.position = Vector3.Lerp(startPos, nowTarget, time);
+
+知识点二 球形插值
+//做弧线运动，可以做弓箭射击，太阳东升西落
+        C.position = Vector3.Slerp(Vector3.right * 10, Vector3.left * 10 + Vector3.up*0.1f, time*0.01f);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Quaternion四元数"><a href="#Quaternion四元数" class="headerlink" title="Quaternion四元数"></a>Quaternion四元数</h2><p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/Quaternion.html">UnityEngine.Quaternion - Unity 脚本手册 Scripting API</a></p>
+<h3 id="为什么使用四元数"><a href="#为什么使用四元数" class="headerlink" title="为什么使用四元数"></a>为什么使用四元数</h3><p>1.欧拉角)transform.eulerAngles)：由三个角度(x,y,z)组成，遵守heading-pitch-bank旋转序列约定)heading:物体绕自身的对象坐标系的Y轴，旋转的角度；pitch:物体绕自身的对象坐标系的X轴，旋转的角度；bank:物体绕自身的对象坐标系的Z轴，旋转的角度)；<br>1.1.优点：直观、易理解；存储空间小)三个数表示)；可以进行从一个方向到另一个方向旋转大于180度的角度；<br>1.2缺点：同一旋转的表示不唯一；万向节死锁；</p>
+<p>2.万向节死锁：当某个特定轴达到某个特殊值时，绕一个轴旋转可能会覆盖住另一个轴的旋转，从而失去一维自由度；Unity中X轴达到90度时，会产生万向节死锁；</p>
+<h3 id="四元数是什么"><a href="#四元数是什么" class="headerlink" title="四元数是什么"></a>四元数是什么</h3><p>1.轴-角对：在3D空间中，任意旋转都可以表示，绕着某个轴旋转一个旋转角得到；</p>
+<p>2.四元数：对于给定旋转，假设为绕着n轴，旋转β度，n轴为(x,y,z)；四元数Q = [cos(β/2), sin(β/2)x, sin(β/2)y, sin(β/2)z]；</p>
+<p>3.四元数基本API</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 四元数 Quaternion
+        //四元数Q = [cos(β/2),  sin(β/2)x, sin(β/2)y, sin(β/2)z]
+        //计算原理
+        //Quaternion q = new Quaternion(Mathf.Sin(30 * Mathf.Deg2Rad), 0, 0, Mathf.Cos(30 * Mathf.Deg2Rad));
+        //提供的轴角对 初始化 四元数的方法
+        Quaternion q = Quaternion.AngleAxis(60, Vector3.right);
+        
+知识点二 四元数和欧拉角转换
+        //1.欧拉角转四元数
+        Quaternion q2 = Quaternion.Euler(60, 0, 0);
+        GameObject obj2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        obj2.transform.rotation = q2;
+        //2.四元数转欧拉角
+        print(q2.eulerAngles);
+
+知识点三 四元数弥补的欧拉角缺点
+        //1.同一旋转的表示不唯一  四元数旋转后 转换后的欧拉角 始终是 -180~180度
+
+        //2.万向节死锁 通过四元数旋转对象可以避免万向节死锁
+        
+//必备知识点：四元数相乘代表旋转四元数
+ this.transform.rotation *= Quaternion.AngleAxis(1, Vector3.up);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="四元数常用方法"><a href="#四元数常用方法" class="headerlink" title="四元数常用方法"></a>四元数常用方法</h3><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 单位四元数
+        print(Quaternion.identity);
+        //testObj.rotation = Quaternion.identity;
+
+        Instantiate(testObj, Vector3.zero, Quaternion.identity);
+
+知识点二 插值运算
+        //在四元数中Lerp和Slerp只有一些细微差别
+        //由于算法不同,Slerp的效果会好一些
+        //Lerp的效果相比Slerp更快但是如果旋转范围较大效果较差,所以建议使用Slerp进行插值运算
+        //无限接近 先快后慢
+        A.transform.rotation = Quaternion.Slerp(A.transform.rotation, target.rotation, Time.deltaTime);
+
+        //匀速变化 time&gt;=1到达目标
+        time += Time.deltaTime;
+        B.transform.rotation = Quaternion.Slerp(start, target.rotation, time);
+
+识点三 LookRotation
+        //Quaternion q = Quaternion.LookRotation(lookB.position - lookA.position);
+        //lookA.rotation = q;
+        lookA.MyLookAt(lookB);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="四元数计算"><a href="#四元数计算" class="headerlink" title="四元数计算"></a>四元数计算</h3><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 四元数相乘
+        //两个四元数相乘得到一个新的四元数,代表两个旋转量的叠加,相当于旋转(旋转相对的坐标系 是物体自身坐标系)
+        Quaternion q = Quaternion.AngleAxis(20, Vector3.up);
+        this.transform.rotation *= q;
+
+知识点二 四元数乘向量
+        //四元数乘向量返回一个新向量,可以将指定向量旋转对应四元数的旋转量,相当于直接旋转向量
+        Vector3 v = Vector3.forward;
+        v = Quaternion.AngleAxis(45, Vector3.up) * v;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>#Mono重要内容</p>
+<h2 id="延迟-延时-函数"><a href="#延迟-延时-函数" class="headerlink" title="延迟)延时)函数"></a>延迟)延时)函数</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 什么是延迟函数
+        //延迟函数顾名思义
+        //就是会延时执行的函数
+        //我们可以自己设定延时要执行的函数和具体延时的时间
+        //是MonoBehaviour基类中实现好的方法
+
+知识点二 延迟函数的使用
+1.延迟函数
+        //Invoke
+        //参数一：函数名 字符串
+        //参数二：延迟时间 秒为单位
+        Invoke("DelayDoSomething", 1);
+
+        //注意：
+        //1-1.延时函数第一个参数传入的是函数名字符串
+        //1-2.延时函数没办法传入参数 只有包裹一层
+        //1-3.函数名必须是该脚本上申明的函数
+
+2.延迟重复执行函数
+        //InvokeRepeating
+        //参数一：函数名字符串
+        //参数二：第一次执行的延迟时间
+        //参数三：之后每次执行的间隔时间
+        InvokeRepeating("DelayRe", 5, 1);
+//注意：
+        //它的注意事项和延时函数一致
+
+3.取消延迟函数
+        //3-1取消该脚本上的所有延时函数执行
+        CancelInvoke();
+
+        //3-2指定函数名取消
+        //只要取消了指定延迟 不管之前该函数开启了多少次 延迟执行 都会统一取消
+        CancelInvoke("DelayDoSomething");
+4.判断是否有延迟函数
+        if( IsInvoking() )
+        {
+            print("存在延迟函数");
+        }
+        if( IsInvoking("DelayDoSomething") )
+        {
+            print("存在延迟函数DelayDoSomething");
+        }
+
+知识点三 延迟函数受对象失活销毁影响
+        //脚本依附对象失活 或者 脚本自己失活
+        //延迟函数可以继续执行 不会受到影响的
+
+        //脚本依附对象销毁或者脚本移除
+        //延迟函数无法继续执行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="协同程序"><a href="#协同程序" class="headerlink" title="协同程序"></a>协同程序</h2><p>1.Unity支持多线程，只是新开线程无法访问主线程中Unity相关内容(注意：Unity中的多线程 要记住关闭);<br>2.协同程序不是多线程，它是将线程中逻辑进行分时执行，避免卡顿,继承MonoBehavior的类都可以使用协程;<br>3.协程只有当组件单独失活时不受影响，其它情况协程会停止<br>4.API</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 协程的使用
+        //继承MonoBehavior的类 都可以开启 协程函数
+        //第一步：申明协程函数
+        //  协程函数2个关键点
+        //  1-1返回值为IEnumerator类型及其子类
+        //  1-2函数中通过 yield return 返回值; 进行返回
+
+        //第二步：开启协程函数
+        //协程函数 是不能够 直接这样去执行的！！！！！！！
+        //这样执行没有任何效果
+        //MyCoroutine(1, "123");
+        //常用开启方式
+        //IEnumerator ie = MyCoroutine(1, "123");
+        //StartCoroutine(ie);
+        Coroutine c1 = StartCoroutine( MyCoroutine(1, "123") );
+        Coroutine c2 = StartCoroutine( MyCoroutine(1, "123"));
+        Coroutine c3 = StartCoroutine( MyCoroutine(1, "123"));
+
+        //第三步：关闭协程
+        //关闭所有协程
+        //StopAllCoroutines();
+
+        //关闭指定协程
+        //StopCoroutine(c1);
+
+知识点二 yield return 不同内容的含义
+        //1.下一帧执行
+        //yield return 数字;
+        //yield return null;
+        //在Update和LateUpdate之间执行
+
+        //2.等待指定秒后执行
+        //yield return new WaitForSeconds(秒);
+        //在Update和LateUpdate之间执行
+
+        //3.等待下一个固定物理帧更新时执行
+        //yield return new WaitForFixedUpdate();
+        //在FixedUpdate和碰撞检测相关函数之后执行
+
+        //4.等待摄像机和GUI渲染完成后执行
+        //yield return new WaitForEndOfFrame();
+        //在LateUpdate之后的渲染相关处理完毕后之后
+
+        //5.一些特殊类型的对象 比如异步加载相关函数返回的对象
+        //之后讲解 异步加载资源 异步加载场景 网络加载时再讲解
+        //一般在Update和LateUpdate之间执行
+
+        //6.跳出协程
+        //yield break;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="协同程序原理"><a href="#协同程序原理" class="headerlink" title="协同程序原理"></a>协同程序原理</h2><p>1.协程的本质 就是利用 C#的迭代器函数”分步执行”的特点+协程调度逻辑 实现的一套分时执行函数的规则;</p>
+<p>2.代码实现：</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 协程的本质
+        //协程可以分成两部分
+        //1.协程函数本体
+        //2.协程调度器
+
+        //协程本体就是一个能够中间暂停返回的函数
+        //协程调度器是Unity内部实现的，会在对应的时机帮助我们继续执行协程函数
+
+        //Unity只实现了协程调度部分
+        //协程的本体本质上就是一个 C#的迭代器方法
+        
+知识点二 协程本体是迭代器方法的体现
+        //1.协程函数本体
+        //如果我们不通过 开启协程方法执行协程 
+        //Unity的协程调度器是不会帮助我们管理协程函数的
+        IEnumerator ie = Test();
+
+        //但是我们可以自己执行迭代器函数内容
+        ie.MoveNext();//会执行函数中内容遇到 yield return为止的逻辑
+        print(ie.Current);//得到 yield return 返回的内容
+
+        //ie.MoveNext();
+        //print(ie.Current);
+        //ie.MoveNext();
+        //print(ie.Current);
+        //ie.MoveNext();
+        //TestClass tc = ie.Current as TestClass;
+        //print(tc.time);
+        //MoveNext 返回值 代表着 是否到了结尾)这个迭代器函数 是否执行完毕)
+        
+        //2.协程调度器
+        //继承MonoBehavior后 开启协程
+        //相当于是把一个协程函数)迭代器)放入Unity的协程调度器中帮助我们管理进行执行
+        //具体的yield return 后面的规则 也是Unity定义的一些规则<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>#Resources资源动态加载</p>
+<h2 id="Unity中的特殊文件夹"><a href="#Unity中的特殊文件夹" class="headerlink" title="Unity中的特殊文件夹"></a>Unity中的特殊文件夹</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 工程路径获取
+        //注意 该方式 获取到的路径 一般情况下 只在 编辑模式下使用
+        //我们不会在实际发布游戏后 还使用该路径
+        //游戏发布过后 该路径就不存在了 
+        print(Application.dataPath);
+
+知识点二 Resources 资源文件夹
+        //路径获取：
+        //一般不获取
+        //只能使用Resources相关API进行加载
+        //如果硬要获取 可以用工程路径拼接
+        print(Application.dataPath + "/Resources");
+
+        //注意：
+        //需要我们自己将创建
+        //作用：
+        //资源文件夹
+        //1-1.需要通过Resources相关API动态加载的资源需要放在其中
+        //1-2.该文件夹下所有文件都会被打包出去
+        //1-3.打包时Unity会对其压缩加密
+        //1-4.该文件夹打包后只读 只能通过Resources相关API加载
+
+知识点三 StreamingAssets 流动资源文件夹
+        //路径获取：
+        print(Application.streamingAssetsPath);
+        //注意：
+        //需要我们自己将创建
+        //作用：
+        //流文件夹
+        //2-1.打包出去不会被压缩加密，可以任由我们摆布
+        //2-2.移动平台只读，PC平台可读可写
+        //2-3.可以放入一些需要自定义动态加载的初始资源
+
+知识点四 persistentDataPath 持久数据文件夹
+        //路径获取：
+        print(Application.persistentDataPath);
+
+        //注意：
+        //不需要我们自己将创建
+        //作用：
+        //固定数据文件夹
+        //3-1.所有平台都可读可写
+        //3-2.一般用于放置动态下载或者动态创建的文件，游戏中创建或者获取的文件都放在其中
+
+知识点五 Plugins 插件文件夹
+        //路径获取：
+        //一般不获取
+
+        //注意：
+        //需要我们自己将创建
+        //作用：
+        //插件文件夹
+        //不同平台的插件相关文件放在其中
+        //比如IOS和Android平台
+
+知识点六 Editor 编辑器文件夹
+        //路径获取：
+        //一般不获取
+        //如果硬要获取 可以用工程路径拼接
+        print(Application.dataPath + "/Editor");
+
+        //注意：
+        //需要我们自己将创建
+        //作用：
+        //编辑器文件夹
+        //5-1.开发Unity编辑器时，编辑器相关脚本放在该文件夹中
+        //5-2.该文件夹中内容不会被打包出去
+
+知识点七 默认资源文件夹 Standard Assets
+        //路劲过去：
+        //一般不获取
+
+        //注意：
+        //需要我们自己将创建
+        //作用：
+        //默认资源文件夹
+        //一般Unity自带资源都放在这个文件夹下
+        //代码和资源优先被编译<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/Application.html">UnityEngine.Application - Unity 脚本手册 Scripting API</a></p>
+<h2 id="Resources同步加载"><a href="#Resources同步加载" class="headerlink" title="Resources同步加载"></a>Resources同步加载</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 常用资源类型
+        //1.预设体对象——GameObject)要实例化)
+        //2.音效文件——AudioClip
+        //3.文本文件——TextAsset
+        //4.图片文件——Texture
+        //5.其它类型——需要什么用什么类型
+
+知识点二 资源同步加载 普通方法
+        //在一个工程当中 Resources文件夹 可以有多个 通过API加载时 它会自己去这些同名的Resources文件夹中去找资源
+        //打包时 Resources文件夹 里的内容 都会打包在一起
+
+        //1.预设体对象 想要创建在场景上 记住实例化
+        // 第一步：要去加载预设体的资源文件(本质上 就是加载 配置数据 在内存中)
+        Object obj = Resources.Load("Cube");
+        //第二步：如果想要在场景上 创建预设体 一定是加载配置文件过后 然后实例化
+        Instantiate(obj);
+
+        // 第一步：要去加载预设体的资源文件(本质上 就是加载 配置数据 在内存中)
+        Object obj2 = Resources.Load("Sphere");
+        //第二步：如果想要在场景上 创建预设体 一定是加载配置文件过后 然后实例化
+        Instantiate(obj2);
+
+        //2.音效资源
+        //第一步：就是加载数据
+        Object obj3 = Resources.Load("Music/BKMusic");
+        //第二步：使用数据 我们不需要实例化 音效切片 我们只需要把数据 赋值到正确的脚本上即可
+        audioS.clip = obj3 as AudioClip;
+        audioS.Play();
+
+        //3.文本资源
+        //文本资源支持的格式
+        //.txt
+        //.xml
+        //.bytes
+        //.json
+        //.html
+        //.csv
+        //.....
+        TextAsset ta = Resources.Load("Txt/Test") as TextAsset;
+        //文本内容
+        print(ta.text);
+        //字节数据组
+        //print(ta.bytes);
+        //4.图片
+        tex = Resources.Load("Tex/TestJPG") as Texture;
+        GUI.DrawTexture(new Rect(0, 0, 100, 100), tex);)(画出图片)
+        //5.其它类型 需要什么类型 就用什么类型就行
+        //6.问题：资源同名怎么办
+        //Resources.Load加载同名资源时 无法准确加载出你想要的内容
+        //可以使用另外的API
+        //6-1加载指定类型的资源
+        //tex = Resources.Load("Tex/TestJPG", typeof(Texture)) as Texture;
+
+        ta = Resources.Load("Tex/TestJPG", typeof(TextAsset)) as TextAsset;
+        //print(ta.text);
+
+        //6-2加载指定名字的所有资源
+        Object[] objs = Resources.LoadAll("Tex/TestJPG");
+
+ 知识点三 资源同步加载 泛型方法
+        TextAsset ta2 = Resources.Load&lt;TextAsset&gt;("Tex/TestJPG");
+        print(ta2.text);
+
+        tex = Resources.Load&lt;Texture&gt;("Tex/TestJPG");<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Resources异步加载"><a href="#Resources异步加载" class="headerlink" title="Resources异步加载"></a>Resources异步加载</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 Resources异步加载方法
+        //注意：
+        //异步加载 不能马上得到加载的资源 至少要等一帧
+
+        //1.通过异步加载中的完成事件监听 使用加载的资源
+        //这句代码 你可以理解 Unity 在内部 就会去开一个线程进行资源下载
+        //ResourceRequest rq = Resources.LoadAsync&lt;Texture&gt;("Tex/TestJPG");
+        //马上进行一个 资源下载结束 的一个事件函数监听
+        //rq.completed += LoadOver;
+        print(Time.frameCount);
+        //这个 刚刚执行了异步加载的 执行代码 资源还没有加载完毕 这样用 是不对的 
+        //一定要等加载结束过后 才能使用
+        //rq.asset ××××××××××××
+
+        //2.通过协程 使用加载的资源
+        StartCoroutine(Load());
+        
+    IEnumerator Load()
+    {
+        //迭代器函数 当遇到yield return时  就会 停止执行之后的代码
+        //然后 协程协调器 通过得到 返回的值 去判断 下一次执行后面的步骤 将会是何时
+        ResourceRequest rq = Resources.LoadAsync&lt;Texture&gt;("Tex/TestJPG");
+        print(Time.frameCount);
+        //第一部分
+        //Unity 自己知道 该返回值 意味着你在异步加载资源 
+        //yield return rq;
+        //Unity 会自己判断 该资源是否加载完毕了 加载完毕过后 才会继续执行后面的代码
+        print(Time.frameCount);
+        
+        //判断资源是否加载结束
+        while(!rq.isDone)
+        {
+            //打印当前的 加载进度 (0-1浮点型值)
+            print(rq.progress);
+            yield return null;
+        }
+        tex = rq.asset as Texture;
+    }
+
+
+总结：
+        //1.完成事件监听异步加载
+        //好处：写法简单
+        //坏处：只能在资源加载结束后 进行处理
+        //“线性加载”
+
+        //2.协程异步加载
+        //好处：可以在协程中处理复杂逻辑，比如同时加载多个资源，比如进度条更新
+        //坏处：写法稍麻烦
+        //“并行加载”
+
+        //注意：
+        //理解为什么异步加载不能马上加载结束，为什么至少要等1帧
+        //理解协程异步加载的原理<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Resources卸载资源"><a href="#Resources卸载资源" class="headerlink" title="Resources卸载资源"></a>Resources卸载资源</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 Resources重复加载资源会浪费内存吗？
+        //其实Resources加载一次资源过后
+        //该资源就一直存放在内存中作为缓存
+        //第二次加载时发现缓存中存在该资源
+        //会直接取出来进行使用
+        //所以 多次重复加载不会浪费内存
+        //但是 会浪费性能)每次加载都会去查找取出，始终伴随一些性能消耗)
+        
+知识点二 如何手动释放掉缓存中的资源
+        //1.卸载指定资源
+        //Resources.UnloadAsset 方法
+        //注意：
+        //该方法 不能释放 GameObject对象 因为它会用于实例化对象
+        //它只能用于一些 不需要实例化的内容 比如 图片 和 音效 文本等等
+        //一般情况下 我们很少单独使用它
+        //GameObject obj = Resources.Load&lt;GameObject&gt;("Cube");
+        //即使是没有实例化的 GameObject对象也不能进行卸载
+        //Resources.UnloadAsset(obj);
+
+        //2.卸载未使用的资源
+        //注意：
+        //一般在过场景时和GC一起使用
+        Resources.UnloadUnusedAssets();
+        GC.Collect();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="场景切换"><a href="#场景切换" class="headerlink" title="场景切换"></a>场景切换</h1><p>  需要把要加载的场景Build Settings中。</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 场景同步切换
+        //在切换场景时
+        //Unity会删除当前场景上所有对象
+        //并且去加载下一个场景的相关信息
+        //如果当前场景 对象过多或者下一个场景对象过多
+        //这个过程会非常的耗时 会让玩家感受到卡顿
+        SceneManager.LoadScene("Lesson20Test");
+
+知识点二 场景异步切换
+        //场景异步加载和资源异步加载 几乎一致 有两种方式
+
+        //1.通过事件回调函数 异步加载
+        //AsyncOperation ao = SceneManager.LoadSceneAsync("Lesson20Test");
+        //当场景异步加载结束后 就会自动调用该事件函数 我们如果希望在加载结束后 做一些事情 那么久可以在该函数中
+        //写处理逻辑
+        //ao.completed += (a) =&gt;
+        //{
+        //    print("加载结束");
+        //};
+
+        //ao.completed += LoadOver;
+
+
+        //2.通过协程异步加载
+        //需要注意的是 加载场景会把当前场景上 没有特别处理的对象 都删除了
+        //所以 协程中的部分逻辑 可能是执行不了的 
+        //解决思路
+        //让处理场景加载的脚本依附的对象 过场景时 不被移除
+        //该脚本依附的对象 过场景时 不会被 移除
+        DontDestroyOnLoad(this.gameObject);
+       StartCoroutine(LoadScene("Lesson20Test"));
+        IEnumerator LoadScene(string name)
+    {
+        //第一步
+        //异步加载场景
+        AsyncOperation ao = SceneManager.LoadSceneAsync(name);
+        //Unity内部的 协程协调器 发现是异步加载类型的返回对象 那么就会等待
+        //等待异步加载结束后 才会继续执行 迭代器函数中后面的步骤
+        print("异步加载过程中 打印的信息");
+        //协程的好处 是异步加载场景时 我可以在加载的同时 做一些别的逻辑
+        //yield return ao;
+        //第二步
+        print("异步加载结束后 打印的信息");
+
+        //比如 我们可以在异步加载过程中 去更新进度条
+        //第一种 就是利用 场景异步加载 的进度 去更新 但是 不是特别准确 一般也不会直接用
+        //while(!ao.isDone)
+        //{
+        //    print(ao.progress);
+        //    yield return null;
+        //}
+
+        //离开循环后 就会认为场景加载结束
+        //可以把进度条顶满 然后 隐藏进度条
+
+        //第二种 就是根据你游戏的规则 自己定义 进度条变化的条件
+        yield return ao;
+        //场景加载结束 更新20%进度
+        //接着去加载场景中 的其它信息
+        //比如
+        //动态加载怪物
+        //这时 进度条 再更新20%
+        //动态加载 场景模型
+        //这时 就认为 加载结束了 进度条顶满 
+        //隐藏进度条
+    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/SceneManagement.SceneManager.html">SceneManagement.SceneManager - Unity 脚本手册 Scripting API </a></p>
+<h1 id="画线功能Linerenderer组件"><a href="#画线功能Linerenderer组件" class="headerlink" title="画线功能Linerenderer组件"></a>画线功能Linerenderer组件</h1><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 LineRenderer是什么
+        //LineRenderer是Unity提供的一个用于画线的组件
+        //使用它我们可以在场景中绘制线段
+        //一般可以用于
+        //1绘制攻击范围
+        //2武器红外线
+        //3辅助功能
+        //4其它画线功能
+        
+知识点二ineRender代码相关
+        //动态添加一个线段
+        GameObject line = new GameObject();
+        line.name = "Line";
+        LineRenderer lineRenderer = line.AddComponent&lt;LineRenderer&gt;();
+
+        //首尾相连
+        lineRenderer.loop = true;
+
+        //开始结束宽
+        lineRenderer.startWidth = 0.02f;
+        lineRenderer.endWidth = 0.02f;
+
+        //开始结束颜色
+        lineRenderer.startColor = Color.white;
+        lineRenderer.endColor = Color.red;
+
+        //设置材质
+        m = Resources.Load&lt;Material&gt;("M");
+        lineRenderer.material = m;
+
+        //设置点
+        //一定注意 设置点 要 先设置点的个数
+        lineRenderer.positionCount = 4;
+        //接着就设置 对应每个点的位置
+        lineRenderer.SetPositions(new Vector3[] { new Vector3(0,0,0),
+                                                  new Vector3(0,0,5),
+                                                  new Vector3(5,0,5)});
+        lineRenderer.SetPosition(3, new Vector3(5, 0, 0));
+
+        //是否使用世界坐标系
+        //决定了 是否随对象移动而移动
+        lineRenderer.useWorldSpace = false;
+
+        //让线段受光影响 会接受光数据 进行着色器计算
+        lineRenderer.generateLightingData = true;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/LineRenderer.html">UnityEngine.LineRenderer - Unity 脚本手册 Scripting API</a></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7jWrk9.png" alt="面板参数一"><br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7jW26K.png" alt="面板参数二"><br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7jWfmD.png" alt="面板参数三"><br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/27/7jWIkd.png" alt="面板参数四"></p>
+<h1 id="核心系统"><a href="#核心系统" class="headerlink" title="核心系统"></a>核心系统</h1><p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/Physics.html">UnityEngine.Physics - Unity 脚本手册 Scripting API</a></p>
+<h2 id="物理系统之范围检测"><a href="#物理系统之范围检测" class="headerlink" title="物理系统之范围检测"></a>物理系统之范围检测</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点二 如何进行范围检测
+        //必备条件：想要被范围检测到的对象 必须具备碰撞器
+        //注意点：
+        //1.范围检测相关API 只有当执行该句代码时 进行一次范围检测 它是瞬时的
+        //2.范围检测相关API 并不会真正产生一个碰撞器 只是碰撞判断计算而已
+
+        //范围检测API
+        //1.盒状范围检测
+        //参数一：立方体中心点
+        //参数二：立方体三边大小
+        //参数三：立方体角度
+        //参数四：检测指定层级)不填检测所有层)
+        //参数五：是否忽略触发器 UseGlobal-使用全局设置 Collide-检测触发器 Ignore-忽略触发器 不填使用UseGlobal
+        //返回值：在该范围内的触发器)得到了对象触发器就可以得到对象的所有信息)
+        print(LayerMask.NameToLayer("UI"));
+        Collider[] colliders = Physics.OverlapBox( Vector3.zero, Vector3.one, Quaternion.AngleAxis(45, Vector3.up), 
+                            1 &lt;&lt; LayerMask.NameToLayer("UI") |
+                            1 &lt;&lt; LayerMask.NameToLayer("Default"), QueryTriggerInteraction.UseGlobal);
+        //0000 0001
+        //0010 0000
+
+        //重要知识点：
+        //关于层级
+        //通过名字得到层级编号 LayerMask.NameToLayer
+        //我们需要通过编号左移构建二进制数
+        //这样每一个编号的层级 都是 对应位为1的2进制数
+        //我们通过 位运算 可以选择想要检测层级
+        //好处 一个int 就可以表示所有想要检测的层级信息
+
+        //层级编号是 0~31 刚好32位
+        //是一个int数
+        //每一个编号 代表的 都是二进制的一位
+        //0—— 1 &lt;&lt; 0——0000 0000 0000 0000 0000 0000 0000 0001 = 1
+        //1—— 1 &lt;&lt; 1——0000 0000 0000 0000 0000 0000 0000 0010 = 2
+        //2—— 1 &lt;&lt; 2——0000 0000 0000 0000 0000 0000 0000 0100 = 4
+        //3—— 1 &lt;&lt; 3——0000 0000 0000 0000 0000 0000 0000 1000 = 8
+        //4—— 1 &lt;&lt; 4——0000 0000 0000 0000 0000 0000 0001 0000 = 16
+        //5—— 1 &lt;&lt; 5——0000 0000 0000 0000 0000 0000 0010 0000 = 32
+
+        //另一个API 
+        //返回值：碰撞到的碰撞器数量
+        //参数：传入一个数组进行存储
+        //Physics.OverlapBoxNonAlloc()
+        
+        if(Physics.OverlapBoxNonAlloc(Vector3.zero, Vector3.one, colliders) != 0)
+
+        //2.球形范围检测
+        //参数一：中心点
+        //参数二：球半径
+        //参数三：检测指定层级)不填检测所有层)
+        //参数四：是否忽略触发器 UseGlobal-使用全局设置 Collide-检测触发器 Ignore-忽略触发器 不填使用UseGlobal
+        //返回值：在该范围内的触发器)得到了对象触发器就可以得到对象的所有信息)
+        colliders = Physics.OverlapSphere(Vector3.zero, 5, 1 &lt;&lt; LayerMask.NameToLayer("Default"));
+
+
+        //另一个API 
+        //返回值：碰撞到的碰撞器数量
+        //参数：传入一个数组进行存储
+        //Physics.OverlapSphereNonAlloc
+        if( Physics.OverlapSphereNonAlloc(Vector3.zero, 5, colliders) != 0 )
+
+        //3.胶囊范围检测
+        //参数一：半圆一中心点
+        //参数二：半圆二中心点
+        //参数三：半圆半径
+        //参数四：检测指定层级)不填检测所有层)
+        //参数五：是否忽略触发器 UseGlobal-使用全局设置 Collide-检测触发器 Ignore-忽略触发器 不填使用UseGlobal
+        //返回值：在该范围内的触发器)得到了对象触发器就可以得到对象的所有信息)
+        colliders = Physics.OverlapCapsule(Vector3.zero, Vector3.up, 1, 1 &lt;&lt; LayerMask.NameToLayer("UI"), QueryTriggerInteraction.UseGlobal);
+
+        //另一个API 
+        //返回值：碰撞到的碰撞器数量
+        //参数：传入一个数组进行存储
+        //Physics.OverlapCapsuleNonAlloc
+        if ( Physics.OverlapCapsuleNonAlloc(Vector3.zero, Vector3.up, 1, colliders ) != 0 )<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="物理系统之射线检测"><a href="#物理系统之射线检测" class="headerlink" title="物理系统之射线检测"></a>物理系统之射线检测</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">知识点一 射线对象
+        //1.3D世界中的射线
+        //假设有一条
+        //起点为坐标(1,0,0)
+        //方向为世界坐标Z轴正方向的射线
+        //注意：
+        //理解参数含义
+        //参数一：起点
+        //参数二：方向)一定记住 不是两点决定射线方向，第二个参数 直接就代表方向向量)
+        
+        //目前只是申明了一个射线对象 对于我们来说 没有任何的用处
+        Ray r = new Ray(Vector3.right, Vector3.forward);
+
+        //Ray中的参数
+        print(r.origin);//起点
+        print(r.direction);//方向
+
+        //2.摄像机发射出的射线
+        // 得到一条从屏幕位置作为起点
+        // 摄像机视口方向为 方向的射线
+        Ray r2 = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
+知识点三 碰撞检测函数
+        //Physics类中提供了很多进行射线检测的静态函数
+        //他们有很多种重载类型 我们只需要掌握核心的几个函数 其它函数自然就明白什么意思了
+        //注意：
+        //射线检测也是瞬时的
+        //执行代码时进行一次射线检测
+
+        //1.最原始的射线检测
+        // 准备一条射线
+        Ray r3 = new Ray(Vector3.zero, Vector3.forward);
+        // 进行射线检测 如果碰撞到对象 返回true
+        //参数一：射线
+        //参数二: 检测的最大距离 超出这个距离不检测
+        //参数三：检测指定层级)不填检测所有层)
+        //参数四：是否忽略触发器 UseGlobal-使用全局设置 Collide-检测触发器 Ignore-忽略触发器 不填使用UseGlobal
+        //返回值：bool 当碰撞到对象时 返回 true 没有 返回false
+
+        if (Physics.Raycast(r3, 1000, 1 &lt;&lt; LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal))
+
+        //还有一种重载 不用传入 射线 直接传入起点 和 方向 也可以用于判断
+        //就是把 第一个参数射线 变成了 射线的 两个点 一个起点 一个方向
+        if (Physics.Raycast(Vector3.zero, Vector3.forward, 1000, 1 &lt;&lt; LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal))
+
+        //2.获取相交的单个物体信息
+        //物体信息类 RaycastHit
+        RaycastHit hitInfo;
+        //参数一：射线
+        //参数二：RaycastHit是结构体 是值类型 Unity会通过out 关键在 在函数内部处理后 得到碰撞数据后返回到该参数中
+        //参数三：距离
+        //参数四：检测指定层级)不填检测所有层)
+        //参数五：是否忽略触发器 UseGlobal-使用全局设置 Collide-检测触发器 Ignore-忽略触发器 不填使用UseGlobal
+        if( Physics.Raycast(r3, out hitInfo, 1000, 1&lt;&lt;LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal) )
+        {
+            //碰撞器信息
+            print("碰撞到物体的名字" + hitInfo.collider.gameObject.name);
+            //碰撞到的点
+            print(hitInfo.point);
+            //法线信息
+            print(hitInfo.normal);
+            //得到碰撞到对象的位置
+            print(hitInfo.transform.position);
+            //得到碰撞到对象 离自己的距离
+            print(hitInfo.distance);
+            //RaycastHit 该类 对于我们的意义
+            //它不仅可以得到我们碰撞到的对象信息
+            //还可以得到一些 碰撞的点 距离 法线等等的信息
+        }
+
+        //还有一种重载 不用传入 射线 直接传入起点 和 方向 也可以用于判断
+        if (Physics.Raycast(Vector3.zero, Vector3.forward, out hitInfo, 1000, 1 &lt;&lt; LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal))
+
+        //3.获取相交的多个物体
+        //可以得到碰撞到的多个对象
+        //如果没有 就是容量为0的数组
+        //参数一：射线
+        //参数二：距离
+        //参数三：检测指定层级)不填检测所有层)
+        //参数四：是否忽略触发器 UseGlobal-使用全局设置 Collide-检测触发器 Ignore-忽略触发器 不填使用UseGlobal
+        RaycastHit[] hits = Physics.RaycastAll(r3, 1000, 1 &lt;&lt; LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal);
+
+        //还有一种重载 不用传入 射线 直接传入起点 和 方向 也可以用于判断
+        //之前的参数一射线 通过两个点传入
+        hits = Physics.RaycastAll(Vector3.zero, Vector3.forward, 1000, 1 &lt;&lt; LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal);
+
+        //还有一种函数 返回的碰撞的数量 通过out得到数据
+        if(Physics.RaycastNonAlloc(r3, hits, 1000, 1 &lt;&lt; LayerMask.NameToLayer("Monster"), QueryTriggerInteraction.UseGlobal) &gt; 0 )<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/Ray.html">UnityEngine.Ray - Unity 脚本手册 Scripting API</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.taikr.com/docs/UnityDocumentation_2019.1/ScriptReference/RaycastHit.html">UnityEngine.RaycastHit - Unity 脚本手册 Scripting API</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">憨憨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wwy010518.github.io/posts/1538.html">http://wwy010518.github.io/posts/1538.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wwy010518.github.io" target="_blank">憨憨</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Unity/">Unity</a></div><div class="post_share"><div class="social-share" data-image="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://s4.ax1x.com/2022/01/22/7fZRxA.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fZRxA.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://s4.ax1x.com/2022/01/22/7fZcPe.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fZcPe.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1539.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Unity核心</div></div></a></div><div class="next-post pull-right"><a href="/posts/1537.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Unity入门</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/1537.html" title="Unity入门"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-08-30</div><div class="title">Unity入门</div></div></a></div><div><a href="/posts/1539.html" title="Unity核心"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-05</div><div class="title">Unity核心</div></div></a></div><div><a href="/posts/1541.html" title="Unity相关_UGUI"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-24</div><div class="title">Unity相关_UGUI</div></div></a></div><div><a href="/posts/1540.html" title="Unity进阶"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-13</div><div class="title">Unity进阶</div></div></a></div><div><a href="/posts/1543.html" title="Unity相关_数据持久化"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-24</div><div class="title">Unity相关_数据持久化</div></div></a></div><div><a href="/posts/1542.html" title="Unity相关_FairyGUI"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-12</div><div class="title">Unity相关_FairyGUI</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">憨憨</div><div class="author-info__description">故事总需要个起点</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://wwy010518.github.io"><i class="fab fa-home"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/WWY010518/WWY010518.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=3179342661&amp;website=www.qtxml.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">你会是我生命中很重要的人么</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3D%E6%95%B0%E5%AD%A6"><span class="toc-number">1.</span> <span class="toc-text">3D数学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97Mathf%E5%85%AC%E5%85%B1%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">数学计算Mathf公共类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">三角函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">坐标系说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vector3%E5%90%91%E9%87%8F"><span class="toc-number">1.4.</span> <span class="toc-text">Vector3向量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E6%A8%A1%E9%95%BF%E5%92%8C%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F"><span class="toc-number">1.4.1.</span> <span class="toc-text">向量模长和单位向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4"><span class="toc-number">1.4.2.</span> <span class="toc-text">向量加减乘除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%82%B9%E4%B9%98"><span class="toc-number">1.4.3.</span> <span class="toc-text">向量点乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E5%8F%89%E4%B9%98"><span class="toc-number">1.4.4.</span> <span class="toc-text">向量叉乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E6%8F%92%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-number">1.4.5.</span> <span class="toc-text">向量插值运算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quaternion%E5%9B%9B%E5%85%83%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">Quaternion四元数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%9B%9B%E5%85%83%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">为什么使用四元数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.5.2.</span> <span class="toc-text">四元数是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.3.</span> <span class="toc-text">四元数常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%AE%A1%E7%AE%97"><span class="toc-number">1.5.4.</span> <span class="toc-text">四元数计算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F-%E5%BB%B6%E6%97%B6-%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.</span> <span class="toc-text">延迟)延时)函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E5%90%8C%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.7.</span> <span class="toc-text">协同程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E5%90%8C%E7%A8%8B%E5%BA%8F%E5%8E%9F%E7%90%86"><span class="toc-number">1.8.</span> <span class="toc-text">协同程序原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unity%E4%B8%AD%E7%9A%84%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.9.</span> <span class="toc-text">Unity中的特殊文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resources%E5%90%8C%E6%AD%A5%E5%8A%A0%E8%BD%BD"><span class="toc-number">1.10.</span> <span class="toc-text">Resources同步加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resources%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD"><span class="toc-number">1.11.</span> <span class="toc-text">Resources异步加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resources%E5%8D%B8%E8%BD%BD%E8%B5%84%E6%BA%90"><span class="toc-number">1.12.</span> <span class="toc-text">Resources卸载资源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E5%88%87%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">场景切换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%BB%E7%BA%BF%E5%8A%9F%E8%83%BDLinerenderer%E7%BB%84%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">画线功能Linerenderer组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text">核心系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%8C%83%E5%9B%B4%E6%A3%80%E6%B5%8B"><span class="toc-number">4.1.</span> <span class="toc-text">物理系统之范围检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B9%8B%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B"><span class="toc-number">4.2.</span> <span class="toc-text">物理系统之射线检测</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/2049.html" title="ET框架笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="ET框架笔记"/></a><div class="content"><a class="title" href="/posts/2049.html" title="ET框架笔记">ET框架笔记</a><time datetime="2022-01-24T13:00:00.000Z" title="发表于 2022-01-24 21:00:00">2022-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/513.html" title="计算机操作系统原理笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7f7vPe.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="计算机操作系统原理笔记"/></a><div class="content"><a class="title" href="/posts/513.html" title="计算机操作系统原理笔记">计算机操作系统原理笔记</a><time datetime="2022-01-08T13:00:00.000Z" title="发表于 2022-01-08 21:00:00">2022-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1542.html" title="Unity相关_FairyGUI"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Unity相关_FairyGUI"/></a><div class="content"><a class="title" href="/posts/1542.html" title="Unity相关_FairyGUI">Unity相关_FairyGUI</a><time datetime="2021-12-12T13:00:00.000Z" title="发表于 2021-12-12 21:00:00">2021-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/03008.html" title="Unity相关_基于Lua的热更新解决方案"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Unity相关_基于Lua的热更新解决方案"/></a><div class="content"><a class="title" href="/posts/03008.html" title="Unity相关_基于Lua的热更新解决方案">Unity相关_基于Lua的热更新解决方案</a><time datetime="2021-10-28T13:00:00.000Z" title="发表于 2021-10-28 21:00:00">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1.html" title="Markdown语法格式（.md后缀-使用typora）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fN86P.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Markdown语法格式（.md后缀-使用typora）"/></a><div class="content"><a class="title" href="/posts/1.html" title="Markdown语法格式（.md后缀-使用typora）">Markdown语法格式（.md后缀-使用typora）</a><time datetime="2021-09-28T13:00:00.000Z" title="发表于 2021-09-28 21:00:00">2021-09-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 憨憨</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></head></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
