@@ -1,20 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>憨憨</title>
+  <title>雪夜寒窗</title>
   
-  <subtitle>憨憨の博客</subtitle>
+  <subtitle>雪夜寒窗の博客</subtitle>
   <link href="http://wwy010518.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwy010518.github.io/"/>
-  <updated>2022-02-18T12:41:00.176Z</updated>
+  <updated>2022-02-28T09:10:40.638Z</updated>
   <id>http://wwy010518.github.io/</id>
   
   <author>
-    <name>憨憨</name>
+    <name>雪夜寒窗</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ET6.0框架Demo源码解析</title>
+    <link href="http://wwy010518.github.io/posts/2052.html"/>
+    <id>http://wwy010518.github.io/posts/2052.html</id>
+    <published>2022-02-28T13:00:00.000Z</published>
+    <updated>2022-02-28T09:10:40.638Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="Game-Play" scheme="http://wwy010518.github.io/categories/Game-Play/"/>
+    
+    <category term="技术架构" scheme="http://wwy010518.github.io/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="ET" scheme="http://wwy010518.github.io/tags/ET/"/>
+    
+    <category term="游戏框架" scheme="http://wwy010518.github.io/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Unity角色换装</title>
@@ -542,32 +570,6 @@
       
     <summary type="html">&lt;h1 id=&quot;CLR中简单数据结构类&quot;&gt;&lt;a href=&quot;#CLR中简单数据结构类&quot; class=&quot;headerlink&quot; title=&quot;CLR中简单数据结构类&quot;&gt;&lt;/a&gt;CLR中简单数据结构类&lt;/h1&gt;&lt;p&gt;命名空间：System.Collections；&lt;/p&gt;
 &lt;h2 i</summary>
-      
-    
-    
-    
-    <category term="编程语言" scheme="http://wwy010518.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="C#" scheme="http://wwy010518.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/"/>
-    
-    
-    <category term="C#" scheme="http://wwy010518.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#核心</title>
-    <link href="http://wwy010518.github.io/posts/1027.html"/>
-    <id>http://wwy010518.github.io/posts/1027.html</id>
-    <published>2019-07-15T13:00:00.000Z</published>
-    <updated>2022-01-25T07:47:52.980Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="面向对象基本概念"><a href="#面向对象基本概念" class="headerlink" title="面向对象基本概念"></a>面向对象基本概念</h1><p>其他编程方式：面向过程编程；<br>三大特征：封装+继承+多态；<br>七大原则：<br>1.单一原则：一个类只处理自己应该处理的。应该各司其职，例如把每个移动技能都尽量写出一个类，方便修改。<br>2.开闭原则：新功能尽量是加处理而不是改代码。继承就是最明显的开闭原则，不要修改模板的内容，例如定义属性要用方法定义， getset，方便修改，修改类时或者改别人的方法，不清楚逻辑的就再写一个类。<br>3.依赖倒置原则：不依赖于具体实现，要依赖抽象(接口)。要依赖于抽象，不要依赖于具体实现，可以先了解需求，再画图，最后变成代码。<br>4.接口隔离原则：一个接口一个行为。接口里的单一原则，需要分的事件要分清楚。<br>5.里氏替换原则：用父类容器装载子类，任何地方子类都能替换父类。不要修改别人的代码，可以继承他的代码去重写(注：多态：父类的指针指向子类，而调用子类的方法)<br>6.合成复用原则：尽量用组合复用的形式。继承关系中，父类要可以解决子类共同的问题，子类时解决特与的问题，能用现有的类，就别再自己创建类。<br>7.迪米特法则：一个类尽量减少对别的类引用。又叫最少知识原则，减少耦合性，类自己能解决的，尽量不要牵扯别的类，比如A类引用B类的方法，但是B类方法参数改了，A类也要改。</p><h1 id="面向对象三特征-封装"><a href="#面向对象三特征-封装" class="headerlink" title="面向对象三特征-封装"></a>面向对象三特征-封装</h1><p>一般类定义：</p><h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">class 类名{  类名 对象名=new 类名; }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="类一般成员和封装"><a href="#类一般成员和封装" class="headerlink" title="类一般成员和封装"></a>类一般成员和封装</h2><p>成员变量：成员变量是声明在类中的变量，可以是任意类型；<br>成员方法(函数)：类的成员函数是一个在类定义中有它的定义或原型的函数;<br>访问修饰符种类：public(接口成员、命名空间、枚举默认)、private(类成员)、protected、internal(类、结构、接口、委托默认)；</p><h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>构造函数：类的构造函数是类的一个特殊的成员函数，当创建类的新对象时执行，构造函数的名称与类的名称完全相同，它没有任何返回类型默认的构造函数没有任何参数，但是如果你需要一个带有参数的构造函数可以有参数，这种构造函数叫做参数化构造函数。这种技术可以帮助你在创建对象的同时给对象赋初始值，以下是它的特殊写法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public 类名(参数1，参数2):this(参数1){  //默认会先调用无参构造(this)或者父类构造函数(换成base)}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>##析构函数<br>析构函数：类的 析构函数 是类的一个特殊的成员函数，当类的对象超出范围时执行，析构函数的名称是在类的名称前加上一个波浪形(~)作为前缀，它不返回值，也不带任何参数，析构函数用于在结束程序(比如关闭文件、释放内存等)之前释放资源，就是当引用类型的堆被回收时被调用，析构函数不能继承或重载。</p><h2 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h2><p>定义:简称GC，当堆(Heap)中的变量没有被任何对象引用时，就会被自动回收；<br>算法：引用计数、标记清除、标记整理、复制集合；<br>注意事项：GC只负责堆的垃圾回收,而栈(stack)的内存时系统自动管理的，值类型有自己的生命周期，会自动分配和释放；<br>原理：C#会把堆中的内存分为0代内存、1代内存、2代内存(代是分代算法，代系数越大速度越慢，内存越大)，新分配的对象会配置在0代内存，每次分配都可能会进行垃圾回收释放内存(0代内存或者1代内存满时)，垃圾回收机制确认堆中的垃圾，首先会标记对象，发现是否有引用，标记后可达对象，未标记未不可达对象(垃圾)，然后就将对象压缩堆(挂起执行托管代码线程)释放垃圾，搬迁可达对象地址到下一代内存(到第二代内存不会在搬迁)，大对象(83kb以上)总认为是第二代内存。<br>手动触发代码：GC.Collect();一般Loading过场景调用</p><h2 id="成员属性"><a href="#成员属性" class="headerlink" title="成员属性"></a>成员属性</h2><p>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">访问修饰符 属性类型 属性名{  访问修饰符 get{}//自动属性可以省略{}  访问修饰符 set{}//自动属性可以省略{}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="索引器"><a href="#索引器" class="headerlink" title="索引器"></a>索引器</h2><p>概念:让对象可以像数组一样通过索引访问元素，索引器可以重载；<br>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">访问修饰符 返回值 this[参数1、参数2]{  get{}  set{}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="静态类和静态成员static"><a href="#静态类和静态成员static" class="headerlink" title="静态类和静态成员static"></a>静态类和静态成员static</h2><p>静态类：不能被实例化，只能有静态成员；<br>静态变量：当我们声明一个类成员为静态时，意味着无论有多少个类的对象被创建，只会有一个该静态成员的副本；<br>静态函数：这样的函数只能访问静态变量。静态函数在对象被创建之前就已经存在；<br>静态构造函数：不能使用访问修饰符，不能有参数，使用静态类或者普通类的成员时会自动且仅调用一次；</p><h2 id="拓展方法"><a href="#拓展方法" class="headerlink" title="拓展方法"></a>拓展方法</h2><p>特点：一定是写在静态类，一定是静态函数，第一个参数为拓展目标，第一个参数用this修饰；<br>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">访问修饰符 static 返回值 函数名(this 拓展类名 参数名，参数1，参数2){}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h2><p>概念：使用operator关键字让自定义类和结构体可以使用运算符；<br>特点：一定是公告静态方法，返回值在operator前(条件运算要成对出现，一个符号可以多个重载，不能使用ref和out);<br>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public static 返回类型 operator 运算符(参数列表){}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>不可重载的运算符:逻辑与&amp;&amp; 、逻辑非||、索引符[]、强转符号()、点.、三目运算符?:、赋值符号=；</p><h2 id="内部类和分部类"><a href="#内部类和分部类" class="headerlink" title="内部类和分部类"></a>内部类和分部类</h2><p>内部类定义:在一个类中再声明一个类，使用时要外部类点出自己；<br>分部类：用partial把类分成几部分,注意访问修饰符要一样;<br>分部方法:用partial将方法声明和实现分离，强制私有，只能在分部类声明，不能有返回值，不能用out关键字；</p><h1 id="面向对象三特征-继承"><a href="#面向对象三特征-继承" class="headerlink" title="面向对象三特征-继承"></a>面向对象三特征-继承</h1><h2 id="继承基本规则"><a href="#继承基本规则" class="headerlink" title="继承基本规则"></a>继承基本规则</h2><p>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">class 类名 ：被继承的类{  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><p>概念:任何父类出现的地方，子类都可以替代<br>语法:</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">父类 变量名=new 子类()；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>###is关键字<br>定义:判断一个对象是否为指定类对象，返回bool值<br>语法:对象 is 类名</p><p>###as关键字<br>定义:将一个对象转换为指定类对象，没有返回null<br>语法:对象 as 类名</p><h2 id="继承中的构造函数"><a href="#继承中的构造函数" class="headerlink" title="继承中的构造函数"></a>继承中的构造函数</h2><p>特点:实例化时先执行父类构造函数,再执行子类构造函数；</p><h2 id="万物之父和装箱拆箱"><a href="#万物之父和装箱拆箱" class="headerlink" title="万物之父和装箱拆箱"></a>万物之父和装箱拆箱</h2><p>万物之父关键字:object<br>装箱:例如object存储值类型发生，把值类型从栈中迁移到堆中，变成引用类型；<br>拆箱:例如把object转为值类型发生，把引用类型从堆中迁移到栈中，变成值类型；</p><h2 id="密封类"><a href="#密封类" class="headerlink" title="密封类"></a>密封类</h2><p>概念:使用sealed关键字使类无法再被继承；</p><h1 id="面向对象三特征-多态"><a href="#面向对象三特征-多态" class="headerlink" title="面向对象三特征-多态"></a>面向对象三特征-多态</h1><h2 id="vob"><a href="#vob" class="headerlink" title="vob"></a>vob</h2><p>关键字：virtual(虚函数)和override(重写);</p><h2 id="抽象类和抽象方法"><a href="#抽象类和抽象方法" class="headerlink" title="抽象类和抽象方法"></a>抽象类和抽象方法</h2><p>关键字：abstract(抽象函数)；<br>特点：抽象类不能被实例化，但是遵守里氏替换原则，抽象方法没有方法体；</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>关键字:interface；<br>特点：不包含成员变量，只有抽象方法、属性、索引器、事件，成员不能被实现，不能是私有成员，类可以继承多个接口，接口也遵守里氏替换原则；<br>作用：不作为实体基类,但是可以作为一个行为基类;<br>命名规则:帕斯卡命名法前面加I;</p><p>###显示实现接口<br>作用：当实现俩个接口后，其中有相同方法时；<br>语法：用接口名点出方法名;</p><h2 id="密封方法"><a href="#密封方法" class="headerlink" title="密封方法"></a>密封方法</h2><p>关键字:sealed修饰不能再被重写；</p><h1 id="面向对象相关知识点"><a href="#面向对象相关知识点" class="headerlink" title="面向对象相关知识点"></a>面向对象相关知识点</h1><h2 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h2><p>特点：命名空间可以包裹命名空间;<br>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">namespace 命名空间名{  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="万物之父中的方法"><a href="#万物之父中的方法" class="headerlink" title="万物之父中的方法"></a>万物之父中的方法</h2><p>静态方法Equals:判断俩个对象是否相等,值类型比较数值，引用类型比较地址;<br>静态方法RefereceEquals：判断俩个对象引用是否相等，主要用于应用类型，值类型返回始终false;<br>普通方法GetType():获取对象运行时的类型(反射相关);<br>普通方法MemberwiseClone：拷贝对象,引用对象指向相同地址;<br>虚方法Equals:相当于RefereceEquals,但是在种类中ValueType中重写了,可以用来比较值相等；<br>虚方法GetHashCode：获取对象哈希值(对象唯一编码，但是也可能u不同对象哈希码一样)；<br>虚方法ToString：返回对象代表的字符串;</p><h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p>注意事项：string大部分方法需要赋值再使用，因为会实例化一个新的字符串；<br>字符串名[]：字符串索引器;<br>(静态)string.Format()：字符串拼接(替代);<br>字符串名.IndexOf()：正向查找字符位置;<br>字符串名.LastIndexOf()：反向查找字符位置;<br>字符串名.Remove()：移除指定位置的字符;<br>字符串名.Replace()：替换指定字符串;<br>字符串名.ToUpper()：字符串全部大写；<br>字符串名.ToLower()：字符串全部小写;<br>字符串名.Substring()：字符串截取；<br>字符串名.Split()：字符串切割；</p><h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><p>作用：修改字符串而不创建新的对象<br>字符串.Capacity:获取容量；<br>字符串.Append:增；<br>字符串.AppendFormat():拼接；<br>字符串.Insert():插入；<br>字符串.Remove():删；<br>字符串.Clear():清空；<br>索引-字符串[]:用来查和改；<br>str.Replace():替换；</p><h2 id="字符串拼接的方式"><a href="#字符串拼接的方式" class="headerlink" title="字符串拼接的方式"></a>字符串拼接的方式</h2><h3 id="直接通过-拼接"><a href="#直接通过-拼接" class="headerlink" title="直接通过+拼接"></a>直接通过+拼接</h3><p>  会有性能问题，字符串少还好，越多GC越严重。</p><h3 id="通过StringBuilder拼接字符串"><a href="#通过StringBuilder拼接字符串" class="headerlink" title="通过StringBuilder拼接字符串"></a>通过StringBuilder拼接字符串</h3><p>  字符串数量越多性能相对直接+拼接方法越高。</p><h3 id="通过StringBuffer拼接字符串"><a href="#通过StringBuffer拼接字符串" class="headerlink" title="通过StringBuffer拼接字符串"></a>通过StringBuffer拼接字符串</h3><p>  区别：线程安全版的StringBuilder，但是性能不如StringBuilder;</p><h3 id="string-Format"><a href="#string-Format" class="headerlink" title="string.Format"></a>string.Format</h3><p>原理：其底层本质还是StringBuilder来实现的；</p><h3 id="方式拼接字符串"><a href="#方式拼接字符串" class="headerlink" title="$方式拼接字符串"></a>$方式拼接字符串</h3><p>原理：是string.Format简化版，C#6.0新增操作；<br>语法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">string str = $"my name is{name}, I'm {age} years old";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h1><h2 id="多脚本文件"><a href="#多脚本文件" class="headerlink" title="多脚本文件"></a>多脚本文件</h2><p>.cs：源码文件<br>.sln：解决方案入口文件<br>.dll：编译文件</p><h2 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h2><p>定义：统一建模语言，是面向对象设计的建模语言；<br>理解：可以通过一些UML可视化软件(visio)就可以生成代码；</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;面向对象基本概念&quot;&gt;&lt;a href=&quot;#面向对象基本概念&quot; class=&quot;headerlink&quot; title=&quot;面向对象基本概念&quot;&gt;&lt;/a&gt;面向对象基本概念&lt;/h1&gt;&lt;p&gt;其他编程方式：面向过程编程；&lt;br&gt;三大特征：封装+继承+多态；&lt;br&gt;七大原则：&lt;br&gt;1</summary>
       
     
     
