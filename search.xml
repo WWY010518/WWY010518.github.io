@@ -13,6 +13,8 @@
       
       <categories>
           
+          <category> 大学知识 </category>
+          
           <category> CS基础 </category>
           
           <category> 人工智能 </category>
@@ -122,9 +124,9 @@
     
     
     <entry>
-      <title>Unity角色换装</title>
-      <link href="/posts/1552.html"/>
-      <url>/posts/1552.html</url>
+      <title>Unity相关-角色换装</title>
+      <link href="/posts/1600.html"/>
+      <url>/posts/1600.html</url>
       
         <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
       
@@ -153,9 +155,9 @@
     
     
     <entry>
-      <title>Unity插件 - Animancer插件使用</title>
-      <link href="/posts/1549.html"/>
-      <url>/posts/1549.html</url>
+      <title>Unity插件-Animancer插件使用</title>
+      <link href="/posts/1577.html"/>
+      <url>/posts/1577.html</url>
       
         <content type="html"><![CDATA[<h1 id="Animancer介绍"><a href="#Animancer介绍" class="headerlink" title="Animancer介绍"></a>Animancer介绍</h1><h1 id="Animancer初步使用"><a href="#Animancer初步使用" class="headerlink" title="Animancer初步使用"></a>Animancer初步使用</h1><p>使用方法：添加Animator组件和AnimancerComponent相关组件，再编写脚本控制动画；</p><p>脚本案例：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public sealed class PlayAnimation : MonoBehaviour{    [SerializeField] private AnimancerComponent _Animancer;    [SerializeField] private AnimationClip _Clip;    private void OnEnable()    {        _Animancer.Play(_Clip);        var state = _Animancer.Play(_Clip);        state.Speed = ...                        state.Time = ...                     state.NormalizedTime = ...              state.Events.OnEnd = ...                   _Animancer.Play(_Clip).Time = 0;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="Animancer核心组件"><a href="#Animancer核心组件" class="headerlink" title="Animancer核心组件"></a>Animancer核心组件</h1><h2 id="AnimancerComponent"><a href="#AnimancerComponent" class="headerlink" title="AnimancerComponent"></a>AnimancerComponent</h2><p>说明：普通的动画师组件</p><p>AnimancerComponent类中的API：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">成员变量：//1.获取Animator Controller组件animancer.Animator//2.获取Playableanimancer.Playable//3.获取该组件上的动画状态字典animancer.States//4.获取该组件上的动画层级animancer.Layers成员方法：//1.播放动画animancer.Play(AnimationClip, float, FadeMode)//2.使用键值播放动画。如果该键没有注册，返回nullanimancer.TryPlay(Object, float, FadeMode)//3.停止当前动画或者目标动画animancer.Stop(参数)//4.判断是否播放当前动画或者目标动画animancer.IsPlaying()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="NamedAnimancerComponent"><a href="#NamedAnimancerComponent" class="headerlink" title="NamedAnimancerComponent"></a>NamedAnimancerComponent</h2><p>说明：继承自AnimancerComponent并添加一个数组，并按名称注册动画，可以使用名字播放动画，这与 Unity 的旧版组件非常相似；</p><p>AnimancerComponent类中的API：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">增加的成员变量：//1.获取动画源列表animancer.Animations//1.获取默认动画源animancer.DefaultAnimation<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="HybridAnimancerComponent"><a href="#HybridAnimancerComponent" class="headerlink" title="HybridAnimancerComponent"></a>HybridAnimancerComponent</h2><p>说明：继承自NamedAnimancerComponent，并且添加了控制器，可以融合Animator Controller组件和Animancer；</p><h1 id="Animancer动画状态"><a href="#Animancer动画状态" class="headerlink" title="Animancer动画状态"></a>Animancer动画状态</h1><p>动画状态说明：播放动画时，Animancer会创建一个状态来管理它并跟踪它的进度，如果以后再次播放相同的动画，它将重用相同的状态；</p><p>AnimancerState类API</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">成员变量：//1.获取动画源文件state.Clip//2.动画事件集合state.Events//3.动画的长度state.Length//4.动画的速度state.Speed//5.状态的开始时间，该变量改变，动画事件也会变state.NormalizedTime//6.状态的结束时间，该变量改变，动画事件也会变state.NormalizedEndTime//7.状态的事件集合state.Events成员方法：//1.销毁动画state.Destroy()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>主要访问和创建状态的方法：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//1.此属性存储该方法最近返回的状态var state = animancer.States.Current;//2.此属性存储最近由 Layer 的方法返回的状态var state = animancer.Layers[x].CurrentState;//3.索引器获取var state = animancer.States[clip];//4.方法获取animancer.States.TryGet(clip, out var state);//5.如果已存在的状态，则此方法将返回该状态。否则它将创建并返回一个新的var state = animancer.States.GetOrCreate(clip);//6.创建新状态，即使该动画已存在一个状态。请注意，每个状态必须具有不同的密钥，否则将引发，注意key时object类型，所以会有装拆箱问题var state = animancer.States.Create(key, clip);//7.创建新状态，而不为其提供键。var state = new ClipState(clip);//8.如果存在的状态，则此方法将销毁该状态并返回，否则，它将返回falseanimancer.States.Destroy(clip);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="Animancer动画过渡"><a href="#Animancer动画过渡" class="headerlink" title="Animancer动画过渡"></a>Animancer动画过渡</h1><p>过渡说明：Animancer中除了使用Clip动画源文件来进行使用，也可以使用ClipTransition播放动画，并且这样效果更好；</p><p>过渡类类型：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//基本过渡：1.ClipTransition：实现ITransition接口，最基本的过渡类型，FadeDuration可以控制动画淡入淡出过渡的时长，Speed控制速度，StartTime和EndTime控制起始时间，同时动画支持添加帧事件；2.ClipTransitionSequence：继承自ClipTransition并简单地添加一个数组，这些数组将在第一个之后按顺序播放（使用他们的每个结束事件来播放下一个）；3.PlayableAssetTransition//混合过渡：1.ManualMixerTransition：简单的混合动画；2.LinearMixerTransition：1D混合动画，用一个参数控制，参数信息和Animator里的混合一致；3.MixerTransition2D：2D混合模式，用俩个参数控制，参数信息和Animator里的混合一致；//控制器过渡：1.ControllerTransition：使用控制器文件；//过渡资源1.过渡类+Asset：过渡资源在资源面板下可以创建该过渡资源文件，和上面不同的时，过渡文件整个项目全局共享，而不是每个对象都有自己单独的过渡。它们都遵循相同的命名约定；2.过渡类+Asset.UnShared:不共享分过渡资源，一般用不着；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="Animancer混合"><a href="#Animancer混合" class="headerlink" title="Animancer混合"></a>Animancer混合</h1><h2 id="动画淡入淡出"><a href="#动画淡入淡出" class="headerlink" title="动画淡入淡出"></a>动画淡入淡出</h2><p>淡入淡出说明：淡入淡出通常不用于动画，因为它们不能混合，但是对于骨架动画非常有用，因为它允许角色模型从一个动画的结束姿势平滑地过渡到另一个动画的起始姿势，而不需要两个姿势完全相同。这也意味着，如果动画在任何时候被中断，过渡仍然可以是平滑的；</p><p>常用淡入淡出类型：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//1.参数值按百分比计算下标0:FadeMode.FixedSpeed//2.参数根据事件计算下标1:FadeMode.FixedDuration//3.好像是不会创建的新的状态下标2:FadeMode.FromStart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="动画的层"><a href="#动画的层" class="headerlink" title="动画的层"></a>动画的层</h2><p>层说明：基本和Animator使用方法一致；</p><p>AnimancerLayer类API说明</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">重要成员变量：//1.层级下标layer.Index//2.层级叠加模式还是覆盖模式layer.IsAdditive//3.层权重layer.Weight重要成员方法：//1.设置骨骼蒙版layer.SetMask(AvatarMask)//2.设置层权重layer.SetWeight(float)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="动画混合树"><a href="#动画混合树" class="headerlink" title="动画混合树"></a>动画混合树</h2><p>混合树说明：基本和Animator使用方法一致；</p><p>混合树使用：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//混合类类型说明1.ManualMixerState：没有参数2.LinearMixerState：float参数，线性插值算法3.CartesianMixerState：Vector参数，梯度波段O(n2)插值算法4.DirectionalMixerState：Vector参数，极地梯度波段O(n2)插值算法//案例public sealed class LinearMixerExample : MonoBehaviour{    private AnimancerComponent _Animancer;    private AnimationClip _back;    private AnimationClip _forward;    private AnimationClip _left;    private AnimationClip _right;    private float _MovementSpeed;    public CartesianMixerState mixState;    private void Awake()    {        mixState = new CartesianMixerState();        //初始化混合动画        mixState.Initialize(_back, _forward，_left，_right);        //设置动画参数        mixState.SetThreshold(0, new Vector2(0, 0));        mixState.SetThreshold(1,new Vector2(0,-1));        mixState.SetThreshold(2, new Vector2(0, 1));        mixState.SetThreshold(3, new Vector2(-1, 0));        mixState.SetThreshold(4, new Vector2(1, 0));        //设置混合动画的同步，同步适用于移动，但对于空闲动画，通常应禁用同步        MixerState.AutoSynchronizeChildren = false;        mixer.DontSynchronizeChildren();        mixer.DontSynchronize(mixer.GetChild(0));        mixer.Synchronize(mixer.GetChild(1));        //播放        _Animancer.Play(mixState);    }    private void Update()    {            var input = new Vector2(    Input.GetAxisRaw("Horizontal"),    Input.GetAxisRaw("Vertical"));            mixState.Parameter = Vector2.MoveTowards(                mixState.Parameter,                input,                _MovementSpeed * Time.deltaTime);    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="Animancer事件"><a href="#Animancer事件" class="headerlink" title="Animancer事件"></a>Animancer事件</h1><p>事件说明：基本和Animator使用方法一致，但是性能更好，且使用Clip文件使用时，每次都会创建垃圾，除非您缓存事件回调，而ClipTransition访问它将直接引用ClipTransition拥有的，因此当您再次播放时，您所做的任何修改都将保留。这意味着修改通常只应在启动时执行一次，而不是每次播放时都重复进行；</p><p>用法说明：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//1.添加事件state.Events.Add(0.4f, 事件);//2.结束事件，结束一定会调用  state.Events.OnEnd = 事件;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h1 id="Animancer搭配推荐"><a href="#Animancer搭配推荐" class="headerlink" title="Animancer搭配推荐"></a>Animancer搭配推荐</h1>]]></content>
       
@@ -224,7 +226,11 @@
       
       <categories>
           
+          <category> 大学知识 </category>
+          
           <category> CS基础 </category>
+          
+          <category> 计算机操作系统 </category>
           
       </categories>
       
@@ -240,7 +246,7 @@
     
     
     <entry>
-      <title>Unity相关_FairyGUI</title>
+      <title>Unity进阶-FairyGUI</title>
       <link href="/posts/1542.html"/>
       <url>/posts/1542.html</url>
       
@@ -262,7 +268,7 @@
             
             <tag> Unity </tag>
             
-            <tag> GUI解决方案 </tag>
+            <tag> FairyGUI </tag>
             
         </tags>
       
@@ -271,9 +277,9 @@
     
     
     <entry>
-      <title>Unity相关_基于Lua的热更新解决方案</title>
-      <link href="/posts/03008.html"/>
-      <url>/posts/03008.html</url>
+      <title>Unity进阶-基于Lua的热更新解决方案</title>
+      <link href="/posts/1569.html"/>
+      <url>/posts/1569.html</url>
       
         <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
       
@@ -329,9 +335,9 @@
     
     
     <entry>
-      <title>UnityEditor</title>
-      <link href="/posts/1550.html"/>
-      <url>/posts/1550.html</url>
+      <title>Unity进阶-Editor</title>
+      <link href="/posts/1560.html"/>
+      <url>/posts/1560.html</url>
       
         <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
       
@@ -368,6 +374,8 @@
       
       
       <categories>
+          
+          <category> 大学知识 </category>
           
           <category> CS基础 </category>
           
@@ -447,7 +455,7 @@
     
     
     <entry>
-      <title>Unity相关_数据持久化</title>
+      <title>Unity进阶-数据持久化PlayerPrefs</title>
       <link href="/posts/1543.html"/>
       <url>/posts/1543.html</url>
       
@@ -471,6 +479,8 @@
             
             <tag> 数据持久化 </tag>
             
+            <tag> PlayerPrefs </tag>
+            
         </tags>
       
     </entry>
@@ -478,7 +488,106 @@
     
     
     <entry>
-      <title>Unity相关_UGUI</title>
+      <title>Unity进阶-数据持久化Xml</title>
+      <link href="/posts/03008.html"/>
+      <url>/posts/03008.html</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+          <category> 数据持久化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> 数据持久化 </tag>
+            
+            <tag> Xml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-数据持久化二进制</title>
+      <link href="/posts/1544.html"/>
+      <url>/posts/1544.html</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+          <category> 数据持久化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> 数据持久化 </tag>
+            
+            <tag> 二进制 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-数据持久化Json</title>
+      <link href="/posts/03009.html"/>
+      <url>/posts/03009.html</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+          <category> 数据持久化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> 数据持久化 </tag>
+            
+            <tag> Json </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-UGUI</title>
       <link href="/posts/1541.html"/>
       <url>/posts/1541.html</url>
       
@@ -500,7 +609,7 @@
             
             <tag> Unity </tag>
             
-            <tag> GUI解决方案 </tag>
+            <tag> UGUI </tag>
             
         </tags>
       
@@ -509,7 +618,7 @@
     
     
     <entry>
-      <title>Unity相关_GUI</title>
+      <title>Unity进阶-GUI</title>
       <link href="/posts/1540.html"/>
       <url>/posts/1540.html</url>
       
@@ -531,7 +640,7 @@
             
             <tag> Unity </tag>
             
-            <tag> GUI解决方案 </tag>
+            <tag> GUI </tag>
             
         </tags>
       
@@ -541,8 +650,8 @@
     
     <entry>
       <title>Unity进阶-AnimationPlayable</title>
-      <link href="/posts/03009.html"/>
-      <url>/posts/03009.html</url>
+      <link href="/posts/1546.html"/>
+      <url>/posts/1546.html</url>
       
         <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
       
@@ -561,6 +670,120 @@
             <tag> Unity </tag>
             
             <tag> Playable </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-ScriptableObject</title>
+      <link href="/posts/1548.html"/>
+      <url>/posts/1548.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> ScriptableObject </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-InputSystem</title>
+      <link href="/posts/1547.html"/>
+      <url>/posts/1547.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> InputSystem </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-Addressables</title>
+      <link href="/posts/1549.html"/>
+      <url>/posts/1549.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> Addressables </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity进阶-知识补充</title>
+      <link href="/posts/1550.html"/>
+      <url>/posts/1550.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
             
         </tags>
       
