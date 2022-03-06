@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>编译原理</title>
+      <link href="/posts/516.html"/>
+      <url>/posts/516.html</url>
+      
+        <content type="html"><![CDATA[<p>重要信息：老师电话13574404624</p><h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="文法和语言"><a href="#文法和语言" class="headerlink" title="文法和语言"></a>文法和语言</h1><h1 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h1><h1 id="自顶向下语法分析方法"><a href="#自顶向下语法分析方法" class="headerlink" title="自顶向下语法分析方法"></a>自顶向下语法分析方法</h1><h1 id="自顶向上优先分析"><a href="#自顶向上优先分析" class="headerlink" title="自顶向上优先分析"></a>自顶向上优先分析</h1><h1 id="LR分析"><a href="#LR分析" class="headerlink" title="LR分析"></a>LR分析</h1><h1 id="语法制导的语义计算"><a href="#语法制导的语义计算" class="headerlink" title="语法制导的语义计算"></a>语法制导的语义计算</h1><h1 id="静态语义分析和中间代码生成"><a href="#静态语义分析和中间代码生成" class="headerlink" title="静态语义分析和中间代码生成"></a>静态语义分析和中间代码生成</h1><h1 id="运行时存储组织"><a href="#运行时存储组织" class="headerlink" title="运行时存储组织"></a>运行时存储组织</h1><h1 id="代码优化和目标代码生成"><a href="#代码优化和目标代码生成" class="headerlink" title="代码优化和目标代码生成"></a>代码优化和目标代码生成</h1><h1 id="课程设计"><a href="#课程设计" class="headerlink" title="课程设计"></a>课程设计</h1><h1 id="编译器和相关工具实例——GCC-Binutils"><a href="#编译器和相关工具实例——GCC-Binutils" class="headerlink" title="编译器和相关工具实例——GCC/Binutils"></a>编译器和相关工具实例——GCC/Binutils</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学知识 </category>
+          
+          <category> CS基础 </category>
+          
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编译原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构和算法</title>
+      <link href="/posts/544.html"/>
+      <url>/posts/544.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据结构概论"><a href="#数据结构概论" class="headerlink" title="数据结构概论"></a>数据结构概论</h2><h3 id="数据结构的定义"><a href="#数据结构的定义" class="headerlink" title="数据结构的定义"></a>数据结构的定义</h3><p>1.数据：描叙客观事物的数和字符的集合；</p><p>2.数据项：数据最小单位；</p><p>3.数据对象：性质相同的数据元素集合；</p><p>4.数据结构：数据元素之间的关系；</p><ul><li>数据逻辑结构：由数据元素之间的逻辑关系组成；</li><li>数据的存储结构：数据元素以及其关系的物理结构；</li><li>数据的运算：施加在该数据上的操作；</li></ul><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>1.定义：数据之间的抽象逻辑关系；</p><p>2.表示方法：图表表示、二元组表示；</p><p>3.逻辑结构类型：</p><ul><li>集合：同属集合，无关系；</li><li>线性结构：一对一；</li><li>树形结构：一对多；</li><li>图：多对多；</li></ul><h3 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h3><p>1.定义：指数据的实际存储，逻辑结构在计算机存储实现；</p><p>2.物理存输类型：</p><ul><li>顺序存储结构：连续存储</li><li>链式存储结构：非连续存储</li><li>索引存储结构：键值对</li><li>哈希（散列）存储：计算关键字哈希值仅存数据<h3 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h3></li></ul><p>1.定义：对数据实施的操作；</p><p>运算定义和运算实现分离：基于逻辑结构定义运算，基于存储结构实现运算</p><p>2.常用数据运算类型：增删改查以及排序；</p><h3 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h3><p>1.数据类型：值类型，引用类型等；</p><p>2.抽象数据类型：从求解问题抽象出来的数据逻辑结构和抽象运算，与具体实现无关（重要特征是数据抽象和数据封装），算法就是抽象运算的实现；</p><h2 id="算法概论"><a href="#算法概论" class="headerlink" title="算法概论"></a>算法概论</h2><p>1.算法的定义：对特定问题的一种描叙，是指令的有限序列，应具有以下特征；</p><ul><li>有穷性：是可以终止结束的算法；</li><li>确定性：相同输入相同输出；</li><li>可行性：操作基本；</li><li>有输入输出：输入加工对象，加功得到结果；</li></ul><p>2.算法的设计目标：应具有正确性、可使用性、可读性、健壮性、高效率和低存储；</p><p>3.算法的描述：采用计算机语言描叙算法；</p><h2 id="算法分析概论"><a href="#算法分析概论" class="headerlink" title="算法分析概论"></a>算法分析概论</h2><p>1.算法分析的定义：分析算法占用的计算机CPU时间和内存空间的多少；</p><h3 id="算法时间性能分析（重点理解）"><a href="#算法时间性能分析（重点理解）" class="headerlink" title="算法时间性能分析（重点理解）"></a>算法时间性能分析（重点理解）</h3><p>1.时间算法类型：</p><ul><li>事后统计法：统计执行时间，必须执行程序且很多因素掩盖了算法本质，如计算机速度、语言、问题规模等；</li><li>事前估计法：抛开问题，仅考虑算法本身的效率；</li></ul><p>2.算法时间复杂度定义：平均情况下的问题规模n的函数的最高阶表示，推导如下</p><ul><li>执行次数T(n) ==&gt; 问题规模n的函数</li><li>总算法执行时间 ==&gt; 原操作+ T(n)(执行次数或算法频率)</li><li>简化算法执行时间 ==&gt;  仅考虑执行次数T(n)  </li><li>上界f(n) ==&gt; 由T(n)对于n的阶级函数的拆解</li><li>问题阶级规模比较 ==&gt; 1(仅原操作)&lt;log2n&lt;n&lt;nlog2n&lt;n^2&lt;n^3&lt;2^n&lt;n!</li><li>渐进时间复杂度 ==&gt; O(f(n))（O是找出T(n)最高阶或者说最紧凑的上界）</li><li>平均时间复杂度 ==&gt;最好时间复杂度（算法运气好的时间）与最坏时间复杂度（算法运气坏的时候）的折中考虑</li></ul><p>3.算法复杂度求和求积：</p><ul><li>T1(n)+T2(n)=O(Max(fn,g(n)))  例如并列循环</li><li>T1(n) * T2(n) = O(f(n)*g(n)) 例如多层嵌套循环</li></ul><p>4.递归算法时间复杂度：自己调用自己，不能采用前面的分析方法；</p><h3 id="算法空间性能分析"><a href="#算法空间性能分析" class="headerlink" title="算法空间性能分析"></a>算法空间性能分析</h3><p>1.算法空间复杂度：记作S(n) = O(g(n))，解释如下；</p><ul><li>局部空间：初始只分配一次空间，参与原操作完继续使用，如果算法只有该形式空间分配，即问题规模n为常数，则该算法为原地工作或就地工作算法，空间复杂度为O(1)；</li><li>临时空间：原操作时才分配空间，原操作完即可释放，基本是其算法执行次数的考虑，空间复杂度和时间复杂度相关；</li></ul><p>2.递归算法空间复杂度：待记；</p><h2 id="程序概论"><a href="#程序概论" class="headerlink" title="程序概论"></a>程序概论</h2><p>1.程序=数据结构+算法；</p><p>2.数据结构和算法的联系：数据存储结构会影响算法的好坏，不能只单单考虑一种，存储强、信息多的存储结构，算法会比较好设计，反而相对简单的存储结构可能要设计一套复杂的算法；</p><h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="数组和广义表"><a href="#数组和广义表" class="headerlink" title="数组和广义表"></a>数组和广义表</h1><h1 id="数和二叉树"><a href="#数和二叉树" class="headerlink" title="数和二叉树"></a>数和二叉树</h1><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h1 id="内排序"><a href="#内排序" class="headerlink" title="内排序"></a>内排序</h1><h1 id="外排序"><a href="#外排序" class="headerlink" title="外排序"></a>外排序</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学知识 </category>
+          
+          <category> CS基础 </category>
+          
+          <category> 数据结构和算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构和算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>人工智能导论</title>
       <link href="/posts/515.html"/>
       <url>/posts/515.html</url>
@@ -310,6 +368,33 @@
     
     
     <entry>
+      <title>游戏帧同步方案</title>
+      <link href="/posts/2064.html"/>
+      <url>/posts/2064.html</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game-Play </category>
+          
+          <category> 同步技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 帧同步 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown语法格式（.md后缀-使用typora）</title>
       <link href="/posts/1.html"/>
       <url>/posts/1.html</url>
@@ -367,8 +452,8 @@
     
     <entry>
       <title>常用排序算法</title>
-      <link href="/posts/514.html"/>
-      <url>/posts/514.html</url>
+      <link href="/posts/545.html"/>
+      <url>/posts/545.html</url>
       
         <content type="html"><![CDATA[<p>列举一些常用的排序算法</p><p>#冒泡排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 冒泡排序/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void BubbleSort(int[] array, int count){    //设置标识符，如果为false意为当前数组为有序，不需要再排序了    bool shouldSorted = true;    for (int i = 0; i &lt; count &amp;&amp; shouldSorted; i++)    {        shouldSorted = false;        for (int j = count - 1; j &gt; i; j--)        {            if (array[j - 1] &gt; array[j])            {                shouldSorted = true;                Utilities.Swap(ref array[j - 1], ref array[j]);            }        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#选择排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 选择排序/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void SelectSort(int[] array, int count){    int min;    for (int i = 0; i &lt; count - 1; i++)    {        min = i;        for (int j = i + 1; j &lt; count; j++)        {            if (array[min] &gt; array[j])            {                min = j;            }        }        if (min != i)        {            Utilities.Swap(ref array[min], ref array[i]);        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#插入排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 插入排序/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void InserSort(int[] array, int count){    int guard; //哨兵，用于暂存需要交换的值    for (int i = 0; i &lt; count - 1; i++)    {        if (array[i] &gt; array[i + 1])        {            guard = array[i + 1];            int j;            for (j = i; array[j] &gt; guard &amp;&amp; j &gt;= 0; j--)            {                array[j + 1] = array[j]; //赋值操作（依次后移）            }            array[j + 1] = guard;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#希尔排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 希尔排序/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void ShellSort(int[] array, int count){    int i, j, guard;    int increment = count;    do    {        increment = increment / 3 + 1; //增量序列        for (i = increment + 1; i &lt; count; i++)        {            if (array[i] &lt; array[i - increment])            {                guard = array[i]; //暂存在哨兵处                for (j = i - increment; j &gt;= 0 &amp;&amp; guard &lt; array[j]; j -= increment)                {                    array[j + increment] = array[j]; //记录后移，查找插入位置                }                array[j + increment] = guard; //插入            }        }    } while (increment &gt; 1);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#堆排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 堆排序_主函数/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void HeapSort(int[] array, int count){    for (int i = count / 2 - 1; i &gt;= 0; i--) //把array构建成一个大顶堆    {        HeapAdjust(array, i, count - 1);    }    for (int i = count - 1; i &gt; 0; i--)    {        Utilities.Swap(ref array[0], ref array[i]); //将堆顶记录和当前未经排序子序列的最后一个记录交换        HeapAdjust(array, 0, i - 1); //将array[0...i-1]重新调整为大顶堆    }}/// &lt;summary&gt;/// 堆排序_构造大顶堆函数/// 已知array[startIndex...endIndex中]记录的关键字除array[endIndex]外均满足堆定义/// 本函数调整array[endIndex]关键字，使array[startIndex...endIndex]成为一个大顶堆/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="startIndex"&gt;起始位置&lt;/param&gt;/// &lt;param name="endIndex"&gt;结束位置&lt;/param&gt;public static void HeapAdjust(int[] array, int startIndex, int endIndex){    int temp;    temp = array[startIndex];    for (int i = 2 * startIndex + 1; i &lt;= endIndex; i = i * 2 + 1) //沿关键字较大的孩子结点向下筛选    {        if (i &lt; endIndex &amp;&amp; array[i] &lt; array[i + 1])        {            ++i; //i为关键字中较大记录的下标        }        if (temp &gt; array[i])        {            break; //rc应插入在位置s上        }        array[startIndex] = array[i];        startIndex = i;    }    array[startIndex] = temp; //插入}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#归并排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 归并排序_主函数/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void MergeSort(int[] array, int count){    int[] tempArray = new int[array.Length]; //申请额外空间，存放归并结果    int k = 1;    while (k &lt; count)    {        MergePass(array, tempArray, k, count); //array归并到tempArray        k = 2 * k; //子序列长度加倍        MergePass(tempArray, array, k, count); //tempArray归并到array        k = 2 * k; //子序列长度加倍    }}/// &lt;summary&gt;/// 归并操作，把SR[]中相邻长度为s的子序列两两归并到TR[]/// &lt;/summary&gt;/// &lt;param name="sr"&gt;SR数组&lt;/param&gt;/// &lt;param name="tr"&gt;TR数组&lt;/param&gt;/// &lt;param name="srChildLength"&gt;SR中子序列长度&lt;/param&gt;/// &lt;param name="arrayLength"&gt;原数组长度&lt;/param&gt;public static void MergePass(int[] sr, int[] tr, int srChildLength, int arrayLength){    int hasMergeCount = 1; //hasMargeCount代表当前已经归并的元素个数    while (arrayLength - hasMergeCount + 1 &gt;= 2 * srChildLength) //确保此次两两归并可以完成    {        Merge(sr, tr, hasMergeCount - 1, hasMergeCount + srChildLength - 2,            hasMergeCount + 2 * srChildLength - 2); //两两归并        hasMergeCount += 2 * srChildLength;    }    if (arrayLength - hasMergeCount + 1 &gt; srChildLength) //归并最后两个序列    {        Merge(sr, tr, hasMergeCount - 1, hasMergeCount + srChildLength - 2, arrayLength - 1);    }    else //若最后只剩下单个子序列    {        for (int j = hasMergeCount - 1; j &lt; arrayLength; j++)        {            tr[j] = sr[j];        }    }}/// &lt;summary&gt;/// 归并操作，把SR[sr1StartIndex..sr1EndIndex]和SR[sr1EndIndex+1..sr2EndIndex]归并为有序的TR[sr1StartIndex..sr2EndIndex]/// &lt;/summary&gt;/// &lt;param name="sr"&gt;SR数组&lt;/param&gt;/// &lt;param name="tr"&gt;TR数组&lt;/param&gt;/// &lt;param name="sr1StartIndex"&gt;SR数组子序列1起始位置&lt;/param&gt;/// &lt;param name="sr1EndIndex"&gt;SR数组子序列1结束位置&lt;/param&gt;/// &lt;param name="sr2EndIndex"&gt;SR数组子序列2结束位置&lt;/param&gt;private static void Merge(int[] sr, int[] tr, int sr1StartIndex, int sr1EndIndex, int sr2EndIndex){    int sr2StartIndex, currentProcess; //currentProcess为当前进度    for (sr2StartIndex = sr1EndIndex + 1, currentProcess = sr1StartIndex;        sr1StartIndex &lt;= sr1EndIndex &amp;&amp; sr2StartIndex &lt;= sr2EndIndex;        currentProcess++) //两个SR有一个被榨干后就要退出循环    {        if (sr[sr1StartIndex] &lt; sr[sr2StartIndex])        {            tr[currentProcess] = sr[sr1StartIndex++];        }        else        {            tr[currentProcess] = sr[sr2StartIndex++];        }    }    if (sr1StartIndex &lt;= sr1EndIndex)    {        for (int l = 0; l &lt;= sr1EndIndex - sr1StartIndex; l++)        {            tr[currentProcess + l] = sr[sr1StartIndex + l]; //将剩余的SR[sr1StartIndex...sr1EndIndex]复制到TR        }    }    if (sr2StartIndex &lt;= sr2EndIndex)    {        for (int l = 0; l &lt;= sr2EndIndex - sr2StartIndex; l++)        {            tr[currentProcess + l] = sr[sr2StartIndex + l]; //将剩余的SR[sr2StartIndex...sr2EndIndex]复制到TR        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#快速排序</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">/// &lt;summary&gt;/// 快速排序_主函数/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="count"&gt;数组元素个数&lt;/param&gt;public static void QuickSort(int[] array, int count){    QSort(array, 0, count - 1);}/// &lt;summary&gt;/// 快速排序_递归调用/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="low"&gt;低位索引&lt;/param&gt;/// &lt;param name="high"&gt;高位索引&lt;/param&gt;private static void QSort(int[] array, int low, int high){    int pivot;    while (low &lt; high)    {        pivot = Partition(array, low, high);        QSort(array, low, pivot - 1);        //尾递归，可以减少一次递归堆栈深度        low = pivot + 1;    }}/// &lt;summary&gt;/// 获取枢轴数/// &lt;/summary&gt;/// &lt;param name="array"&gt;数组&lt;/param&gt;/// &lt;param name="low"&gt;低位索引&lt;/param&gt;/// &lt;param name="high"&gt;高位索引&lt;/param&gt;/// &lt;returns&gt;&lt;/returns&gt;private static int Partition(int[] array, int low, int high){    int pivotkey;    int m = low + (high - low) / 2;    //下面是三数取中优化    //交换左端与右端数据，保证左端较小    if (array[low] &gt; array[high])    {        Utilities.Swap(ref array[low],ref array[high]);    }    //交换中间与右端数据，保证中间较小    if (array[m] &gt; array[high])    {        Utilities.Swap(ref array[m],ref array[high]);    }    //交换中间与左端数据，保证左端较小    if (array[m] &gt; array[low])    {        Utilities.Swap(ref array[low],ref array[m]);    }    //默认选取当前数组的第一个值作为枢轴值    pivotkey = array[low];    //枢轴备份    int pivotkeyback = pivotkey;    while (low &lt; high)    {        while (low &lt; high &amp;&amp; array[high] &gt;= pivotkey)        {            high--;        }        array[low] = array[high];        while (low &lt; high &amp;&amp; array[low] &lt;= pivotkey)        {            low++;        }        array[high] = array[low];    }    //将枢轴数值替换回array[low]    array[low] = pivotkeyback;    //返回当前枢轴下标    return low;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>#各种排序时空复杂度<br><img src="img/01002-0001.png" alt="排序复杂图"><br>n: 数据规模<br>k: “桶”的个数<br>In-place: 占用常数内存，不占用额外内存<br>Out-place: 占用额外内存</p>]]></content>
       
