@@ -149,40 +149,9 @@
     
     
     <entry>
-      <title>帧同步确定性物理库</title>
-      <link href="/posts/2053.html"/>
-      <url>/posts/2053.html</url>
-      
-        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> Game-Play </category>
-          
-          <category> 第三方库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 帧同步 </tag>
-            
-            <tag> 第三方库 </tag>
-            
-            <tag> 确定性物理库 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>定点数数学库</title>
-      <link href="/posts/2054.html"/>
-      <url>/posts/2054.html</url>
+      <link href="/posts/2178.html"/>
+      <url>/posts/2178.html</url>
       
         <content type="html"><![CDATA[<h1 id="定点数FInt"><a href="#定点数FInt" class="headerlink" title="定点数FInt"></a>定点数FInt</h1><p>基本思路：解决浮点数的精度问题，基本想法是对数学库进行放大倍数，放大1000，这里可以对底层进行优化，使用位运算来直接操作二进制进行放大缩小，这里可以放大1024倍，也就是1&lt;&lt;10，使用完之后在缩小1024倍还原即可;<br>乘法还原正负不同问题：按照上面的流程，乘法运算后绝对值相同的正负数值经过还原后会出现不对等的问题，比如500乘FInt(0.3f)的RawInt值是是14，但是500乘FInt(-0.3f)的RawInt值却是-15，这是因为二进制中，正数由原码表示，负数由补码表示，补码是在原码的反码上再加一得来的，要简单的解决这一个问题可以对值进行取反运算再取反，让已经实现好的底层去解决；</p><h1 id="定点向量FVector3"><a href="#定点向量FVector3" class="headerlink" title="定点向量FVector3"></a>定点向量FVector3</h1><h1 id="常用运算FCalc"><a href="#常用运算FCalc" class="headerlink" title="常用运算FCalc"></a>常用运算FCalc</h1>]]></content>
       
@@ -203,6 +172,37 @@
             <tag> 第三方库 </tag>
             
             <tag> 定点数数学库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>确定性物理库</title>
+      <link href="/posts/2179.html"/>
+      <url>/posts/2179.html</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game-Play </category>
+          
+          <category> 第三方库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 帧同步 </tag>
+            
+            <tag> 第三方库 </tag>
+            
+            <tag> 确定性物理库 </tag>
             
         </tags>
       
@@ -426,9 +426,36 @@
     
     
     <entry>
+      <title>Lua语言</title>
+      <link href="/posts/1344.html"/>
+      <url>/posts/1344.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程语言 </category>
+          
+          <category> Lua </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lua </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>游戏帧同步方案</title>
-      <link href="/posts/2064.html"/>
-      <url>/posts/2064.html</url>
+      <link href="/posts/2177.html"/>
+      <url>/posts/2177.html</url>
       
         <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
       
