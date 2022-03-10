@@ -130,32 +130,6 @@
   </entry>
   
   <entry>
-    <title>cs专业就业分析</title>
-    <link href="https://wwy.wwywy.com/posts/640.html"/>
-    <id>https://wwy.wwywy.com/posts/640.html</id>
-    <published>2022-03-03T13:00:00.000Z</published>
-    <updated>2022-03-07T11:52:39.253Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    <category term="大学知识" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="cs就业分析" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/cs%E5%B0%B1%E4%B8%9A%E5%88%86%E6%9E%90/"/>
-    
-    
-    <category term="就业" scheme="https://wwy.wwywy.com/tags/%E5%B0%B1%E4%B8%9A/"/>
-    
-  </entry>
-  
-  <entry>
     <title>人工智能导论</title>
     <link href="https://wwy.wwywy.com/posts/517.html"/>
     <id>https://wwy.wwywy.com/posts/517.html</id>
@@ -585,6 +559,36 @@
     
     
     <category term="数据结构和算法" scheme="https://wwy.wwywy.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏MVC系列框架</title>
+    <link href="https://wwy.wwywy.com/posts/2051.html"/>
+    <id>https://wwy.wwywy.com/posts/2051.html</id>
+    <published>2020-12-15T13:00:00.000Z</published>
+    <updated>2022-03-03T08:04:38.446Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><p>基本概念：MVC全名是Model View Controller是模型(model)－视图(view)－控制器(controller)的缩写,是一种软件设计规范，用一种业务逻辑、数据、界面显示 分离的方法,组织代码,将业务逻辑聚集到一个部件里面，在改进和个性化定制,界面及用户交互的同时，不需要重新编写业务逻辑;</p><p>流程：View（界面）触发事件—Controller（业务）处理了业务触发数据更新—更新Model的数据—Model（带着数据）回到了View—View更新数据;</p><p>总结：MVC主要用于软件和WEB开发；在游戏中时非必须的UI系统开发框架；</p><p>不使用MVC的逻辑：</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class PlayerLevPanel : MonoBehaviour{      public Button btnLevUp;      public Button btnClose;            //展示UI面板      public static void ShowMe()    {    //todo    }        //隐藏UI面板    public static void HideMe()    {    //todo    }        void Start()    {        //2.监听事件        btnClose.onClick.AddListener(ClickClose);        btnLevUp.onClick.AddListener(ClickLevUp);    }        public void ClickClose()    {        Debug.Log("关闭");        HideMe();    }        public void ClickLevUp()    {        Debug.Log("升级");        //存储数据        //同步更新面板上的数据        UpdateInfo();        //更新主面板的内容        MainPanel.Panel.UpdateInfo();    }            //3.更新面板    public void UpdateInfo()    {    //更新数据    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>不使用MVC总结：所有的逻辑都在一个类中，小项目可以这么做，但是当项目累计到一定的程度，面板类变多时，耦合会非常高，牵一发而变全身，并且不适合团队开发；</p><p>使用MVC：<br>Model层：负责增删查改获取界面上需要的数据</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class PlayerLevModel{    //定义数据    private int lev;    //外界只能获取字段    public int Lev    {        get        {            return lev;        }    }        //通知外部更新的事件    //通过它和外部建立联系 而不是直接获取外部的面板    private event UnityAction&lt;PlayerLevModel&gt; updateEvent;        //在外部第一次获取这个数据 如何获取    //通过单例模式 来达到数据的唯一性 和数据的获取    private static PlayerLevModel data = null;    public static PlayerLevModel Data    {        get        {            if( data == null )            {                data = new PlayerLevModel();                data.Init();            }            return data;        }    }        //数据相关的操作    // 初始化    public void Init()    {        lev = PlayerPrefs.GetInt("PlayerLev", 1);    }}    public void LevUp()    {        //升级 改变内容        lev += 1;        //改变过后保存        SaveData();    }            public void SaveData()    {        //把这些数据内容 存储到本地        PlayerPrefs.SetInt("PlayerLev", lev);        UpdateInfo();    }            public void AddEventListener(UnityAction&lt;PlayerModel&gt; function)    {        updateEvent += function;    }    public void RemoveEventListener(UnityAction&lt;PlayerModel&gt; function)    {        updateEvent -= function;    }    //通知外部更新外部数据的方法    private void UpdateInfo()    {        //找到对应的 使用数据的脚本 去更新数据        updateEvent?Invoke(this);    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>视图层：负责获取控件，更新控件信息</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class PlayerLevView : MonoBehaviour{      //1.找控件    public Button btnClose;    public Button btnLevUp;    //2.提供面板更新的相关方法给外部    public void UpdateInfo(PlayerModel data)    {        txtLev.text = "LV." + data.Lev;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>控制层：负责业务逻辑处理（界面事件监听，触发数据更新，触发界面更新）</p><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class PlayerLevController : MonoBehaviour{    //视图实例，这里视图和控制在一个物体上    private PlayerLevView roleView;    private static PlayerLevController controller = null;    //控制层单例    public static PlayerLevController Controller    {        get        {            return controller;        }    }            public static void ShowMe()    {        if (controller == null)        {            //实例化面板对象            //设置它的父对象 为Canvas        }        //如果是隐藏的形式hide 在这要显示        controller.gameObject.SetActive(true);    }    public static void HideMe()    {        if (controller != null)        {            //方式一 直接删            //方式二 设置可见为隐藏        }    }            void Start()    {    //这里视图和控制在一个物体上        roleView = this.GetComponent&lt;RoleView&gt;();        //第一次更新面板        roleView.UpdateInfo(PlayerLevModel.Data);        roleView.btnClose.onClick.AddListener(ClickCloseBtn);        roleView.btnLevUp.onClick.AddListener(ClickLevUpBtn);        //告知数据模块 当更新时 通知哪个函数做处理        PlayerModel.Data.AddEventListener(UpdateInfo);    }            private void ClickCloseBtn()    {        HideMe();    }    private void ClickLevUpBtn()    {        //通过数据模块 进行升级 达到数据改变        PlayerLevModel.Data.LevUp();    }    private void UpdateInfo( PlayerModel data )    {        if( roleView != null )        {            roleView.UpdateInfo(data);        }    }    private void OnDestroy()    {              PlayerLevModel.Data.RemoveEventListener(UpdateInfo);    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>好处：<br>1.各司其职，互不干涉 —— 编程思路更清晰<br>2.有利开发中的分工 —— 多人协同开发时，同步并行<br>3.有利于组件重用 —— 项目换皮时，功能变化小时，提高开发效率<br>缺点：<br>1.增加了程序文件的体量 —— 脚本由一变三<br>2.增加了结构的复杂性 —— 对于不清楚MVC原理的人不友好<br>2.效率相对较低 —— 对象之间的相互跳转，始终伴随着一定开销（UI影响不大）</p><h1 id="MV-的概念"><a href="#MV-的概念" class="headerlink" title="MV*的概念"></a>MV*的概念</h1><p>MVC美中不足：M和V之间存在联系，也就是数据和界面存在耦合，数据结构改变会牵扯界面逻辑改变；<br>  所以我们必须要改变这一现状，但是M和V层是必须的，所以可以通过改变X元素来优化原来的M和V，也就是改变联系和处理M和V的方式。</p><p><img src="https://s4.ax1x.com/2022/02/05/Hm6yN9.png" alt="相关的变种"></p><h1 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h1><p>  切断View和Model的耦合，让Presenter处理一切,在MVC中View会直接从Model中读取数据而不是通过 Controller,而在MVP中View并不直接使用Model，它们之间的通信是通过Presenter,来进行的，所有的交互都发生在Presenter内部.</p><p>Model层:不变</p><p>View层:不能直接传入Model模型来更新</p><p>Presenter(主持人)：在该层将Model的数据更新View层,暴力点可以直接在该层得到V的控件，将M层一个个传入；</p><h1 id="MVVM（MP）"><a href="#MVVM（MP）" class="headerlink" title="MVVM（MP）"></a>MVVM（MP）</h1><p>  MVVM的由来是MVP模式和WPF（MAML配置）结合应用的一种新型框架，是MVP的升级版，让ViewModel和V进行双向数据绑定，更新VM等同于更新V，反之同理，但是在unity中不太适合，没有合适的UI配置文件，强硬的绑定V和VM，工作量很大，好处却不明细；</p><p>了解的话可以看看这些第三方MVVM框架：<br>loxodon-Framework:<a href="https://github.com/vovgou/loxodon-framework">vovgou/loxodon-framework：一个MVVM和Databinding框架，可以使用C#和Lua来开发游戏 (github.com)</a><br>uMVVM:<a href="https://github.com/MEyes/uMVVM">MEyes/uMVVM：一个简单的统一 mvvm 框架 (github.com)</a></p><p>所以，unity中，并不是特别推荐MVVM的格式，不要为了框架而框架，MVVM框架主要是V和VM的数据双向绑定，我们可以尝试将V和VM合二为一，且将界面和逻辑某种意义上解耦即可—MP，这里还要用到之前的基本框架，用到事件中心；</p><h1 id="MVE"><a href="#MVE" class="headerlink" title="MVE"></a>MVE</h1><p>  E就是事件中心，用EventCenter事件中心来分发消息，个人框架的一种变种，之前监听数据都是在M层进行监听，控制层进行注册和注销，但是随着M层的不断增加，控制层注册事件也会随之变得复杂，要针对不同的M注册不同的事件，引入事件中心后，可以在事件中心注册事件，M层根据事件名监听事件即可；</p><h1 id="商业框架PureMVC"><a href="#商业框架PureMVC" class="headerlink" title="商业框架PureMVC"></a>商业框架PureMVC</h1><p>官网：<a href="http://puremvc.org/">PureMVC 框架</a><br>PureMVC基本结构：MVC+代理模式、中介者模式、外观模式、命令模式、观察者模式、单例模式；<br>Model（数据模型）：关联Proxy(代理)对象，负责处理数据；<br>View（界面）：关联Mediator(中介)对象，负责处理界面；<br>Controller（业务控制）:管理Command(命令)对象，负责处理业务逻辑；<br>Facade（外观）：是MVC三者的经纪人，统管全局，可以获取代理、中介、命令；<br>Notification：通知，负责传递信息；</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;MVC&quot;&gt;&lt;a href=&quot;#MVC&quot; class=&quot;headerlink&quot; title=&quot;MVC&quot;&gt;&lt;/a&gt;MVC&lt;/h1&gt;&lt;p&gt;基本概念：MVC全名是Model View Controller是模型(model)－视图(view)－控制器(controller</summary>
+      
+    
+    
+    
+    <category term="Game-Play" scheme="https://wwy.wwywy.com/categories/Game-Play/"/>
+    
+    <category term="技术架构" scheme="https://wwy.wwywy.com/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
+    
+    <category term="游戏框架" scheme="https://wwy.wwywy.com/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="MVC" scheme="https://wwy.wwywy.com/tags/MVC/"/>
     
   </entry>
   
