@@ -271,6 +271,39 @@
     
     
     <entry>
+      <title>Unity相关-.Net说明以及mono跨平台原理</title>
+      <link href="/posts/1602.html"/>
+      <url>/posts/1602.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="了解-Net相关知识"><a href="#了解-Net相关知识" class="headerlink" title="了解.Net相关知识"></a>了解.Net相关知识</h1><h2 id="微软-Net概述"><a href="#微软-Net概述" class="headerlink" title="微软.Net概述"></a>微软.Net概述</h2><p>1.微软.Net说明：微软的.Net即不是编程语言也不是框架，是类似于互联网时代、次世代、21世纪的宣传口号，是一整套技术体系的统称，或者说是微软提供的技术水平的代号，本质上是微软为自己一系列取的一个代号，以下是包含内容；</p><ul><li>框架体系：.Net Framework、.Net Core、Mono等等；</li><li>开发语言：C#、VB、F#等等（C#是.Net平台主推的开发语言）；</li><li>开发工具：Visual Studio、Visual Studio Code 等等；</li></ul><p>2.微软实现.Net平台的目的：</p><ul><li>跨语言：只要是面向.NET平台的编程语言(C#、VB、C++、F#等等)，用其中一种语言编写的内容可以无缝地用在另一种语言编写的应用程序中；</li><li>跨平台：一次编译，不需要任何代码修改，应用程序就可以运行在任意有.NET框架实现的操作系统上，即代码不依赖于操作系统，也不依赖硬件环境；</li></ul><h2 id="Net跨语言"><a href="#Net跨语言" class="headerlink" title=".Net跨语言"></a>.Net跨语言</h2><p>1.跨语言公共语言规范：微软为了实现跨平台，制定了一些规范，只要一门语言支持这个规则，就能在.Net平台下开发应用程序，以下是规则说明；</p><ul><li>CLS（公共语言规范）：.Net专门参考每种语言找出语言间的共性，是一组语言互操作的标准规范；</li><li>CTS（公共类型系统）：当你设计面向.Net语言时需要遵守的一个体系，而刚才提到的CLS公共语言规范就是是CTS公共类型系统的子级，一个编程语言，如果它能够支持CTS，那么我们就称它为面向.NET平台的语言；</li><li>CLI（公共语言基础结构）：是微软将CTS等内容提交给国际组织计算机制造联合会ECMA的一个工业标准；</li></ul><h2 id="Net虚拟机-CLR"><a href="#Net虚拟机-CLR" class="headerlink" title=".Net虚拟机(CLR)"></a>.Net虚拟机(CLR)</h2><p>1.CLR（公共语言运行时）说明：让应用程序在操作系统上运行，公共语言运行时，它是.Net Framework的基础，所有的.Net技术都是建立在此之上的，它是一个在执行时管理代码的代码，提供内存管理，线程管理等等核心服务，就好像一个小型的操作系统一样，所以形象的把它称为“.Net虚拟机”，Java的虚拟机也是类似这样的东西，如果想要应用程序在目标操作系统上能够运行，就必须依靠.Net提供的CLR环境来支持，它会把程序集中的IL（中间代码）翻译成机器码最终在操作系统上运行；</p><p>2.CLR做的事情：<br><img src="https://s1.ax1x.com/2022/03/21/qumuMq.png" alt="CLR做的事情"></p><h2 id="Net跨平台"><a href="#Net跨平台" class="headerlink" title=".Net跨平台"></a>.Net跨平台</h2><h3 id="Net-Framework"><a href="#Net-Framework" class="headerlink" title=".Net Framework"></a>.Net Framework</h3><ol><li>.Net Framework：.Net Framework 在2002年推出1.0版本，.NET Framework 是一个可以快速开发、部署网站服务及应用程序的开发框架，是 Windows 中的一个组件，部分开源，主要用于开发Windows下应用程序，包括公共语言运行时（Common Language Runtime, CLR），虚拟执行系统，.NET Framework 类库等，下面时详细说明；</li></ol><ul><li>只要支持CLS公共语言规范的语言都可以用于开发Windows下的各种应用程序和网站程序；</li><li>BCL（基础类库）和FCL（框架类库）：是这个框架体系中为我们实现好的各种API；</li><li>程序集：程序集的表现就是后缀为.dll或者.exe格式的文件，其中包含的最关键信息， PE头、CLR头（就是一些程序的格式信息，比如入口方法，版本号等等）</li><li>CIL代码（通用中间代码）：是介于源代码和机器码之间的代码之后会通过CLR产生机器码，CIL代码你可以理解为由于可能使用不同的代码进行开发，所以会将这些代码翻译为统一规范的中间代码；</li></ul><p><img src="https://s1.ax1x.com/2022/03/21/qunTHK.png" alt=".Net Framework的体系结构"></p><h3 id="Net-Core"><a href="#Net-Core" class="headerlink" title=".Net Core"></a>.Net Core</h3><ol><li>.Net Core：.Net Core 是2016年推出的.Net Framework的新一代版本，是.Net Framework的翻版实现，它是一个开源项目，它是基于.Net Framework来进行设计的主要目的就是跨平台，是.Net技术框架组成在Windows、MacOS、类Linux系统下的具体实现，它的原理就是为不同的操作系统实现对应的CLR公共语言运行时（.Net虚拟机），这样就可以在不同的平台上，将IL（中间代码）翻译成机器码最终在操作系统上运行了；</li></ol><p><img src="https://s1.ax1x.com/2022/03/21/quu5GQ.png" alt=".Net Core的体系结构"></p><h3 id="Mono"><a href="#Mono" class="headerlink" title="Mono"></a>Mono</h3><p>1.Mono：2004年由Xamarin公司（已被微软收购）所赞助的开源项目，它基于.Net的CLI（Common Language Infrastructure）公共语言基础结构，它相对.Net FrameWork最大的区别就是具备跨平台的能力，它不仅可以运行在Windows、MacOS、Linux等操作系统，甚至还可以运行在PS3、XBOX、Wii等主机平台上，也就是说在.Net Core出现之前，Mono是.Net平台实现跨平台的不二之选；</p><h1 id="Unity跨平台原理-Mono"><a href="#Unity跨平台原理-Mono" class="headerlink" title="Unity跨平台原理(Mono)"></a>Unity跨平台原理(Mono)</h1><p>1.Unity的组成：Unity的底层是通过C/C++来完成上层逻辑的，Unity主要包括两个部分：</p><ul><li>Unity Engine（引擎）：提供UnityEngine.dll动态库，各平台不同，C/C++编写，包含平台相关代码、图形API、物理引擎、灯光等等所有游戏引擎底层内容；</li><li>Unity Editor（编辑器）：提供UnityEditor.dll动态库，大部分由C#编写，用户脚本最初可以使用C#、JavaScript、Boo语言编写，项目代码最后由Mono编译；</li></ul><p>2.Mono组成：</p><ul><li>C#编译器（mcs）；</li><li>Mono Runtime 类似CLR公共语言运行时（虚拟机），包括JIT（Just in time）即时编译器、AOT（Ahead of time）提前编译器、GC、类库加载器 等；</li><li>BCL基础类库；</li><li>Mono类库：提供很多超出.Net的一些额外功能，主要用于构建各种操作系统上的应用；</li></ul><p>3.Unity跨平台的基本原理（Mono）：在Unity下使用各种语言进行逻辑实现，这些语言在发布时会被编译成，IL中间代码，最终这些中间代码在对应操作系统上，通过Mono VM（虚拟机），真正翻译成机器码运行起来；<br><img src="https://s1.ax1x.com/2022/03/21/qu1bUP.png" alt="Unity跨平台的基本原理"></p><p>4.Mono的特点：</p><ul><li>构建（最终打包时）速度快</li><li>Mono编译机制是JIT即时编译，所以支持更多类库</li><li>必须将代码发布为托管程序集（.dll文件）</li><li>Mono VM虚拟机平台维护麻烦，且部分平台不支持（WebGL）</li><li>由于Mono版本授权原因，C#很多新特性无法使用</li><li>IOS支持Mono，但不在允许32位的Mono应用提交到应用商店<br>  <img src="https://s1.ax1x.com/2022/03/21/qudQIJ.png" alt="Mono跨平台说明"></li></ul><p>5.基于Mono跨平台的优缺点：</p><ul><li>优点：只要在不同操作系统上实现Mono VM（虚拟机），那我们能够支持的平台就会“无限”多；</li><li>缺点：维护工作耗时耗力，当Unity版本更新时，Mono VM也需要维护和更新，那多对于N多个平台来说，工作量是非常大的。（Unity的工作量），低版本Mono无法支持新版本C#的强大新特性；</li></ul><h1 id="Unity跨平台原理-IL2CPP"><a href="#Unity跨平台原理-IL2CPP" class="headerlink" title="Unity跨平台原理(IL2CPP)"></a>Unity跨平台原理(IL2CPP)</h1><p>1.IL2CPP说明：L2CPP是在Unity4.6.1 p5之后的版本中，加入的脚本后处理方式，是继Mono之后的一种跨平台解决方案，顾名思义就是把，IL中间代码转译为CPP代码（C++），再利用各平台优化过的编译器编译为对应平台的目标代码，需要注意的是虽然中间代码变为了C++，但是内存管理还是遵循C#中GC的方式，这也是为什么有一个IL2CPP VM（虚拟机）存在的原因，它主要是用来完成GC管理，线程创建等服务工作的；</p><p>2.IL2CPP特点：</p><ul><li>相对Mono构建（最终打包时）速度慢；</li><li>只支持AOT提前编译；</li><li>可以启用引擎代码剥离来减少代码的大小；</li><li>程序的运行效率比Mono高，运行速度快；</li><li>多平台移植更加方便；<br>  <img src="https://s1.ax1x.com/2022/03/21/qudkPs.png" alt="IL2CPP跨平台说明"></li></ul><p>3.Mono和IL2CPP的区别：</p><ul><li>IL2CPP效率高于Mono，跨平台也更好维护，不使用热更新后者大量反射的化推荐使用IL2CPP；</li><li>Mono是JIT（半解释半编译程序或者说纯解释程序）即时编译，IL2CPP是AOT（预编译程序）提前编译，导致IL2CPP不能在运行时动态生成代码和类型，所以必须在编译时就完全确定需要用到的类型，举例：List<a>和List<b>中A和B是我们自定义的类，我能必须在代码中显示的调用过，IL2CPP才能保留List</b></a><b><a>和List<b>两个类型。如果在热更新时我们调用List<c>，但是它之前并没有在代码中显示调用过，那么这时就会出现报错等问题。主要就是因为JIT和AOT两个编译模式的不同造成的；</c></b></a></b></li><b><a><b></b></a></b></ul><b><a><b></b></a><b><h1 id="IL2CPP模式存在的问题"><a></a><a href="#IL2CPP模式存在的问题" class="headerlink" title="IL2CPP模式存在的问题"></a>IL2CPP模式存在的问题</h1><p>1.安装Unity IL2CPP打包工具：在Unityhub中下载 IL2CPP打包相关工具；</p><h2 id="IL2CPP打包泛型问题"><a href="#IL2CPP打包泛型问题" class="headerlink" title="IL2CPP打包泛型问题"></a>IL2CPP打包泛型问题</h2><p>1.问题说明：IL2CPP和Mono最大的区别是，不能在运行时动态生成代码和类型，就是说 泛型相关的内容，如果你在打包生成前没有把之后想要使用的泛型类型显示使用一次，那么之后如果使用没有被编译的类型，就会出现找不到类型的报错；</p><p>2.解决方案：其实就是在预言编译之前让IL2CPP知道我们需要使用这个内容，详细如下</p><ul><li>泛型类：声明一个类，然后在这个类中声明一些public的泛型类变量；</li><li>泛型方法：随便写一个静态方法，在将这个泛型方法在其中调用一下。这个静态方法无需被调用；</li></ul><h2 id="IL2CPP打包类型裁剪问题"><a href="#IL2CPP打包类型裁剪问题" class="headerlink" title="IL2CPP打包类型裁剪问题"></a>IL2CPP打包类型裁剪问题</h2><p>1.问题说明：IL2CPP在打包时会自动对Unity工程的DLL进行裁剪，将代码中没有引用到的类型裁剪掉，以达到减小发布后包的尺寸的目的，然而在实际使用过程中，很多类型有可能会被意外剪裁掉，造成运行时抛出找不到某个类型的异常，特别是通过反射等方式在编译时无法得知的函数调用，在运行时都很有可能遇到问题；</p><p>2.解决方案：</p><ul><li>(1).IL2CPP处理模式时，将PlayerSetting-&gt;Other Setting-&gt;Managed Stripping Level(代码剥离)设置为Low；</li><li>Disable:Mono模式下才能设置为不删除任何代码 ；</li><li>Low:默认低级别，保守的删除代码，删除大多数无法访问的代码，同时也最大程度减少剥离实际使用的代码的可能性；</li><li>Medium:中等级别，不如低级别剥离谨慎，也不会达到高级别的极端；</li><li>Hight:高级别，尽可能多的删除无法访问的代码，有限优化尺寸减小。如果选择该模式一般需要配合link.xml使用；</li><li>(2).通过Unity提供的link.xml方式来告诉Unity引擎，哪些类型是不能够被剪裁掉的,在Unity工程的Assets目录中（或其任何子目录中）建立一个叫link.xml的XML文件；</li></ul><p>3.link.xml声明格式举例说明：推荐看官网</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!--程序集中保留类型和成员--&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>assembly</span> <span class="token attr-name">fullname</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Assembly-CSharp<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!--保留命名空间中类以及参数preserve说明：all全部、fields字段、methods方法、nothing只保留类型--&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">fullname</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>MyNameSpace.MyClass<span class="token punctuation">"</span></span> <span class="token attr-name">preserve</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>all<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>assembly</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></b></b>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> mono </tag>
+            
+            <tag> .Net </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Unity插件-Animancer插件使用</title>
       <link href="/posts/1577.html"/>
       <url>/posts/1577.html</url>
@@ -394,8 +427,8 @@
     
     <entry>
       <title>Unity相关-Excel工具</title>
-      <link href="/posts/1578.html"/>
-      <url>/posts/1578.html</url>
+      <link href="/posts/1601.html"/>
+      <url>/posts/1601.html</url>
       
         <content type="html"><![CDATA[<h1 id="Excel介绍"><a href="#Excel介绍" class="headerlink" title="Excel介绍"></a>Excel介绍</h1><p>1.Excel的本质：Excel表本质上也是一堆数据，只不过它有自己的存储读取规则，如果我们想要通过代码读取它，那么必须知道它的存储规则，官网是专门提供了对应的DLL文件用来解析Excel文件的；</p><p>2.获取Excel数据信息的意义：</p><ul><li>可以根据表中数据来动态的生成相关数据，如数据结构类、容器类、二进制数据类；</li><li>转成二进制数据也可以提升读取效率，提升数据安全性；</li></ul><h1 id="Excel官方工具使用"><a href="#Excel官方工具使用" class="headerlink" title="Excel官方工具使用"></a>Excel官方工具使用</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">//主要知识点：//1.FileStream读取文件流//2.IExcelDataReader类，从流中读取Excel数据//3.DataSet 数据集合类 将Excel数据转存进其中方便读取//4.DataTable 数据表类 表示Excel文件中的一个表//5.DataRow 数据行类 表示某张表中的一行数据[MenuItem("GameTool/读取Excel里的具体信息")]private static void ReadExcel(){    using (FileStream fs = File.Open(Application.dataPath + "/ArtRes/Excel/PlayerInfo.xlsx", FileMode.Open, FileAccess.Read))    {        IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(fs);        DataSet result = excelReader.AsDataSet();        for (int i = 0; i &lt; result.Tables.Count; i++)        {            //得到其中一张表的具体数据            DataTable table = result.Tables[i];            Debug.Log("表名：" + result.Tables[i].TableName);            Debug.Log("行数：" + result.Tables[i].Rows.Count);            Debug.Log("列数：" + result.Tables[i].Columns.Count);            //得到其中一行的数据            DataRow row = table.Rows[0];            //得到行中某一列的信息            Debug.Log(row[1].ToString());            DataRow row;            for (int j = 0; j &lt; table.Rows.Count; j++)            {                //得到每一行的信息                row = table.Rows[j];                Debug.Log("*********新的一行************");                for (int k = 0; k &lt; table.Columns.Count; k++)                {                    //得到每一列的信息                    Debug.Log(row[k].ToString());                }            }        }        fs.Close();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="制定规则"><a href="#制定规则" class="headerlink" title="制定规则"></a>制定规则</h1><p>1.Excel读取规则：</p><ul><li>数据类型生成要知道字段名，容器（一般字典）要知道主键，二进制要知道从哪行哪列开始；</li><li>第一行是字段名，第二行是数据类型，第三行容器可以再加一个key表示主键（也可以默认第一列），第四行是中文解释（给策划写的，不会生成进去）；</li><li>下方的表名作为生成的类型名；</li></ul><h1 id="Excel工具编写"><a href="#Excel工具编写" class="headerlink" title="Excel工具编写"></a>Excel工具编写</h1>]]></content>
       
@@ -586,6 +619,33 @@
         <tags>
             
             <tag> 数据结构和算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C#各版本知识补充</title>
+      <link href="/posts/1029.html"/>
+      <url>/posts/1029.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Unity跨平台基本原理"><a href="#Unity跨平台基本原理" class="headerlink" title="Unity跨平台基本原理"></a>Unity跨平台基本原理</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程语言 </category>
+          
+          <category> C# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
             
         </tags>
       
