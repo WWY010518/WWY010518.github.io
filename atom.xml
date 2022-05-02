@@ -6,7 +6,7 @@
   <link href="https://wwy.wwywy.com/atom.xml" rel="self"/>
   
   <link href="https://wwy.wwywy.com/"/>
-  <updated>2022-03-23T08:22:15.119Z</updated>
+  <updated>2022-03-24T13:28:43.474Z</updated>
   <id>https://wwy.wwywy.com/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>数据结构和算法</title>
-    <link href="https://wwy.wwywy.com/posts/544.html"/>
-    <id>https://wwy.wwywy.com/posts/544.html</id>
-    <published>2022-03-03T13:00:00.000Z</published>
-    <updated>2022-03-23T08:22:15.119Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据结构概论"><a href="#数据结构概论" class="headerlink" title="数据结构概论"></a>数据结构概论</h2><h3 id="数据结构的定义"><a href="#数据结构的定义" class="headerlink" title="数据结构的定义"></a>数据结构的定义</h3><p>1.数据：描述客观事物的数和字符的集合；</p><p>2.数据项：数据最小单位；</p><p>3.数据对象：性质相同的数据元素集合；</p><p>4.数据结构：数据元素之间的关系；</p><ul><li>数据逻辑结构：由数据元素之间的逻辑关系组成；</li><li>数据的存储结构：数据元素以及其关系的物理结构；</li><li>数据的运算：施加在该数据上的操作；</li></ul><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>1.定义：数据之间的抽象逻辑关系；</p><p>2.表示方法：图表表示、二元组表示；</p><p>3.逻辑结构类型：</p><ul><li>集合：同属集合，无关系；</li><li>线性结构：一对一；</li><li>树形结构：一对多；</li><li>图：多对多；</li></ul><h3 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h3><p>1.定义：指数据的实际存储，逻辑结构在计算机存储实现；</p><p>2.物理存输类型：</p><ul><li>顺序存储结构：连续存储</li><li>链式存储结构：非连续存储</li><li>索引存储结构：键值对</li><li>哈希（散列）存储：计算关键字哈希值仅存数据<h3 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h3></li></ul><p>1.定义：对数据实施的操作；</p><p>运算定义和运算实现分离：基于逻辑结构定义运算，基于存储结构实现运算</p><p>2.常用数据运算类型：增删改查以及排序；</p><h3 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h3><p>1.数据类型：值类型，引用类型等；</p><p>2.抽象数据类型：从求解问题抽象出来的数据逻辑结构和抽象运算，与具体实现无关（重要特征是数据抽象和数据封装），算法就是抽象运算的实现；</p><p>3.抽象数据结构定义：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT:数据结构名（例如List）；Data:数据结构的描述（例如线性表元素一一对应）；Operation:数据结构定义了哪些操作（例如对线性表的清空、插入、添加、删除、初始化等等）；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="算法概论"><a href="#算法概论" class="headerlink" title="算法概论"></a>算法概论</h2><p>1.算法的定义：对特定问题的一种描叙，是指令的有限序列，应具有以下特征；</p><ul><li>有穷性：是可以终止结束的算法；</li><li>确定性：相同输入相同输出；</li><li>可行性：算法每一步都必须是可行的，每一步都能执行有限次数完成；</li><li>有输入输出：输入加工对象，加功得到结果；</li></ul><p>2.算法的设计目标：如下几点</p><ul><li>正确性：对于非法的数据能够得到满足规格的结果；</li><li>可读可使用性：便于阅读、交流和使用；</li><li>健壮性：数据不合法时，也能做出相应处理；</li><li>时间高效率和低存储：满足时间高效率和低存储；</li></ul><p>3.算法的描述：采用计算机语言描叙算法；</p><h2 id="算法分析概论"><a href="#算法分析概论" class="headerlink" title="算法分析概论"></a>算法分析概论</h2><p>1.算法分析的定义：分析算法占用的计算机CPU时间和内存空间的多少；</p><h3 id="算法时间性能分析（重点理解）"><a href="#算法时间性能分析（重点理解）" class="headerlink" title="算法时间性能分析（重点理解）"></a>算法时间性能分析（重点理解）</h3><p>1.时间算法类型：</p><ul><li>事后统计法：统计执行时间，必须执行程序且很多因素掩盖了算法本质，如计算机速度、语言、问题规模等；</li><li>事前估计法：抛开问题，仅考虑算法本身的效率；</li></ul><p>2.算法时间复杂度定义：平均情况下的问题规模n的函数的最高阶表示，推导如下</p><ul><li>执行次数T(n) ==&gt; 问题规模n的函数；</li><li>总算法执行时间 ==&gt; 原操作+ T(n)(执行次数或算法频率)；</li><li>简化算法执行时间 ==&gt;  仅考虑执行次数T(n)  ；</li><li>上界f(n) ==&gt; 由T(n)对于n的阶级函数的拆解，是问题规模n的某个函数；</li><li>问题阶级增率比较 ==&gt; 1(仅原操作)&lt;${log}<em>{2}$n&lt;n&lt;n${log}</em>{2}$n&lt;$n^2$&lt;$n^3$&lt;$2^n$&lt;n!&lt;$n^n$；</li><li>渐进时间复杂度（函数渐进增长问题） ==&gt; O(f(n))（O是找出T(n)最高阶或者说最紧凑的上界）；</li><li>平均时间复杂度 ==&gt;最好时间复杂度（算法运气好的时间）与最坏时间复杂度（算法运气坏的时候）的折中考虑；</li></ul><p>3.推导大O阶的方法：</p><ul><li>用常数1取代运行时间中所有加法常数；</li><li>修改后的运行次数函数，只保留最高阶数；</li><li>去除最高阶的相乘系数，得到的就是大O阶；</li></ul><p>4.算法复杂度求和求积：</p><ul><li>T1(n)+T2(n)=O(Max(fn,g(n)))  例如并列循环</li><li>T1(n) * T2(n) = O(f(n)*g(n)) 例如多层嵌套循环</li></ul><p>5.递归算法时间复杂度：自己调用自己，不能采用前面的分析方法；</p><h3 id="算法空间性能分析"><a href="#算法空间性能分析" class="headerlink" title="算法空间性能分析"></a>算法空间性能分析</h3><p>1.算法空间复杂度：记作S(n) = O(g(n))，n为问题的规模，f(n)为语句所占用的存储空间函数，解释如下；</p><ul><li>局部空间：初始只分配一次空间，参与原操作完继续使用，如果算法只有该形式空间分配，即问题规模n为常数，则该算法为原地工作或就地工作算法，空间复杂度为O(1)；</li><li>临时空间：原操作时才分配空间，原操作完即可释放，基本是其算法执行次数的考虑，空间复杂度和时间复杂度相关；</li></ul><p>2.递归算法空间复杂度：待记；</p><h2 id="程序概论"><a href="#程序概论" class="headerlink" title="程序概论"></a>程序概论</h2><p>1.程序=数据结构+算法；</p><p>2.数据结构和算法的联系：数据存储结构会影响算法的好坏，不能只单单考虑一种，存储强、信息多的存储结构，算法会比较好设计，反而相对简单的存储结构可能要设计一套复杂的算法；</p><h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>1.线性表定义：具有相同特征的数据元素的一个有限序列；</p><p>2.线性表的抽象数据类型：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT：线性表（List）Data：一个有n个数据元素的数据集合，且元素类型相同，除了第一个和最后一个元素，每一个元素只有一个前驱元素和后继元素，且它之间的关系是一一对应的；Operation：其中i是下标，e是表元素Init<span class="token punctuation">(</span><span class="token punctuation">)</span>:初始化操作IsEmpty<span class="token punctuation">(</span><span class="token punctuation">)</span>:判断是否为空Clear<span class="token punctuation">(</span><span class="token punctuation">)</span>:清空操作GetElem<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:根据下标获取元素Locate<span class="token punctuation">(</span>e<span class="token punctuation">)</span>:根据元素获取下标，为-1则表示返回失败；Insert<span class="token punctuation">(</span>e,i<span class="token punctuation">)</span>:在下标位置插入元素Delete<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:删除下标元素，并且返回其值Lengtn<span class="token punctuation">(</span><span class="token punctuation">)</span>:获取个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h2><p>1.顺序存储结构定义：线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素，逻辑上相邻的俩个元素在对应得顺序表中它们得存储位置也相邻；</p><h2 id="链式存储结构"><a href="#链式存储结构" class="headerlink" title="链式存储结构"></a>链式存储结构</h2><p>2.链式存储结构定义：</p><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="数组和广义表"><a href="#数组和广义表" class="headerlink" title="数组和广义表"></a>数组和广义表</h1><h1 id="数和二叉树"><a href="#数和二叉树" class="headerlink" title="数和二叉树"></a>数和二叉树</h1><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h1 id="内排序"><a href="#内排序" class="headerlink" title="内排序"></a>内排序</h1><h1 id="外排序"><a href="#外排序" class="headerlink" title="外排序"></a>外排序</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot; title=&quot;绪论&quot;&gt;&lt;/a&gt;绪论&lt;/h1&gt;&lt;h2 id=&quot;数据结构概论&quot;&gt;&lt;a href=&quot;#数据结构概论&quot; class=&quot;headerlink&quot; title=&quot;数据结构概论&quot;&gt;&lt;/a&gt;数</summary>
-      
-    
-    
-    
-    <category term="大学知识" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="CS基础" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/CS%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="数据结构和算法" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/CS%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数据结构和算法" scheme="https://wwy.wwywy.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
   
   <entry>
     <title>编译原理</title>
@@ -126,6 +98,34 @@
     
     
     <category term="计算机网络技术" scheme="https://wwy.wwywy.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构和算法</title>
+    <link href="https://wwy.wwywy.com/posts/544.html"/>
+    <id>https://wwy.wwywy.com/posts/544.html</id>
+    <published>2022-03-03T13:00:00.000Z</published>
+    <updated>2022-03-23T08:22:15.119Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据结构概论"><a href="#数据结构概论" class="headerlink" title="数据结构概论"></a>数据结构概论</h2><h3 id="数据结构的定义"><a href="#数据结构的定义" class="headerlink" title="数据结构的定义"></a>数据结构的定义</h3><p>1.数据：描述客观事物的数和字符的集合；</p><p>2.数据项：数据最小单位；</p><p>3.数据对象：性质相同的数据元素集合；</p><p>4.数据结构：数据元素之间的关系；</p><ul><li>数据逻辑结构：由数据元素之间的逻辑关系组成；</li><li>数据的存储结构：数据元素以及其关系的物理结构；</li><li>数据的运算：施加在该数据上的操作；</li></ul><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>1.定义：数据之间的抽象逻辑关系；</p><p>2.表示方法：图表表示、二元组表示；</p><p>3.逻辑结构类型：</p><ul><li>集合：同属集合，无关系；</li><li>线性结构：一对一；</li><li>树形结构：一对多；</li><li>图：多对多；</li></ul><h3 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h3><p>1.定义：指数据的实际存储，逻辑结构在计算机存储实现；</p><p>2.物理存输类型：</p><ul><li>顺序存储结构：连续存储</li><li>链式存储结构：非连续存储</li><li>索引存储结构：键值对</li><li>哈希（散列）存储：计算关键字哈希值仅存数据<h3 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h3></li></ul><p>1.定义：对数据实施的操作；</p><p>运算定义和运算实现分离：基于逻辑结构定义运算，基于存储结构实现运算</p><p>2.常用数据运算类型：增删改查以及排序；</p><h3 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h3><p>1.数据类型：值类型，引用类型等；</p><p>2.抽象数据类型：从求解问题抽象出来的数据逻辑结构和抽象运算，与具体实现无关（重要特征是数据抽象和数据封装），算法就是抽象运算的实现；</p><p>3.抽象数据结构定义：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT:数据结构名（例如List）；Data:数据结构的描述（例如线性表元素一一对应）；Operation:数据结构定义了哪些操作（例如对线性表的清空、插入、添加、删除、初始化等等）；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="算法概论"><a href="#算法概论" class="headerlink" title="算法概论"></a>算法概论</h2><p>1.算法的定义：对特定问题的一种描叙，是指令的有限序列，应具有以下特征；</p><ul><li>有穷性：是可以终止结束的算法；</li><li>确定性：相同输入相同输出；</li><li>可行性：算法每一步都必须是可行的，每一步都能执行有限次数完成；</li><li>有输入输出：输入加工对象，加功得到结果；</li></ul><p>2.算法的设计目标：如下几点</p><ul><li>正确性：对于非法的数据能够得到满足规格的结果；</li><li>可读可使用性：便于阅读、交流和使用；</li><li>健壮性：数据不合法时，也能做出相应处理；</li><li>时间高效率和低存储：满足时间高效率和低存储；</li></ul><p>3.算法的描述：采用计算机语言描叙算法；</p><h2 id="算法分析概论"><a href="#算法分析概论" class="headerlink" title="算法分析概论"></a>算法分析概论</h2><p>1.算法分析的定义：分析算法占用的计算机CPU时间和内存空间的多少；</p><h3 id="算法时间性能分析（重点理解）"><a href="#算法时间性能分析（重点理解）" class="headerlink" title="算法时间性能分析（重点理解）"></a>算法时间性能分析（重点理解）</h3><p>1.时间算法类型：</p><ul><li>事后统计法：统计执行时间，必须执行程序且很多因素掩盖了算法本质，如计算机速度、语言、问题规模等；</li><li>事前估计法：抛开问题，仅考虑算法本身的效率；</li></ul><p>2.算法时间复杂度定义：平均情况下的问题规模n的函数的最高阶表示，推导如下</p><ul><li>执行次数T(n) ==&gt; 问题规模n的函数；</li><li>总算法执行时间 ==&gt; 原操作+ T(n)(执行次数或算法频率)；</li><li>简化算法执行时间 ==&gt;  仅考虑执行次数T(n)  ；</li><li>上界f(n) ==&gt; 由T(n)对于n的阶级函数的拆解，是问题规模n的某个函数；</li><li>问题阶级增率比较 ==&gt; 1(仅原操作)&lt;${log}<em>{2}$n&lt;n&lt;n${log}</em>{2}$n&lt;$n^2$&lt;$n^3$&lt;$2^n$&lt;n!&lt;$n^n$；</li><li>渐进时间复杂度（函数渐进增长问题） ==&gt; O(f(n))（O是找出T(n)最高阶或者说最紧凑的上界）；</li><li>平均时间复杂度 ==&gt;最好时间复杂度（算法运气好的时间）与最坏时间复杂度（算法运气坏的时候）的折中考虑；</li></ul><p>3.推导大O阶的方法：</p><ul><li>用常数1取代运行时间中所有加法常数；</li><li>修改后的运行次数函数，只保留最高阶数；</li><li>去除最高阶的相乘系数，得到的就是大O阶；</li></ul><p>4.算法复杂度求和求积：</p><ul><li>T1(n)+T2(n)=O(Max(fn,g(n)))  例如并列循环</li><li>T1(n) * T2(n) = O(f(n)*g(n)) 例如多层嵌套循环</li></ul><p>5.递归算法时间复杂度：自己调用自己，不能采用前面的分析方法；</p><h3 id="算法空间性能分析"><a href="#算法空间性能分析" class="headerlink" title="算法空间性能分析"></a>算法空间性能分析</h3><p>1.算法空间复杂度：记作S(n) = O(g(n))，n为问题的规模，f(n)为语句所占用的存储空间函数，解释如下；</p><ul><li>局部空间：初始只分配一次空间，参与原操作完继续使用，如果算法只有该形式空间分配，即问题规模n为常数，则该算法为原地工作或就地工作算法，空间复杂度为O(1)；</li><li>临时空间：原操作时才分配空间，原操作完即可释放，基本是其算法执行次数的考虑，空间复杂度和时间复杂度相关；</li></ul><p>2.递归算法空间复杂度：待记；</p><h2 id="程序概论"><a href="#程序概论" class="headerlink" title="程序概论"></a>程序概论</h2><p>1.程序=数据结构+算法；</p><p>2.数据结构和算法的联系：数据存储结构会影响算法的好坏，不能只单单考虑一种，存储强、信息多的存储结构，算法会比较好设计，反而相对简单的存储结构可能要设计一套复杂的算法；</p><h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>1.线性表定义：具有相同特征的数据元素的一个有限序列；</p><p>2.线性表的抽象数据类型：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT：线性表（List）Data：一个有n个数据元素的数据集合，且元素类型相同，除了第一个和最后一个元素，每一个元素只有一个前驱元素和后继元素，且它之间的关系是一一对应的；Operation：其中i是下标，e是表元素Init<span class="token punctuation">(</span><span class="token punctuation">)</span>:初始化操作IsEmpty<span class="token punctuation">(</span><span class="token punctuation">)</span>:判断是否为空Clear<span class="token punctuation">(</span><span class="token punctuation">)</span>:清空操作GetElem<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:根据下标获取元素Locate<span class="token punctuation">(</span>e<span class="token punctuation">)</span>:根据元素获取下标，为-1则表示返回失败；Insert<span class="token punctuation">(</span>e,i<span class="token punctuation">)</span>:在下标位置插入元素Delete<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:删除下标元素，并且返回其值Lengtn<span class="token punctuation">(</span><span class="token punctuation">)</span>:获取个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h2><p>1.顺序存储结构定义：线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素，逻辑上相邻的俩个元素在对应得顺序表中它们得存储位置也相邻；</p><h2 id="链式存储结构"><a href="#链式存储结构" class="headerlink" title="链式存储结构"></a>链式存储结构</h2><p>2.链式存储结构定义：</p><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="数组和广义表"><a href="#数组和广义表" class="headerlink" title="数组和广义表"></a>数组和广义表</h1><h1 id="数和二叉树"><a href="#数和二叉树" class="headerlink" title="数和二叉树"></a>数和二叉树</h1><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h1 id="内排序"><a href="#内排序" class="headerlink" title="内排序"></a>内排序</h1><h1 id="外排序"><a href="#外排序" class="headerlink" title="外排序"></a>外排序</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot; title=&quot;绪论&quot;&gt;&lt;/a&gt;绪论&lt;/h1&gt;&lt;h2 id=&quot;数据结构概论&quot;&gt;&lt;a href=&quot;#数据结构概论&quot; class=&quot;headerlink&quot; title=&quot;数据结构概论&quot;&gt;&lt;/a&gt;数</summary>
+      
+    
+    
+    
+    <category term="大学知识" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="CS基础" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/CS%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="数据结构和算法" scheme="https://wwy.wwywy.com/categories/%E5%A4%A7%E5%AD%A6%E7%9F%A5%E8%AF%86/CS%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数据结构和算法" scheme="https://wwy.wwywy.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -252,7 +252,7 @@
     <link href="https://wwy.wwywy.com/posts/1602.html"/>
     <id>https://wwy.wwywy.com/posts/1602.html</id>
     <published>2022-02-18T13:00:00.000Z</published>
-    <updated>2022-03-21T13:59:21.912Z</updated>
+    <updated>2022-03-22T02:42:48.028Z</updated>
     
     <content type="html"><![CDATA[<h1 id="了解-Net相关知识"><a href="#了解-Net相关知识" class="headerlink" title="了解.Net相关知识"></a>了解.Net相关知识</h1><h2 id="微软-Net概述"><a href="#微软-Net概述" class="headerlink" title="微软.Net概述"></a>微软.Net概述</h2><p>1.微软.Net说明：微软的.Net即不是编程语言也不是框架，是类似于互联网时代、次世代、21世纪的宣传口号，是一整套技术体系的统称，或者说是微软提供的技术水平的代号，本质上是微软为自己一系列取的一个代号，以下是包含内容；</p><ul><li>框架体系：.Net Framework、.Net Core、Mono等等；</li><li>开发语言：C#、VB、F#等等（C#是.Net平台主推的开发语言）；</li><li>开发工具：Visual Studio、Visual Studio Code 等等；</li></ul><p>2.微软实现.Net平台的目的：</p><ul><li>跨语言：只要是面向.NET平台的编程语言(C#、VB、C++、F#等等)，用其中一种语言编写的内容可以无缝地用在另一种语言编写的应用程序中；</li><li>跨平台：一次编译，不需要任何代码修改，应用程序就可以运行在任意有.NET框架实现的操作系统上，即代码不依赖于操作系统，也不依赖硬件环境；</li></ul><h2 id="Net跨语言"><a href="#Net跨语言" class="headerlink" title=".Net跨语言"></a>.Net跨语言</h2><p>1.跨语言公共语言规范：微软为了实现跨平台，制定了一些规范，只要一门语言支持这个规则，就能在.Net平台下开发应用程序，以下是规则说明；</p><ul><li>CLS（公共语言规范）：.Net专门参考每种语言找出语言间的共性，是一组语言互操作的标准规范；</li><li>CTS（公共类型系统）：当你设计面向.Net语言时需要遵守的一个体系，而刚才提到的CLS公共语言规范就是是CTS公共类型系统的子级，一个编程语言，如果它能够支持CTS，那么我们就称它为面向.NET平台的语言；</li><li>CLI（公共语言基础结构）：是微软将CTS等内容提交给国际组织计算机制造联合会ECMA的一个工业标准；</li></ul><h2 id="Net虚拟机-CLR"><a href="#Net虚拟机-CLR" class="headerlink" title=".Net虚拟机(CLR)"></a>.Net虚拟机(CLR)</h2><p>1.CLR（公共语言运行时）说明：让应用程序在操作系统上运行，公共语言运行时，它是.Net Framework的基础，所有的.Net技术都是建立在此之上的，它是一个在执行时管理代码的代码，提供内存管理，线程管理等等核心服务，就好像一个小型的操作系统一样，所以形象的把它称为“.Net虚拟机”，Java的虚拟机也是类似这样的东西，如果想要应用程序在目标操作系统上能够运行，就必须依靠.Net提供的CLR环境来支持，它会把程序集中的IL（中间代码）翻译成机器码最终在操作系统上运行；</p><p>2.CLR做的事情：<br><img src="https://s1.ax1x.com/2022/03/21/qumuMq.png" alt="CLR做的事情"></p><h2 id="Net跨平台"><a href="#Net跨平台" class="headerlink" title=".Net跨平台"></a>.Net跨平台</h2><h3 id="Net-Framework"><a href="#Net-Framework" class="headerlink" title=".Net Framework"></a>.Net Framework</h3><ol><li>.Net Framework：.Net Framework 在2002年推出1.0版本，.NET Framework 是一个可以快速开发、部署网站服务及应用程序的开发框架，是 Windows 中的一个组件，部分开源，主要用于开发Windows下应用程序，包括公共语言运行时（Common Language Runtime, CLR），虚拟执行系统，.NET Framework 类库等，下面时详细说明；</li></ol><ul><li>只要支持CLS公共语言规范的语言都可以用于开发Windows下的各种应用程序和网站程序；</li><li>BCL（基础类库）和FCL（框架类库）：是这个框架体系中为我们实现好的各种API；</li><li>程序集：程序集的表现就是后缀为.dll或者.exe格式的文件，其中包含的最关键信息， PE头、CLR头（就是一些程序的格式信息，比如入口方法，版本号等等）</li><li>CIL代码（通用中间代码）：是介于源代码和机器码之间的代码之后会通过CLR产生机器码，CIL代码你可以理解为由于可能使用不同的代码进行开发，所以会将这些代码翻译为统一规范的中间代码；</li></ul><p><img src="https://s1.ax1x.com/2022/03/21/qunTHK.png" alt=".Net Framework的体系结构"></p><h3 id="Net-Core"><a href="#Net-Core" class="headerlink" title=".Net Core"></a>.Net Core</h3><ol><li>.Net Core：.Net Core 是2016年推出的.Net Framework的新一代版本，是.Net Framework的翻版实现，它是一个开源项目，它是基于.Net Framework来进行设计的主要目的就是跨平台，是.Net技术框架组成在Windows、MacOS、类Linux系统下的具体实现，它的原理就是为不同的操作系统实现对应的CLR公共语言运行时（.Net虚拟机），这样就可以在不同的平台上，将IL（中间代码）翻译成机器码最终在操作系统上运行了；</li></ol><p><img src="https://s1.ax1x.com/2022/03/21/quu5GQ.png" alt=".Net Core的体系结构"></p><h3 id="Mono"><a href="#Mono" class="headerlink" title="Mono"></a>Mono</h3><p>1.Mono：2004年由Xamarin公司（已被微软收购）所赞助的开源项目，它基于.Net的CLI（Common Language Infrastructure）公共语言基础结构，它相对.Net FrameWork最大的区别就是具备跨平台的能力，它不仅可以运行在Windows、MacOS、Linux等操作系统，甚至还可以运行在PS3、XBOX、Wii等主机平台上，也就是说在.Net Core出现之前，Mono是.Net平台实现跨平台的不二之选；</p><h1 id="Unity跨平台原理-Mono"><a href="#Unity跨平台原理-Mono" class="headerlink" title="Unity跨平台原理(Mono)"></a>Unity跨平台原理(Mono)</h1><p>1.Unity的组成：Unity的底层是通过C/C++来完成上层逻辑的，Unity主要包括两个部分：</p><ul><li>Unity Engine（引擎）：提供UnityEngine.dll动态库，各平台不同，C/C++编写，包含平台相关代码、图形API、物理引擎、灯光等等所有游戏引擎底层内容；</li><li>Unity Editor（编辑器）：提供UnityEditor.dll动态库，大部分由C#编写，用户脚本最初可以使用C#、JavaScript、Boo语言编写，项目代码最后由Mono编译；</li></ul><p>2.Mono组成：</p><ul><li>C#编译器（mcs）；</li><li>Mono Runtime 类似CLR公共语言运行时（虚拟机），包括JIT（Just in time）即时编译器、AOT（Ahead of time）提前编译器、GC、类库加载器 等；</li><li>BCL基础类库；</li><li>Mono类库：提供很多超出.Net的一些额外功能，主要用于构建各种操作系统上的应用；</li></ul><p>3.Unity跨平台的基本原理（Mono）：在Unity下使用各种语言进行逻辑实现，这些语言在发布时会被编译成，IL中间代码，最终这些中间代码在对应操作系统上，通过Mono VM（虚拟机），真正翻译成机器码运行起来；<br><img src="https://s1.ax1x.com/2022/03/21/qu1bUP.png" alt="Unity跨平台的基本原理"></p><p>4.Mono的特点：</p><ul><li>构建（最终打包时）速度快</li><li>Mono编译机制是JIT即时编译，所以支持更多类库</li><li>必须将代码发布为托管程序集（.dll文件）</li><li>Mono VM虚拟机平台维护麻烦，且部分平台不支持（WebGL）</li><li>由于Mono版本授权原因，C#很多新特性无法使用</li><li>IOS支持Mono，但不在允许32位的Mono应用提交到应用商店<br>  <img src="https://s1.ax1x.com/2022/03/21/qudQIJ.png" alt="Mono跨平台说明"></li></ul><p>5.基于Mono跨平台的优缺点：</p><ul><li>优点：只要在不同操作系统上实现Mono VM（虚拟机），那我们能够支持的平台就会“无限”多；</li><li>缺点：维护工作耗时耗力，当Unity版本更新时，Mono VM也需要维护和更新，那多对于N多个平台来说，工作量是非常大的。（Unity的工作量），低版本Mono无法支持新版本C#的强大新特性；</li></ul><h1 id="Unity跨平台原理-IL2CPP"><a href="#Unity跨平台原理-IL2CPP" class="headerlink" title="Unity跨平台原理(IL2CPP)"></a>Unity跨平台原理(IL2CPP)</h1><p>1.IL2CPP说明：L2CPP是在Unity4.6.1 p5之后的版本中，加入的脚本后处理方式，是继Mono之后的一种跨平台解决方案，顾名思义就是把，IL中间代码转译为CPP代码（C++），再利用各平台优化过的编译器编译为对应平台的目标代码，需要注意的是虽然中间代码变为了C++，但是内存管理还是遵循C#中GC的方式，这也是为什么有一个IL2CPP VM（虚拟机）存在的原因，它主要是用来完成GC管理，线程创建等服务工作的；</p><p>2.IL2CPP特点：</p><ul><li>相对Mono构建（最终打包时）速度慢；</li><li>只支持AOT提前编译；</li><li>可以启用引擎代码剥离来减少代码的大小；</li><li>程序的运行效率比Mono高，运行速度快；</li><li>多平台移植更加方便；<br>  <img src="https://s1.ax1x.com/2022/03/21/qudkPs.png" alt="IL2CPP跨平台说明"></li></ul><p>3.Mono和IL2CPP的区别：</p><ul><li>IL2CPP效率高于Mono，跨平台也更好维护，不使用热更新后者大量反射的化推荐使用IL2CPP；</li><li>Mono是JIT（半解释半编译程序或者说纯解释程序）即时编译，IL2CPP是AOT（预编译程序）提前编译，导致IL2CPP不能在运行时动态生成代码和类型，所以必须在编译时就完全确定需要用到的类型，举例：List<a>和List<b>中A和B是我们自定义的类，我能必须在代码中显示的调用过，IL2CPP才能保留List</b></a><b><a>和List<b>两个类型。如果在热更新时我们调用List<c>，但是它之前并没有在代码中显示调用过，那么这时就会出现报错等问题。主要就是因为JIT和AOT两个编译模式的不同造成的；</c></b></a></b></li><b><a><b></b></a></b></ul><b><a><b></b></a><b><h1 id="IL2CPP模式存在的问题"><a></a><a href="#IL2CPP模式存在的问题" class="headerlink" title="IL2CPP模式存在的问题"></a>IL2CPP模式存在的问题</h1><p>1.安装Unity IL2CPP打包工具：在Unityhub中下载 IL2CPP打包相关工具；</p><h2 id="IL2CPP打包泛型问题"><a href="#IL2CPP打包泛型问题" class="headerlink" title="IL2CPP打包泛型问题"></a>IL2CPP打包泛型问题</h2><p>1.问题说明：IL2CPP和Mono最大的区别是，不能在运行时动态生成代码和类型，就是说 泛型相关的内容，如果你在打包生成前没有把之后想要使用的泛型类型显示使用一次，那么之后如果使用没有被编译的类型，就会出现找不到类型的报错；</p><p>2.解决方案：其实就是在预言编译之前让IL2CPP知道我们需要使用这个内容，详细如下</p><ul><li>泛型类：声明一个类，然后在这个类中声明一些public的泛型类变量；</li><li>泛型方法：随便写一个静态方法，在将这个泛型方法在其中调用一下。这个静态方法无需被调用；</li></ul><h2 id="IL2CPP打包类型裁剪问题"><a href="#IL2CPP打包类型裁剪问题" class="headerlink" title="IL2CPP打包类型裁剪问题"></a>IL2CPP打包类型裁剪问题</h2><p>1.问题说明：IL2CPP在打包时会自动对Unity工程的DLL进行裁剪，将代码中没有引用到的类型裁剪掉，以达到减小发布后包的尺寸的目的，然而在实际使用过程中，很多类型有可能会被意外剪裁掉，造成运行时抛出找不到某个类型的异常，特别是通过反射等方式在编译时无法得知的函数调用，在运行时都很有可能遇到问题；</p><p>2.解决方案：</p><ul><li>(1).IL2CPP处理模式时，将PlayerSetting-&gt;Other Setting-&gt;Managed Stripping Level(代码剥离)设置为Low；</li><li>Disable:Mono模式下才能设置为不删除任何代码 ；</li><li>Low:默认低级别，保守的删除代码，删除大多数无法访问的代码，同时也最大程度减少剥离实际使用的代码的可能性；</li><li>Medium:中等级别，不如低级别剥离谨慎，也不会达到高级别的极端；</li><li>Hight:高级别，尽可能多的删除无法访问的代码，有限优化尺寸减小。如果选择该模式一般需要配合link.xml使用；</li><li>(2).通过Unity提供的link.xml方式来告诉Unity引擎，哪些类型是不能够被剪裁掉的,在Unity工程的Assets目录中（或其任何子目录中）建立一个叫link.xml的XML文件；</li></ul><p>3.link.xml声明格式举例说明：推荐看官网</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!--程序集中保留类型和成员--&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>assembly</span> <span class="token attr-name">fullname</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Assembly-CSharp<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!--保留命名空间中类以及参数preserve说明：all全部、fields字段、methods方法、nothing只保留类型--&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">fullname</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>MyNameSpace.MyClass<span class="token punctuation">"</span></span> <span class="token attr-name">preserve</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>all<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>assembly</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></b></b>]]></content>
     
@@ -333,9 +333,9 @@
     <category term="技术架构" scheme="https://wwy.wwywy.com/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
     
     
-    <category term="ET" scheme="https://wwy.wwywy.com/tags/ET/"/>
-    
     <category term="游戏框架" scheme="https://wwy.wwywy.com/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="ET" scheme="https://wwy.wwywy.com/tags/ET/"/>
     
   </entry>
   
@@ -398,11 +398,11 @@
   </entry>
   
   <entry>
-    <title>Unity相关-Excel工具</title>
+    <title>Unity相关-Excel编辑器工具</title>
     <link href="https://wwy.wwywy.com/posts/1601.html"/>
     <id>https://wwy.wwywy.com/posts/1601.html</id>
     <published>2021-11-16T13:00:00.000Z</published>
-    <updated>2022-03-21T11:17:25.276Z</updated>
+    <updated>2022-04-30T00:18:35.232Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Excel介绍"><a href="#Excel介绍" class="headerlink" title="Excel介绍"></a>Excel介绍</h1><p>1.Excel的本质：Excel表本质上也是一堆数据，只不过它有自己的存储读取规则，如果我们想要通过代码读取它，那么必须知道它的存储规则，官网是专门提供了对应的DLL文件用来解析Excel文件的；</p><p>2.获取Excel数据信息的意义：</p><ul><li>可以根据表中数据来动态的生成相关数据，如数据结构类、容器类、二进制数据类；</li><li>转成二进制数据也可以提升读取效率，提升数据安全性；</li></ul><h1 id="Excel官方工具使用"><a href="#Excel官方工具使用" class="headerlink" title="Excel官方工具使用"></a>Excel官方工具使用</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">//主要知识点：//1.FileStream读取文件流//2.IExcelDataReader类，从流中读取Excel数据//3.DataSet 数据集合类 将Excel数据转存进其中方便读取//4.DataTable 数据表类 表示Excel文件中的一个表//5.DataRow 数据行类 表示某张表中的一行数据[MenuItem("GameTool/读取Excel里的具体信息")]private static void ReadExcel(){    using (FileStream fs = File.Open(Application.dataPath + "/ArtRes/Excel/PlayerInfo.xlsx", FileMode.Open, FileAccess.Read))    {        IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(fs);        DataSet result = excelReader.AsDataSet();        for (int i = 0; i &lt; result.Tables.Count; i++)        {            //得到其中一张表的具体数据            DataTable table = result.Tables[i];            Debug.Log("表名：" + result.Tables[i].TableName);            Debug.Log("行数：" + result.Tables[i].Rows.Count);            Debug.Log("列数：" + result.Tables[i].Columns.Count);            //得到其中一行的数据            DataRow row = table.Rows[0];            //得到行中某一列的信息            Debug.Log(row[1].ToString());            DataRow row;            for (int j = 0; j &lt; table.Rows.Count; j++)            {                //得到每一行的信息                row = table.Rows[j];                Debug.Log("*********新的一行************");                for (int k = 0; k &lt; table.Columns.Count; k++)                {                    //得到每一列的信息                    Debug.Log(row[k].ToString());                }            }        }        fs.Close();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="制定规则"><a href="#制定规则" class="headerlink" title="制定规则"></a>制定规则</h1><p>1.Excel读取规则：</p><ul><li>数据类型生成要知道字段名，容器（一般字典）要知道主键，二进制要知道从哪行哪列开始；</li><li>第一行是字段名，第二行是数据类型，第三行容器可以再加一个key表示主键（也可以默认第一列），第四行是中文解释（给策划写的，不会生成进去）；</li><li>下方的表名作为生成的类型名；</li></ul><h1 id="Excel工具编写"><a href="#Excel工具编写" class="headerlink" title="Excel工具编写"></a>Excel工具编写</h1>]]></content>
     
@@ -426,43 +426,11 @@
   </entry>
   
   <entry>
-    <title>Unity进阶-基于Lua的热更新解决方案</title>
-    <link href="https://wwy.wwywy.com/posts/1569.html"/>
-    <id>https://wwy.wwywy.com/posts/1569.html</id>
-    <published>2021-10-28T13:00:00.000Z</published>
-    <updated>2022-03-12T06:21:03.855Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="热更新介绍"><a href="#热更新介绍" class="headerlink" title="热更新介绍"></a>热更新介绍</h1><p>1.热更新说明：游戏或者软件无需重新下载客户端进行安装，而是在应用程序启动情况下，在内部进行的资源或者代码更新，能迅速修复Bug、提升玩家留存率；</p><p>2.热更新分类：以下俩种</p><ul><li>资源的热更新：Unity内置的有AssetBundle来进行资源热更；</li><li>逻辑的热更新：也就是对代码的热更新，一般使用xlua、tolua；</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;热更新介绍&quot;&gt;&lt;a href=&quot;#热更新介绍&quot; class=&quot;headerlink&quot; title=&quot;热更新介绍&quot;&gt;&lt;/a&gt;热更新介绍&lt;/h1&gt;&lt;p&gt;1.热更新说明：游戏或者软件无需重新下载客户端进行安装，而是在应用程序启动情况下，在内部进行的资源或者代码更新，能迅</summary>
-      
-    
-    
-    
-    <category term="游戏引擎" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
-    
-    <category term="Unity" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/"/>
-    
-    <category term="热更新" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
-    
-    
-    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
-    
-    <category term="Lua" scheme="https://wwy.wwywy.com/tags/Lua/"/>
-    
-    <category term="AssetBundle" scheme="https://wwy.wwywy.com/tags/AssetBundle/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C++入门</title>
     <link href="https://wwy.wwywy.com/posts/1344.html"/>
     <id>https://wwy.wwywy.com/posts/1344.html</id>
     <published>2021-10-28T13:00:00.000Z</published>
-    <updated>2022-03-23T02:48:27.383Z</updated>
+    <updated>2022-05-01T07:17:38.274Z</updated>
     
     <content type="html"><![CDATA[<h1 id="C-基本概念"><a href="#C-基本概念" class="headerlink" title="C++基本概念"></a>C++基本概念</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>1.语言的发展：二进制值类==&gt;汇编语言==&gt;中高级语言(C,C++,Java)</p><p>2.C++说明：C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程，C++ 被认为是一种中级语言，它综合了高级语言和低级语言的特点，C++ 是由 Bjarne Stroustrup 于 1979 年在新泽西州美利山贝尔实验室开始设计开发的。C++ 进一步扩充和完善了 C 语言，C++ 是 C 的一个超集，事实上，任何合法的 C 程序都是合法的 C++ 程序；</p><p>3.C++发展时间：</p><ul><li>1998：C++98，第一个C++标准；</li><li>2003：C++03，第二个C++标准；</li><li>2011：C++11，第三个C++标准；</li><li>2014：C++14，第四个C++标准；</li><li>2017：C++17，第五个C++标准；</li></ul><h2 id="环境的建立"><a href="#环境的建立" class="headerlink" title="环境的建立"></a>环境的建立</h2><p>1.C++编译器：</p><ul><li>GCC编译器：</li><li>Visual Studio IDEA：</li></ul><h1 id="C-基本语法"><a href="#C-基本语法" class="headerlink" title="C++基本语法"></a>C++基本语法</h1><p>1.编译&amp;执行：</p><ul><li>打开一个文本编辑器，添加上述代码；</li><li>保存文件为 hello.cpp；</li><li>打开命令提示符，进入到保存文件所在的目录；</li><li>键入 ‘g++ hello.cpp ‘，输入回车，编译代码。如果代码中没有错误，命令提示符会跳到下一行，并生成 a.out 可执行文件；</li><li>现在，键入 ‘ a.out’ 来运行程序；</li><li>您可以看到屏幕上显示 ‘ Hello World ‘；</li></ul><p>2.C++ 标识符：C++ 标识符是用来标识变量、函数、类、模块，或任何其他用户自定义项目的名称。一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9），C++ 标识符内不允许出现标点字符，比如 @、&amp; 和 %。C++ 是区分大小写的编程语言。因此，在 C++ 中，Manpower 和 manpower 是两个不同的标识符；</p><p>3.C++关键字：</p><p><a href="https://www.runoob.com/w3cnote/cpp-keyword-intro.html">C++ 的关键字（保留字）完整介绍 | 菜鸟教程 (runoob.com)</a></p><p>4.C++注释：和C#一致；</p><h1 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a>变量和常量</h1><h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><table><thead><tr><th>类型</th><th>关键字</th><th>初始化默认值</th><th>位</th><th>范围</th></tr></thead><tbody><tr><td>字符型</td><td>char</td><td>‘\0’</td><td>1 个字节</td><td>-128 到 127 或者 0 到 255</td></tr><tr><td>无符号字符型</td><td>unsigned char</td><td>0</td><td>1 个字节</td><td>0 到 255</td></tr><tr><td>有符号字符型</td><td>signed char</td><td>0</td><td>1 个字节</td><td>-128 到 127</td></tr><tr><td>整形</td><td>int</td><td>0</td><td>4 个字节</td><td>-2147483648 到 2147483647</td></tr><tr><td>无符号整形</td><td>unsigned int</td><td>0</td><td>4 个字节</td><td>0 到 4294967295</td></tr><tr><td>有符号整形</td><td>signed int</td><td>0</td><td>4 个字节</td><td>-2147483648 到 2147483647</td></tr><tr><td>短整形</td><td>short int</td><td>0</td><td>2 个字节</td><td>-32768 到 32767</td></tr><tr><td>无符号短整形</td><td>unsigned short int</td><td>0</td><td>2 个字节</td><td>0 到 65,535</td></tr><tr><td>有符号短整形</td><td>signed short int</td><td>0</td><td>2 个字节</td><td>-32768 到 32767</td></tr><tr><td>长整形</td><td>long int</td><td>0</td><td>8 个字节</td><td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td></tr><tr><td>无符号长整形</td><td>signed long int</td><td>0</td><td>8 个字节</td><td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td></tr><tr><td>有符号长整形</td><td>unsigned long int</td><td>0</td><td>8 个字节</td><td>0 到 18,446,744,073,709,551,615</td></tr><tr><td>单精度浮点型</td><td>float</td><td>0</td><td>4 个字节</td><td>精度型占4个字节（32位）内存空间，+/- 3.4e +/- 38 (~7 个数字)</td></tr><tr><td>双精度浮点型</td><td>double</td><td>0</td><td>8 个字节</td><td>双精度型占8 个字节（64位）内存空间，+/- 1.7e +/- 308 (~15 个数字)</td></tr><tr><td>双精度长浮点型</td><td>long double</td><td>0</td><td>16 个字节</td><td>长双精度型 16 个字节（128位）内存空间，可提供18-19位有效数字。</td></tr><tr><td>宽字符型</td><td>wchar_t</td><td>‘\0’</td><td>2 或 4 个字节</td><td>1 个宽字符（等价==&gt;typedef short int wchar_t）</td></tr><tr><td>无类型</td><td>void</td><td>-</td><td>-</td><td>表示类型的缺失</td></tr></tbody></table><h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><p>1.作用域说明：主要是三个地方可以定义变量</p><ul><li>局部变量：在函数或一个代码块内部声明的变量；</li><li>全局变量：在所有函数外部声明的变量；</li><li>形式参数：在函数参数的定义中声明的变量，而调用方则被称为实际参数；</li></ul><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>1.C++声明常量：常量最好全大写</p><ul><li>#define 预处理器：语法格式#define 预处理名 常量值；</li><li>const 关键字：语法格式const 数据类型 变量名 = 常量值；</li></ul><h2 id="修饰符类型"><a href="#修饰符类型" class="headerlink" title="修饰符类型"></a>修饰符类型</h2><p>1.修饰符：修饰符 signed、unsigned、long 和 short 可应用于整型，signed 和 unsigned 可应用于字符型，long 可应用于双精度型；修饰符 signed 和 unsigned 也可以作为 long 或 short 修饰符的前缀（例如：unsigned long int，其中int可以省略）；</p><ul><li>signed：有符号类型；</li><li>unsigned：无符号类型；</li><li>long：长类型；</li><li>short：短类型；</li></ul><p>2.类型限定符：类型限定符提供了变量的额外信息：</p><ul><li>const：const 类型的对象在程序执行期间不能被修改改变；</li><li>volatile：修饰符 volatile 告诉编译器不需要优化volatile声明的变量，让程序可以直接从内存中读取变量。对于一般的变量编译器会对变量进行优化，将内存中的变量值放在寄存器中以加快读写效率；</li><li>restrict：由 restrict 修饰的指针是唯一一种访问它所指向的对象的方式。只有 C99 增加了新的类型限定符 restrict；</li></ul><h2 id="存储类-型"><a href="#存储类-型" class="headerlink" title="存储类(型)"></a>存储类(型)</h2><p>1.存储类说明：存储类定义 C++ 程序中变量/函数的范围（可见性）和生命周期，这些说明符放置在它们所修饰的类型之前，下面列出 C++ 程序中可用的存储类（从 C++ 17 开始，auto 关键字不再是 C++ 存储类说明符，且 register 关键字被弃用）</p><ul><li>auto(C++17删除)：根据初始化表达式自动推断被声明的变量的类型，用于两种情况，声明变量时根据初始化表达式自动推断该变量的类型、声明函数时函数返回值的占位符；</li><li>register：用于定义存储在寄存器中而不是 RAM 中的局部变量，这意味着变量的最大尺寸等于寄存器的大小，且不能对它应用一元的 ‘&amp;’ 运算符（因为它没有内存位置）；</li><li>static：</li><li>extern：</li><li>mutable：</li><li>thread_local (C++11)：</li></ul><h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h1 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h1><h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1>]]></content>
     
@@ -506,6 +474,38 @@
     
     
     <category term="Lua" scheme="https://wwy.wwywy.com/tags/Lua/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity进阶-基于Lua的热更新解决方案</title>
+    <link href="https://wwy.wwywy.com/posts/1569.html"/>
+    <id>https://wwy.wwywy.com/posts/1569.html</id>
+    <published>2021-10-28T13:00:00.000Z</published>
+    <updated>2022-03-12T06:21:03.855Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="热更新介绍"><a href="#热更新介绍" class="headerlink" title="热更新介绍"></a>热更新介绍</h1><p>1.热更新说明：游戏或者软件无需重新下载客户端进行安装，而是在应用程序启动情况下，在内部进行的资源或者代码更新，能迅速修复Bug、提升玩家留存率；</p><p>2.热更新分类：以下俩种</p><ul><li>资源的热更新：Unity内置的有AssetBundle来进行资源热更；</li><li>逻辑的热更新：也就是对代码的热更新，一般使用xlua、tolua；</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;热更新介绍&quot;&gt;&lt;a href=&quot;#热更新介绍&quot; class=&quot;headerlink&quot; title=&quot;热更新介绍&quot;&gt;&lt;/a&gt;热更新介绍&lt;/h1&gt;&lt;p&gt;1.热更新说明：游戏或者软件无需重新下载客户端进行安装，而是在应用程序启动情况下，在内部进行的资源或者代码更新，能迅</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="Unity" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/"/>
+    
+    <category term="热更新" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    
+    
+    <category term="Lua" scheme="https://wwy.wwywy.com/tags/Lua/"/>
+    
+    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
+    
+    <category term="AssetBundle" scheme="https://wwy.wwywy.com/tags/AssetBundle/"/>
     
   </entry>
   
