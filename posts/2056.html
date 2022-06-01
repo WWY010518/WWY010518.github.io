@@ -1,0 +1,1038 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>游戏程序基础框架实例 | 雪夜の自我救赎</title><meta name="keywords" content="Unity,游戏框架"><meta name="author" content="雪夜"><meta name="copyright" content="雪夜"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="单例管理者基类不继承自Mono1.利用单例模式和泛形去实现模块管理者基类； public class SingletonBase&lt;T&gt; where T:new() {     private static T instance;      public static T GetInstance()     {         if (instance &#x3D;&#x3D; null) instance">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏程序基础框架实例">
+<meta property="og:url" content="https://wwy.wwywy.com/posts/2056.html">
+<meta property="og:site_name" content="雪夜の自我救赎">
+<meta property="og:description" content="单例管理者基类不继承自Mono1.利用单例模式和泛形去实现模块管理者基类； public class SingletonBase&lt;T&gt; where T:new() {     private static T instance;      public static T GetInstance()     {         if (instance &#x3D;&#x3D; null) instance">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg">
+<meta property="article:published_time" content="2020-11-20T13:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T01:44:17.803Z">
+<meta property="article:author" content="雪夜">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="游戏框架">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg"><link rel="shortcut icon" href="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg"><link rel="canonical" href="https://wwy.wwywy.com/posts/2056"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"一年之内的产物","messageNext":"技术可能存在过期"},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 雪夜","link":"链接: ","source":"来源: 雪夜の自我救赎","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '游戏程序基础框架实例',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-30 09:44:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="雪夜の自我救赎" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">29</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/Windows/"><i class="fa-fw fa fa-desktop"></i><span> Windows</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s4.ax1x.com/2022/01/24/7o1K0O.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">雪夜の自我救赎</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/Windows/"><i class="fa-fw fa fa-desktop"></i><span> Windows</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">游戏程序基础框架实例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-20T13:00:00.000Z" title="发表于 2020-11-20 21:00:00">2020-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-30T01:44:17.803Z" title="更新于 2022-03-30 09:44:17">2022-03-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Game-Play/">Game-Play</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/">技术架构</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="游戏程序基础框架实例"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="单例管理者基类"><a href="#单例管理者基类" class="headerlink" title="单例管理者基类"></a>单例管理者基类</h1><h2 id="不继承自Mono"><a href="#不继承自Mono" class="headerlink" title="不继承自Mono"></a>不继承自Mono</h2><p>1.利用单例模式和泛形去实现模块管理者基类；</p>
+<pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">public class SingletonBase&lt;T&gt; where T:new()
+{
+    private static T instance;
+
+    public static T GetInstance()
+    {
+        if (instance == null) instance = new T();
+        return instance;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="继承自Mono"><a href="#继承自Mono" class="headerlink" title="继承自Mono"></a>继承自Mono</h2><p>1.直接实例化通过生成游戏对象并且附加脚本；<br>2.Awake实例化的话要保证单例的唯一性；</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class SingletonMono&lt;T&gt; : MonoBehaviour where T : MonoBehaviour
+{
+    private static T instance;
+
+    public static T GetInstance()
+    {
+        if (instance == null)
+        {
+            GameObject go = new GameObject
+            {
+                name = typeof(T).Name,
+            };
+            instance = go.AddComponent&lt;T&gt;();
+            DontDestroyOnLoad(go);
+        }
+        return instance;
+    }
+
+    protected virtual void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this as T;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="事件管理者"><a href="#事件管理者" class="headerlink" title="事件管理者"></a>事件管理者</h1><p>1.观察者模式，利用了泛形和委托（事件）<br>2.这里的事件字典只能对付小游戏，大型游戏仍是不够</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public interface IEventInfo { } 
+
+public class EventInfo : IEventInfo
+{
+    public event UnityAction actions;
+
+    public EventInfo(UnityAction action)
+    {
+        actions += action;
+    }
+
+    public void EventTrigger()
+    {
+        actions?.Invoke();
+    }
+}
+
+public class EventInfo&lt;T&gt; : IEventInfo
+{
+    public event UnityAction&lt;T&gt; actions;
+
+    public EventInfo(UnityAction&lt;T&gt; action)
+    {
+        actions += action;
+    }
+
+    public void EventTrigger(T Info)
+    {
+        actions?.Invoke(Info);
+    }
+}
+
+public class EventMgr : SingletonBase&lt;EventMgr&gt;
+{
+    //暂时只定义一个字典进行储存，小游戏够用了
+    private Dictionary&lt;string, IEventInfo&gt; eventDic = new Dictionary&lt;string, IEventInfo&gt;(); 
+
+    public void AddListenter(string name,UnityAction action)
+    {
+        if (eventDic.TryGetValue(name, out IEventInfo eventInfo)) (eventInfo as EventInfo).actions += action;
+        else eventDic.Add(name,new EventInfo(action));
+    }
+
+    public void AddListenter&lt;T&gt;(string name, UnityAction&lt;T&gt; action)
+    {
+        if (eventDic.TryGetValue(name, out IEventInfo eventInfo)) (eventInfo as EventInfo&lt;T&gt;).actions += action;
+        else eventDic.Add(name, new EventInfo&lt;T&gt;(action));
+    }
+
+    public void RemoveListenter(string name, UnityAction action)
+    {
+        if (eventDic.TryGetValue(name, out IEventInfo eventInfo)) (eventInfo as EventInfo).actions -= action;
+    }
+
+    public void RemoveListenter&lt;T&gt;(string name, UnityAction&lt;T&gt; action)
+    {
+        if (eventDic.TryGetValue(name, out IEventInfo eventInfo)) (eventInfo as EventInfo&lt;T&gt;).actions -= action;
+    }
+
+    public void EventTrigger(string name)
+    {
+        if (eventDic.TryGetValue(name, out IEventInfo eventInfo)) (eventInfo as EventInfo).EventTrigger();
+    }
+
+    public void EventTrigger&lt;T&gt;(string name,T info)
+    {
+        if (eventDic.TryGetValue(name, out IEventInfo eventInfo)) (eventInfo as EventInfo&lt;T&gt;).EventTrigger(info);
+    }
+
+    public void Clear()
+    {
+        eventDic.Clear();
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="Mono根节点"><a href="#Mono根节点" class="headerlink" title="Mono根节点"></a>Mono根节点</h1><p>1.可以创建一个全局唯一的Mono节点使用<br>2.实现游戏入口继承自该节点即可，但是实现Awake单例</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class MonoRoot : SingletonMono&lt;MonoRoot&gt;
+{
+    private event UnityAction updateActions;
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
+    protected virtual void Update()
+    {
+        updateActions?.Invoke();
+    }
+
+    public void AddUpdateListenter(UnityAction updateAction)
+    {
+        updateActions += updateAction;
+    }
+
+    public void RemoveUpdateListenter(UnityAction updateAction)
+    {
+        updateActions -= updateAction;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="资源加载管理者"><a href="#资源加载管理者" class="headerlink" title="资源加载管理者"></a>资源加载管理者</h1><p>1.资源加载有同步加载和异步加载，异步加载用协程实现<br>2.资源加载管理者包括场景切换，以及配置文件加载</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class ResMgr : SingletonBase&lt;ResMgr&gt;
+{
+
+    #region 资源加载
+    private Dictionary&lt;string,Object&gt; ObjCacheDic=new Dictionary&lt;string, Object&gt;();
+
+
+    public T LoadObj&lt;T&gt;(string path , bool isIns=true , bool isCache= true ) where T : Object
+    {
+        T obj;
+        if (ObjCacheDic.TryGetValue(path, out Object cacheObj)) obj = cacheObj as T;
+        else 
+        {
+            obj = Resources.Load&lt;T&gt;(path);
+            if (isCache) ObjCacheDic.Add(path, obj);
+        };
+
+        if (obj is GameObject &amp;&amp; isIns) return GameObject.Instantiate(obj);
+        else return obj;
+    }
+
+    public void LoadObjAsyn&lt;T&gt;(string path,UnityAction&lt;T&gt; callback, bool isIns = true, bool isCache = true) where T : Object
+    {
+        if (ObjCacheDic.TryGetValue(path, out Object obj))
+        {
+            if (obj is GameObject &amp;&amp; isIns)
+                callback(GameObject.Instantiate(obj) as T);
+            else
+                callback(obj as T);
+        }
+        else MonoRoot.GetInstance().StartCoroutine(ReallyLoadObjAsyn(path, callback, isIns, isCache));
+
+    }
+
+
+    public IEnumerator ReallyLoadObjAsyn&lt;T&gt;(string path, UnityAction&lt;T&gt; callback, bool isIns, bool isCache) where T : Object
+    {
+        ResourceRequest r = Resources.LoadAsync&lt;T&gt;(path);
+        yield return r;
+
+        if(isCache) ObjCacheDic.Add(path, r.asset);
+
+        if (r.asset is GameObject &amp;&amp; isIns)
+            callback(GameObject.Instantiate(r.asset) as T);
+        else
+            callback(r.asset as T);
+    }
+    #endregion
+
+        #region 场景切换
+    public void LoadScene(string name, UnityAction fun)
+    {
+        //场景同步加载
+        SceneManager.LoadScene(name);
+        //加载完成过后 才会去执行fun
+        fun();
+    }
+
+    public void LoadSceneAsyn(string name, UnityAction fun)
+    {
+        MonoRoot.GetInstance().StartCoroutine(ReallyLoadSceneAsyn(name, fun));
+    }
+
+    public IEnumerator ReallyLoadSceneAsyn(string name, UnityAction fun)
+    {
+        AsyncOperation op = SceneManager.LoadSceneAsync(name);
+        while (!op.isDone)
+        {
+            //这里可以去做一些事情，例如更新进度条
+            //EventMgr.GetInstance().EventTrigger("更新进度条", op.progress);
+            yield return op.progress;
+        }
+        //加载完成过后 才会去执行fun
+        fun();
+    } 
+    #endregion
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="缓存池管理者"><a href="#缓存池管理者" class="headerlink" title="缓存池管理者"></a>缓存池管理者</h1><p>1.用一个类类型去包装缓存队列，这个类里面应该封装了获取和设置缓存对象的方法<br>2.缓存池目前只支持预制物的缓存</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class PoolMgr :SingletonBase&lt;PoolMgr&gt; 
+{
+    private Dictionary&lt;string, PoolData&gt; poolDic=new Dictionary&lt;string, PoolData&gt;();
+
+    private GameObject poolRoot;
+
+    public void GetObj(string name, UnityAction&lt;GameObject&gt; callBack)
+    {
+        if(poolDic.TryGetValue(name, out PoolData poolData) &amp;&amp; poolData.Count &gt; 0)
+        {
+            callBack(poolData.GetObj());
+        }
+        else
+        {
+            //创建资源应使用资源路径
+            ResMgr.GetInstance().LoadObjAsyn&lt;GameObject&gt;(name, (go) =&gt;{
+                go.name = name;
+                callBack(go);
+            });
+        }
+    }
+
+    public void PushObj(string name,GameObject obj)
+    {
+        if(poolRoot=null)poolRoot=new GameObject("PoolRoot");
+
+        if(poolDic.TryGetValue(name,out PoolData poolData)) poolData.PushObj(obj);
+        else poolDic.Add(name, new PoolData(obj,poolRoot));
+    }
+
+    public void  Clear()
+    {
+        poolDic.Clear();
+        poolRoot = null;
+    }
+}
+
+public class PoolData
+{
+    private GameObject parentRoot;
+    private Queue&lt;GameObject&gt; objQue;
+
+    public PoolData(GameObject obj,GameObject poolObj)
+    {
+        parentRoot = new GameObject($"{obj.name}Root");
+        parentRoot.transform.parent = poolObj.transform;
+
+        objQue = new Queue&lt;GameObject&gt;();
+
+    }
+
+    public int Count
+    {
+        get { return objQue.Count; }
+    }
+
+    public void PushObj(GameObject obj)
+    {
+        //存起来
+        objQue.Enqueue(obj);
+        //失活 让其隐藏
+        obj.SetActive(false);
+        //设置父对象
+        obj.transform.parent = parentRoot.transform;
+    }
+
+    public GameObject GetObj()
+    {
+        //取出第一个
+        GameObject obj = objQue.Dequeue();
+        //激活 让其显示
+        obj.SetActive(true);
+        //断开了父子关系
+        obj.transform.parent = null;
+
+        return obj;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="输入管理者"><a href="#输入管理者" class="headerlink" title="输入管理者"></a>输入管理者</h1><p>1.输入管理者耦合事件监听和Mono根节点</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class InputMgr : SingletonBase&lt;InputMgr&gt;
+{
+    private bool isStart = false;
+    public InputMgr()
+    {
+        MonoMgr.GetInstance().AddUpdateListener(UpdateIpt);
+    }
+
+    public void StartOrEndCheck(bool isOpen)
+    {
+        isStart = isOpen;
+    }
+
+    private void CheckKeyCode(KeyCode key)
+    {
+        //事件中心模块 分发按下抬起事件
+        if (Input.GetKeyDown(key))
+            EventCenter.GetInstance().EventTrigger("某键按下", key);
+        //事件中心模块 分发按下抬起事件
+        if (Input.GetKeyUp(key))
+            EventCenter.GetInstance().EventTrigger("某键抬起", key);
+    }
+
+    private void UpdateIpt()
+    {
+        //没有开启输入检测 就不去检测 直接return
+        if (!isStart)
+            return;
+
+        CheckKeyCode(KeyCode.W);
+        CheckKeyCode(KeyCode.S);
+        CheckKeyCode(KeyCode.A);
+        CheckKeyCode(KeyCode.D);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="音效管理者"><a href="#音效管理者" class="headerlink" title="音效管理者"></a>音效管理者</h1><p>1.一般音效资源应该做缓存池处理</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class MusicMgr : MonoBehaviour
+{
+    private bool isMute = false;
+    //背景音乐源
+    private AudioSource bkSource;
+    //背景音乐大小
+    private float bkValue = 1;
+    //一般音乐列表
+    private List&lt;AudioSource&gt; sourceLst = new List&lt;AudioSource&gt;();
+    //背景音乐大小
+    private float soundValue = 1;
+
+    //音乐源节点
+    private GameObject musicRoot;
+
+    public MusicMgr()
+    {
+        MonoMgr.GetInstance().AddUpdateListener(UpdateMsc);
+    }
+
+    //音乐播放完就回收
+    private void UpdateMsc()
+    {
+        for (int i = sourceLst.Count - 1; i &gt;= 0; --i)
+        {
+            if (!sourceLst[i].isPlaying)
+            {
+                GameObject.Destroy(sourceLst[i]);
+                sourceLst.RemoveAt(i);
+            }
+        }
+    }
+
+    public void PlayBkMusic(string name)
+    {
+        if(!musicRoot) musicRoot=new GameObject("MusicRoot");
+        if (bkSource) bkSource = musicRoot.AddComponent&lt;AudioSource&gt;();
+
+        //异步加载背景音乐 加载完成后 播放
+        ResMgr.GetInstance().LoadObjAsyn&lt;AudioClip&gt;("Music/BK/" + name, (clip) =&gt;
+        {
+            bkSource.clip = clip;
+            bkSource.loop = true;
+            bkSource.volume = bkValue;
+            bkSource.Play();
+        });
+    }
+
+    public void PauseBKMusic()
+    {
+        bkSource?.Pause();
+    }
+
+    public void StopBKMusic()
+    {
+        bkSource?.Stop();
+    }
+
+    public void ChangeBKValue(float v)
+    {
+        bkValue = v;
+        if (bkSource == null) bkSource.volume = bkValue;
+    }
+
+    public void PlaySound(string name, bool isLoop=false, GameObject parent=null, UnityAction&lt;AudioSource&gt; callBack = null)
+    {
+        if (!musicRoot) musicRoot = new GameObject("MusicRoot");
+
+        //当音效资源异步加载结束后 再添加一个音效
+        ResMgr.GetInstance().LoadObjAsyn&lt;AudioClip&gt;("Music/Sound/" + name, (clip) =&gt;
+        {
+            AudioSource source;
+            if (parent) source=parent.AddComponent&lt;AudioSource&gt;();
+            else source = musicRoot.AddComponent&lt;AudioSource&gt;();
+            source.clip = clip;
+            source.loop = isLoop;
+            source.volume = soundValue;
+            source.Play();
+            sourceLst.Add(source);
+            if (callBack != null)
+                callBack(source);
+        });
+    }
+
+    public void ChangeSoundValue(float value)
+    {
+        soundValue = value;
+        for (int i = 0; i &lt; sourceLst.Count; ++i)
+            sourceLst[i].volume = value;
+    }
+
+    public void StopSound(AudioSource source)
+    {
+        if (sourceLst.Contains(source))
+        {
+            sourceLst.Remove(source);
+            source.Stop();
+            GameObject.Destroy(source);
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="UI管理者和UI面板基类"><a href="#UI管理者和UI面板基类" class="headerlink" title="UI管理者和UI面板基类"></a>UI管理者和UI面板基类</h1><h2 id="面板基类"><a href="#面板基类" class="headerlink" title="面板基类"></a>面板基类</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class BasePanel : MonoBehaviour
+{
+    //通过里式转换原则 来存储所有的控件
+    private Dictionary&lt;string, List&lt;UIBehaviour&gt;&gt; controlDic = new Dictionary&lt;string, List&lt;UIBehaviour&gt;&gt;();
+
+    protected virtual void Awake()
+    {
+        FindChildrenControl&lt;Button&gt;();
+        FindChildrenControl&lt;Image&gt;();
+        FindChildrenControl&lt;Text&gt;();
+        FindChildrenControl&lt;Toggle&gt;();
+        FindChildrenControl&lt;Slider&gt;();
+        FindChildrenControl&lt;ScrollRect&gt;();
+        FindChildrenControl&lt;InputField&gt;();
+    }
+
+    public virtual void ShowMe()
+    {
+
+    }
+
+    public virtual void HideMe()
+    {
+
+    }
+
+    protected virtual void OnClick(string btnName)
+    {
+
+    }
+
+    protected virtual void OnValueChanged(string toggleName, bool value)
+    {
+
+    }
+
+    protected T GetControl&lt;T&gt;(string controlName) where T : UIBehaviour
+    {
+        if (controlDic.ContainsKey(controlName))
+        {
+            for (int i = 0; i &lt; controlDic[controlName].Count; ++i)
+            {
+                if (controlDic[controlName][i] is T)
+                    return controlDic[controlName][i] as T;
+            }
+        }
+
+        return null;
+    }
+
+    private void FindChildrenControl&lt;T&gt;() where T : UIBehaviour
+    {
+        T[] controls = this.GetComponentsInChildren&lt;T&gt;();
+        for (int i = 0; i &lt; controls.Length; ++i)
+        {
+            string objName = controls[i].gameObject.name;
+            if (controlDic.ContainsKey(objName))
+                controlDic[objName].Add(controls[i]);
+            else
+                controlDic.Add(objName, new List&lt;UIBehaviour&gt;() { controls[i] });
+            //如果是按钮控件
+            if (controls[i] is Button)
+            {
+                (controls[i] as Button).onClick.AddListener(() =&gt;
+                {
+                    OnClick(objName);
+                });
+            }
+            //如果是单选框或者多选框
+            else if (controls[i] is Toggle)
+            {
+                (controls[i] as Toggle).onValueChanged.AddListener((value) =&gt;
+                {
+                    OnValueChanged(objName, value);
+                });
+            }
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="UI管理者"><a href="#UI管理者" class="headerlink" title="UI管理者"></a>UI管理者</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public class UIMgr : SingletonBase&lt;UIMgr&gt;
+{
+    public Dictionary&lt;string, BasePanel&gt; panelDic = new Dictionary&lt;string, BasePanel&gt;();
+
+    private Transform bot;
+    private Transform mid;
+    private Transform top;
+    private Transform system;
+
+    //记录我们UI的Canvas父对象 方便以后外部可能会使用它
+    public RectTransform canvas;
+
+    public UIMgr()
+    {
+        //创建Canvas 让其过场景的时候 不被移除
+        GameObject obj = ResMgr.GetInstance().LoadObj&lt;GameObject&gt;("UI/Canvas");
+        canvas = obj.transform as RectTransform;
+        GameObject.DontDestroyOnLoad(obj);
+
+        //找到各层
+        bot = canvas.Find("Bot");
+        mid = canvas.Find("Mid");
+        top = canvas.Find("Top");
+        system = canvas.Find("System");
+
+        //创建EventSystem 让其过场景的时候 不被移除
+        obj = ResMgr.GetInstance().LoadObj&lt;GameObject&gt;("UI/EventSystem");
+        GameObject.DontDestroyOnLoad(obj);
+    }
+
+    /// &lt;summary&gt;
+    /// 通过层级枚举 得到对应层级的父对象
+    /// &lt;/summary&gt;
+    /// &lt;param name="layer"&gt;&lt;/param&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    public Transform GetLayerFather(EUIayer layer)
+    {
+        switch (layer)
+        {
+            case EUIayer.Bot:
+                return this.bot;
+            case EUIayer.Mid:
+                return this.mid;
+            case EUIayer.Top:
+                return this.top;
+            case EUIayer.System:
+                return this.system;
+        }
+        return null;
+    }
+
+    /// &lt;summary&gt;
+    /// 显示面板
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;面板脚本类型&lt;/typeparam&gt;
+    /// &lt;param name="panelName"&gt;面板名&lt;/param&gt;
+    /// &lt;param name="layer"&gt;显示在哪一层&lt;/param&gt;
+    /// &lt;param name="callBack"&gt;当面板预设体创建成功后 你想做的事&lt;/param&gt;
+    public void ShowPanel&lt;T&gt;(string panelName, EUIayer layer = EUIayer.Mid, UnityAction&lt;T&gt; callBack = null) where T : BasePanel
+    {
+        if (panelDic.ContainsKey(panelName))
+        {
+            panelDic[panelName].ShowMe();
+            // 处理面板创建完成后的逻辑
+            if (callBack != null)
+                callBack(panelDic[panelName] as T);
+            //避免面板重复加载 如果存在该面板 即直接显示 调用回调函数后  直接return 不再处理后面的异步加载逻辑
+            return;
+        }
+
+        ResMgr.GetInstance().LoadObjAsyn&lt;GameObject&gt;("UI/" + panelName, (obj) =&gt;
+        {
+            //把他作为 Canvas的子对象
+            //并且 要设置它的相对位置
+            //找到父对象 你到底显示在哪一层
+            Transform father = bot;
+            switch (layer)
+            {
+                case EUIayer.Mid:
+                    father = mid;
+                    break;
+                case EUIayer.Top:
+                    father = top;
+                    break;
+                case EUIayer.System:
+                    father = system;
+                    break;
+            }
+            //设置父对象  设置相对位置和大小
+            obj.transform.SetParent(father);
+
+            obj.transform.localPosition = Vector3.zero;
+            obj.transform.localScale = Vector3.one;
+
+            (obj.transform as RectTransform).offsetMax = Vector2.zero;
+            (obj.transform as RectTransform).offsetMin = Vector2.zero;
+
+            //得到预设体身上的面板脚本
+            T panel = obj.GetComponent&lt;T&gt;();
+            // 处理面板创建完成后的逻辑
+            if (callBack != null)
+                callBack(panel);
+
+            panel.ShowMe();
+
+            //把面板存起来
+            panelDic.Add(panelName, panel);
+        });
+    }
+
+    /// &lt;summary&gt;
+    /// 隐藏面板
+    /// &lt;/summary&gt;
+    /// &lt;param name="panelName"&gt;&lt;/param&gt;
+    public void HidePanel(string panelName)
+    {
+        if (panelDic.ContainsKey(panelName))
+        {
+            panelDic[panelName].HideMe();
+            GameObject.Destroy(panelDic[panelName].gameObject);
+            panelDic.Remove(panelName);
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// 得到某一个已经显示的面板 方便外部使用
+    /// &lt;/summary&gt;
+    public T GetPanel&lt;T&gt;(string name) where T : BasePanel
+    {
+        if (panelDic.ContainsKey(name))
+            return panelDic[name] as T;
+        return null;
+    }
+
+    /// &lt;summary&gt;
+    /// 给控件添加自定义事件监听
+    /// &lt;/summary&gt;
+    /// &lt;param name="control"&gt;控件对象&lt;/param&gt;
+    /// &lt;param name="type"&gt;事件类型&lt;/param&gt;
+    /// &lt;param name="callBack"&gt;事件的响应函数&lt;/param&gt;
+    public static void AddCustomEventListener(UIBehaviour control, EventTriggerType type, UnityAction&lt;BaseEventData&gt; callBack)
+    {
+        EventTrigger trigger = control.GetComponent&lt;EventTrigger&gt;();
+        if (trigger == null)
+            trigger = control.gameObject.AddComponent&lt;EventTrigger&gt;();
+
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = type;
+        entry.callback.AddListener(callBack);
+
+        trigger.triggers.Add(entry);
+    }
+}
+
+/// &lt;summary&gt;
+/// UI层级
+/// &lt;/summary&gt;
+public enum EUIayer
+{
+    Bot,
+    Mid,
+    Top,
+    System,
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">雪夜</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://wwy.wwywy.com/posts/2056.html">https://wwy.wwywy.com/posts/2056.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wwy.wwywy.com" target="_blank">雪夜の自我救赎</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Unity/">Unity</a><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E6%A1%86%E6%9E%B6/">游戏框架</a></div><div class="post_share"><div class="social-share" data-image="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://s4.ax1x.com/2022/01/22/7fZRxA.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fZRxA.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://s4.ax1x.com/2022/01/22/7fZcPe.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/22/7fZcPe.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/2051.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/03/03/bYUUZF.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">游戏MVC系列框架</div></div></a></div><div class="next-post pull-right"><a href="/posts/1543.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s1.ax1x.com/2022/03/09/b2TheP.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Unity进阶-数据持久化PlayerPrefs</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/2051.html" title="游戏MVC系列框架"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/03/03/bYUUZF.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-15</div><div class="title">游戏MVC系列框架</div></div></a></div><div><a href="/posts/1538.html" title="Unity基础"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/03/03/bYGzkR.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-25</div><div class="title">Unity基础</div></div></a></div><div><a href="/posts/1540.html" title="Unity进阶-GUI"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/03/03/bYJDuF.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-10</div><div class="title">Unity进阶-GUI</div></div></a></div><div><a href="/posts/1541.html" title="Unity进阶-UGUI"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/03/03/bYYmb4.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-24</div><div class="title">Unity进阶-UGUI</div></div></a></div><div><a href="/posts/1539.html" title="Unity核心"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/03/03/bYGzkR.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-05</div><div class="title">Unity核心</div></div></a></div><div><a href="/posts/1543.html" title="Unity进阶-数据持久化PlayerPrefs"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s1.ax1x.com/2022/03/09/b2TheP.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-24</div><div class="title">Unity进阶-数据持久化PlayerPrefs</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/12/7KFRfI.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">雪夜</div><div class="author-info__description">天再高又怎么样，踮起脚尖就能更接近太阳</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">29</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://wwy010518.github.io"><i class="fab fa-home"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/WWY010518/WWY010518.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=3179342661&amp;website=www.qtxml.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">年轻时，你做了一个决定，要把生命献给爱情、献给梦想，后来万箭穿心时，你没事，因为青春替你挡了命，青春死了，你还活着</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E7%AE%A1%E7%90%86%E8%80%85%E5%9F%BA%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">单例管理者基类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E7%BB%A7%E6%89%BF%E8%87%AAMono"><span class="toc-number">1.1.</span> <span class="toc-text">不继承自Mono</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E8%87%AAMono"><span class="toc-number">1.2.</span> <span class="toc-text">继承自Mono</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86%E8%80%85"><span class="toc-number">2.</span> <span class="toc-text">事件管理者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mono%E6%A0%B9%E8%8A%82%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">Mono根节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E5%8A%A0%E8%BD%BD%E7%AE%A1%E7%90%86%E8%80%85"><span class="toc-number">4.</span> <span class="toc-text">资源加载管理者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%B1%A0%E7%AE%A1%E7%90%86%E8%80%85"><span class="toc-number">5.</span> <span class="toc-text">缓存池管理者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E7%AE%A1%E7%90%86%E8%80%85"><span class="toc-number">6.</span> <span class="toc-text">输入管理者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9F%B3%E6%95%88%E7%AE%A1%E7%90%86%E8%80%85"><span class="toc-number">7.</span> <span class="toc-text">音效管理者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UI%E7%AE%A1%E7%90%86%E8%80%85%E5%92%8CUI%E9%9D%A2%E6%9D%BF%E5%9F%BA%E7%B1%BB"><span class="toc-number">8.</span> <span class="toc-text">UI管理者和UI面板基类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E6%9D%BF%E5%9F%BA%E7%B1%BB"><span class="toc-number">8.1.</span> <span class="toc-text">面板基类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UI%E7%AE%A1%E7%90%86%E8%80%85"><span class="toc-number">8.2.</span> <span class="toc-text">UI管理者</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/321.html" title="情商的修炼之道"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s4.ax1x.com/2022/01/24/7o1K0O.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="情商的修炼之道"/></a><div class="content"><a class="title" href="/posts/321.html" title="情商的修炼之道">情商的修炼之道</a><time datetime="2022-05-22T13:00:00.000Z" title="发表于 2022-05-22 21:00:00">2022-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/520.html" title="编译原理"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s1.ax1x.com/2022/03/09/b2oQ4e.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="编译原理"/></a><div class="content"><a class="title" href="/posts/520.html" title="编译原理">编译原理</a><time datetime="2022-03-03T13:00:00.000Z" title="发表于 2022-03-03 21:00:00">2022-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/544.html" title="数据结构和算法"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s1.ax1x.com/2022/03/09/b2InYQ.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="数据结构和算法"/></a><div class="content"><a class="title" href="/posts/544.html" title="数据结构和算法">数据结构和算法</a><time datetime="2022-03-03T13:00:00.000Z" title="发表于 2022-03-03 21:00:00">2022-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/536.html" title="计算机网络技术"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s1.ax1x.com/2022/03/09/b2IckD.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="计算机网络技术"/></a><div class="content"><a class="title" href="/posts/536.html" title="计算机网络技术">计算机网络技术</a><time datetime="2022-03-03T13:00:00.000Z" title="发表于 2022-03-03 21:00:00">2022-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/528.html" title="计算机组成原理"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s1.ax1x.com/2022/03/09/b2Izn0.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="计算机组成原理"/></a><div class="content"><a class="title" href="/posts/528.html" title="计算机组成原理">计算机组成原理</a><time datetime="2022-03-03T13:00:00.000Z" title="发表于 2022-03-03 21:00:00">2022-03-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 雪夜</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></head></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'NECHPwTPuwMuM9gPyX87b7RF-MdYXbMMI',
+      appKey: 'oCqKwP5Ot0Btor8sGT2rfheE',
+      placeholder: '畅所欲言！',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'nechpwtp.api.lncldglobal.com',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://wwy.wwywy.com/posts/2056.html'
+    this.page.identifier = 'posts/2056.html'
+    this.page.title = '游戏程序基础框架实例'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://雪夜.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer id="dsq-count-scr" src="//xianqi.disqus.com/count.js" async></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/sakura.js"></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/animate.js"></script><div class="aplayer no-destroy" data-id="1776127550" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "7b02a7fe-bcdd-4aa6-8d43-f05c4691f08e";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (false) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
