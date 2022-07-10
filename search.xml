@@ -1443,35 +1443,6 @@
     
     
     <entry>
-      <title>游戏客户端架构设计一</title>
-      <link href="/posts/2051.html"/>
-      <url>/posts/2051.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> Game-Play </category>
-          
-          <category> 技术架构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Unity </tag>
-            
-            <tag> 游戏框架 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Protobuf详解</title>
       <link href="/posts/1064.html"/>
       <url>/posts/1064.html</url>
@@ -1495,6 +1466,35 @@
             <tag> C# </tag>
             
             <tag> Protobuf </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏架构设计</title>
+      <link href="/posts/2051.html"/>
+      <url>/posts/2051.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game-Play </category>
+          
+          <category> 技术架构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> 游戏框架 </tag>
             
         </tags>
       
