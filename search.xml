@@ -4,6 +4,78 @@
   
     
     <entry>
+      <title>Unity插件-Slate</title>
+      <link href="/posts/1579.html"/>
+      <url>/posts/1579.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  之前一直使用的是Timeline，但是在做技能编辑器时，发现Timeline还是不适合，黑箱操作，并且在战斗同步上，无法提取出运行时供服务器使用，但是Slate对此支持特别好，完全开源，代码也很整洁，很适合扩展。</p><h1 id="核心结构"><a href="#核心结构" class="headerlink" title="核心结构"></a>核心结构</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="编辑器说明"><a href="#编辑器说明" class="headerlink" title="编辑器说明"></a>编辑器说明</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+          <category> 插件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> Timeline </tag>
+            
+            <tag> Slate </tag>
+            
+            <tag> 战斗编辑器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Luban工具详解</title>
+      <link href="/posts/2176.html"/>
+      <url>/posts/2176.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game-Play </category>
+          
+          <category> 技术架构 </category>
+          
+          <category> 工具链 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> Json </tag>
+            
+            <tag> Excel </tag>
+            
+            <tag> Xml </tag>
+            
+            <tag> Luban </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ILRuntiome热更新技术</title>
       <link href="/posts/2153.html"/>
       <url>/posts/2153.html</url>
