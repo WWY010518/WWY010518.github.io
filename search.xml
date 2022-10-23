@@ -4,78 +4,6 @@
   
     
     <entry>
-      <title>Unity插件-Slate</title>
-      <link href="/posts/1579.html"/>
-      <url>/posts/1579.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  之前一直使用的是Timeline，但是在做技能编辑器时，发现Timeline还是不适合，黑箱操作，并且在战斗同步上，无法提取出运行时供服务器使用，但是Slate对此支持特别好，完全开源，代码也很整洁，很适合扩展。</p><h1 id="核心结构"><a href="#核心结构" class="headerlink" title="核心结构"></a>核心结构</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="编辑器说明"><a href="#编辑器说明" class="headerlink" title="编辑器说明"></a>编辑器说明</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 游戏引擎 </category>
-          
-          <category> Unity </category>
-          
-          <category> 插件 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Unity </tag>
-            
-            <tag> Timeline </tag>
-            
-            <tag> Slate </tag>
-            
-            <tag> 战斗编辑器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Luban工具详解</title>
-      <link href="/posts/2176.html"/>
-      <url>/posts/2176.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> Game-Play </category>
-          
-          <category> 技术架构 </category>
-          
-          <category> 工具链 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Unity </tag>
-            
-            <tag> Json </tag>
-            
-            <tag> Excel </tag>
-            
-            <tag> Xml </tag>
-            
-            <tag> Luban </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ILRuntiome热更新技术</title>
       <link href="/posts/2153.html"/>
       <url>/posts/2153.html</url>
@@ -1007,7 +935,7 @@
       <link href="/posts/544.html"/>
       <url>/posts/544.html</url>
       
-        <content type="html"><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据结构概论"><a href="#数据结构概论" class="headerlink" title="数据结构概论"></a>数据结构概论</h2><h3 id="数据结构的定义"><a href="#数据结构的定义" class="headerlink" title="数据结构的定义"></a>数据结构的定义</h3><p>1.数据：描述客观事物的数和字符的集合；</p><p>2.数据项：数据最小单位；</p><p>3.数据对象：性质相同的数据元素集合；</p><p>4.数据结构：数据元素之间的关系；</p><ul><li>数据逻辑结构：由数据元素之间的逻辑关系组成；</li><li>数据的存储结构：数据元素以及其关系的物理结构；</li><li>数据的运算：施加在该数据上的操作；</li></ul><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>1.定义：数据之间的抽象逻辑关系；</p><p>2.表示方法：图表表示、二元组表示；</p><p>3.逻辑结构类型：</p><ul><li>集合：同属集合，无关系；</li><li>线性结构：一对一；</li><li>树形结构：一对多；</li><li>图：多对多；</li></ul><h3 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h3><p>1.定义：指数据的实际存储，逻辑结构在计算机存储实现；</p><p>2.物理存输类型：</p><ul><li>顺序存储结构：连续存储</li><li>链式存储结构：非连续存储</li><li>索引存储结构：键值对</li><li>哈希（散列）存储：计算关键字哈希值仅存数据<h3 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h3></li></ul><p>1.定义：对数据实施的操作；</p><p>运算定义和运算实现分离：基于逻辑结构定义运算，基于存储结构实现运算</p><p>2.常用数据运算类型：增删改查以及排序；</p><h3 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h3><p>1.数据类型：值类型，引用类型等；</p><p>2.抽象数据类型：从求解问题抽象出来的数据逻辑结构和抽象运算，与具体实现无关（重要特征是数据抽象和数据封装），算法就是抽象运算的实现；</p><p>3.抽象数据结构定义：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT:数据结构名（例如List）；Data:数据结构的描述（例如线性表元素一一对应）；Operation:数据结构定义了哪些操作（例如对线性表的清空、插入、添加、删除、初始化等等）；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="算法概论"><a href="#算法概论" class="headerlink" title="算法概论"></a>算法概论</h2><p>1.算法的定义：对特定问题的一种描叙，是指令的有限序列，应具有以下特征；</p><ul><li>有穷性：是可以终止结束的算法；</li><li>确定性：相同输入相同输出；</li><li>可行性：算法每一步都必须是可行的，每一步都能执行有限次数完成；</li><li>有输入输出：输入加工对象，加功得到结果；</li></ul><p>2.算法的设计目标：如下几点</p><ul><li>正确性：对于非法的数据能够得到满足规格的结果；</li><li>可读可使用性：便于阅读、交流和使用；</li><li>健壮性：数据不合法时，也能做出相应处理；</li><li>时间高效率和低存储：满足时间高效率和低存储；</li></ul><p>3.算法的描述：采用计算机语言描叙算法；</p><h2 id="算法分析概论"><a href="#算法分析概论" class="headerlink" title="算法分析概论"></a>算法分析概论</h2><p>1.算法分析的定义：分析算法占用的计算机CPU时间和内存空间的多少；</p><h3 id="算法时间性能分析（重点理解）"><a href="#算法时间性能分析（重点理解）" class="headerlink" title="算法时间性能分析（重点理解）"></a>算法时间性能分析（重点理解）</h3><p>1.时间算法类型：</p><ul><li>事后统计法：统计执行时间，必须执行程序且很多因素掩盖了算法本质，如计算机速度、语言、问题规模等；</li><li>事前估计法：抛开问题，仅考虑算法本身的效率；</li></ul><p>2.算法时间复杂度定义：平均情况下的问题规模n的函数的最高阶表示，推导如下</p><ul><li>执行次数T(n) ==&gt; 问题规模n的函数；</li><li>总算法执行时间 ==&gt; 原操作+ T(n)(执行次数或算法频率)；</li><li>简化算法执行时间 ==&gt;  仅考虑执行次数T(n)  ；</li><li>上界f(n) ==&gt; 由T(n)对于n的阶级函数的拆解，是问题规模n的某个函数；</li><li>问题阶级增率比较 ==&gt; 1(仅原操作)&lt;${log}<em>{2}$n&lt;n&lt;n${log}</em>{2}$n&lt;$n^2$&lt;$n^3$&lt;$2^n$&lt;n!&lt;$n^n$；</li><li>渐进时间复杂度（函数渐进增长问题） ==&gt; O(f(n))（O是找出T(n)最高阶或者说最紧凑的上界）；</li><li>平均时间复杂度 ==&gt;最好时间复杂度（算法运气好的时间）与最坏时间复杂度（算法运气坏的时候）的折中考虑；</li></ul><p>3.推导大O阶的方法：</p><ul><li>用常数1取代运行时间中所有加法常数；</li><li>修改后的运行次数函数，只保留最高阶数；</li><li>去除最高阶的相乘系数，得到的就是大O阶；</li></ul><p>4.算法复杂度求和求积：</p><ul><li>T1(n)+T2(n)=O(Max(fn,g(n)))  例如并列循环</li><li>T1(n) * T2(n) = O(f(n)*g(n)) 例如多层嵌套循环</li></ul><p>5.递归算法时间复杂度：自己调用自己，不能采用前面的分析方法；</p><h3 id="算法空间性能分析"><a href="#算法空间性能分析" class="headerlink" title="算法空间性能分析"></a>算法空间性能分析</h3><p>1.算法空间复杂度：记作S(n) = O(g(n))，n为问题的规模，f(n)为语句所占用的存储空间函数，解释如下；</p><ul><li>局部空间：初始只分配一次空间，参与原操作完继续使用，如果算法只有该形式空间分配，即问题规模n为常数，则该算法为原地工作或就地工作算法，空间复杂度为O(1)；</li><li>临时空间：原操作时才分配空间，原操作完即可释放，基本是其算法执行次数的考虑，空间复杂度和时间复杂度相关；</li></ul><p>2.递归算法空间复杂度：待记；</p><h2 id="程序概论"><a href="#程序概论" class="headerlink" title="程序概论"></a>程序概论</h2><p>1.程序=数据结构+算法；</p><p>2.数据结构和算法的联系：数据存储结构会影响算法的好坏，不能只单单考虑一种，存储强、信息多的存储结构，算法会比较好设计，反而相对简单的存储结构可能要设计一套复杂的算法；</p><h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>1.线性表定义：具有相同特征的数据元素的一个有限序列；</p><p>2.线性表的抽象数据类型：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT：线性表（List）Data：一个有n个数据元素的数据集合，且元素类型相同，除了第一个和最后一个元素，每一个元素只有一个前驱元素和后继元素，且它之间的关系是一一对应的；Operation：其中i是下标，e是表元素Init<span class="token punctuation">(</span><span class="token punctuation">)</span>:初始化操作IsEmpty<span class="token punctuation">(</span><span class="token punctuation">)</span>:判断是否为空Clear<span class="token punctuation">(</span><span class="token punctuation">)</span>:清空操作GetElem<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:根据下标获取元素Locate<span class="token punctuation">(</span>e<span class="token punctuation">)</span>:根据元素获取下标，为-1则表示返回失败；Insert<span class="token punctuation">(</span>e,i<span class="token punctuation">)</span>:在下标位置插入元素Delete<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:删除下标元素，并且返回其值Lengtn<span class="token punctuation">(</span><span class="token punctuation">)</span>:获取个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h2><p>1.顺序存储结构定义：线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素，逻辑上相邻的俩个元素在对应得顺序表中它们得存储位置也相邻；</p><h2 id="链式存储结构"><a href="#链式存储结构" class="headerlink" title="链式存储结构"></a>链式存储结构</h2><p>2.链式存储结构定义：</p><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="数组和广义表"><a href="#数组和广义表" class="headerlink" title="数组和广义表"></a>数组和广义表</h1><h1 id="数和二叉树"><a href="#数和二叉树" class="headerlink" title="数和二叉树"></a>数和二叉树</h1><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h1 id="内排序"><a href="#内排序" class="headerlink" title="内排序"></a>内排序</h1><h1 id="外排序"><a href="#外排序" class="headerlink" title="外排序"></a>外排序</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据结构概论"><a href="#数据结构概论" class="headerlink" title="数据结构概论"></a>数据结构概论</h2><h3 id="数据结构的定义"><a href="#数据结构的定义" class="headerlink" title="数据结构的定义"></a>数据结构的定义</h3><p>1.数据：描述客观事物的数和字符的集合；</p><p>2.数据项：数据最小单位；</p><p>3.数据对象：性质相同的数据元素集合；</p><p>4.数据结构：数据元素之间的关系；</p><ul><li>数据逻辑结构：由数据元素之间的逻辑关系组成；</li><li>数据的存储结构：数据元素以及其关系的物理结构；</li><li>数据的运算：施加在该数据上的操作；</li></ul><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>1.定义：数据之间的抽象逻辑关系；</p><p>2.表示方法：图表表示、二元组表示；</p><p>3.逻辑结构类型：</p><ul><li>集合：同属集合，无关系；</li><li>线性结构：一对一；</li><li>树形结构：一对多；</li><li>图：多对多；</li></ul><h3 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h3><p>1.定义：指数据的实际存储，逻辑结构在计算机存储实现；</p><p>2.物理存输类型：</p><ul><li>顺序存储结构：连续存储</li><li>链式存储结构：非连续存储</li><li>索引存储结构：键值对</li><li>哈希（散列）存储：计算关键字哈希值仅存数据<h3 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h3></li></ul><p>1.定义：对数据实施的操作；</p><p>运算定义和运算实现分离：基于逻辑结构定义运算，基于存储结构实现运算</p><p>2.常用数据运算类型：增删改查以及排序；</p><h3 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h3><p>1.数据类型：值类型，引用类型等；</p><p>2.抽象数据类型：从求解问题抽象出来的数据逻辑结构和抽象运算，与具体实现无关（重要特征是数据抽象和数据封装），算法就是抽象运算的实现；</p><p>3.抽象数据结构定义：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT:数据结构名（例如List）；Data:数据结构的描述（例如线性表元素一一对应）；Operation:数据结构定义了哪些操作（例如对线性表的清空、插入、添加、删除、初始化等等）；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="算法概论"><a href="#算法概论" class="headerlink" title="算法概论"></a>算法概论</h2><p>1.算法的定义：对特定问题的一种描叙，是指令的有限序列，应具有以下特征；</p><ul><li>有穷性：是可以终止结束的算法；</li><li>确定性：相同输入相同输出；</li><li>可行性：算法每一步都必须是可行的，每一步都能执行有限次数完成；</li><li>有输入输出：输入加工对象，加功得到结果；</li></ul><p>2.算法的设计目标：如下几点</p><ul><li>正确性：对于非法的数据能够得到满足规格的结果；</li><li>可读可使用性：便于阅读、交流和使用；</li><li>健壮性：数据不合法时，也能做出相应处理；</li><li>时间高效率和低存储：满足时间高效率和低存储；</li></ul><p>3.算法的描述：采用计算机语言描叙算法；</p><h2 id="算法分析概论"><a href="#算法分析概论" class="headerlink" title="算法分析概论"></a>算法分析概论</h2><p>1.算法分析的定义：分析算法占用的计算机CPU时间和内存空间的多少；</p><h3 id="算法时间性能分析（重点理解）"><a href="#算法时间性能分析（重点理解）" class="headerlink" title="算法时间性能分析（重点理解）"></a>算法时间性能分析（重点理解）</h3><p>1.时间算法类型：</p><ul><li>事后统计法：统计执行时间，必须执行程序且很多因素掩盖了算法本质，如计算机速度、语言、问题规模等；</li><li>事前估计法：抛开问题，仅考虑算法本身的效率；</li></ul><p>2.算法时间复杂度定义：平均情况下的问题规模n的函数的最高阶表示，推导如下</p><ul><li>执行次数T(n) ==&gt; 问题规模n的函数；</li><li>总算法执行时间 ==&gt; 原操作+ T(n)(执行次数或算法频率)；</li><li>简化算法执行时间 ==&gt;  仅考虑执行次数T(n)  ；</li><li>上界f(n) ==&gt; 由T(n)对于n的阶级函数的拆解，是问题规模n的某个函数；</li><li>问题阶级增率比较 ==&gt; 1(仅原操作)&lt;${log}<em>{2}$n&lt;n&lt;n${log}</em>{2}$n&lt;$n^2$&lt;$n^3$&lt;$2^n$&lt;n!&lt;$n^n$；</li><li>渐进时间复杂度（函数渐进增长问题） ==&gt; O(f(n))（O是找出T(n)最高阶或者说最紧凑的上界）；</li><li>平均时间复杂度 ==&gt;最好时间复杂度（算法运气好的时间）与最坏时间复杂度（算法运气坏的时候）的折中考虑；</li></ul><p>3.推导大O阶的方法：</p><ul><li>用常数1取代运行时间中所有加法常数；</li><li>修改后的运行次数函数，只保留最高阶数；</li><li>去除最高阶的相乘系数，得到的就是大O阶；</li></ul><p>4.算法复杂度求和求积：</p><ul><li>T1(n)+T2(n)=O(Max(fn,g(n)))  例如并列循环</li><li>T1(n) * T2(n) = O(f(n)*g(n)) 例如多层嵌套循环</li></ul><p>5.递归算法时间复杂度：自己调用自己，不能采用前面的分析方法；</p><h3 id="算法空间性能分析"><a href="#算法空间性能分析" class="headerlink" title="算法空间性能分析"></a>算法空间性能分析</h3><p>1.算法空间复杂度：记作S(n) = O(g(n))，n为问题的规模，f(n)为语句所占用的存储空间函数，解释如下；</p><ul><li>局部空间：初始只分配一次空间，参与原操作完继续使用，如果算法只有该形式空间分配，即问题规模n为常数，则该算法为原地工作或就地工作算法，空间复杂度为O(1)；</li><li>临时空间：原操作时才分配空间，原操作完即可释放，基本是其算法执行次数的考虑，空间复杂度和时间复杂度相关；</li></ul><p>2.递归算法空间复杂度：待记；</p><h2 id="程序概论"><a href="#程序概论" class="headerlink" title="程序概论"></a>程序概论</h2><p>1.程序=数据结构+算法；</p><p>2.数据结构和算法的联系：数据存储结构会影响算法的好坏，不能只单单考虑一种，存储强、信息多的存储结构，算法会比较好设计，反而相对简单的存储结构可能要设计一套复杂的算法；</p><h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>1.线性表定义：具有相同特征的数据元素的一个有限序列；</p><p>2.线性表的抽象数据类型：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ADT：线性表（List）Data：一个有n个数据元素的数据集合，且元素类型相同，除了第一个和最后一个元素，每一个元素只有一个前驱元素和后继元素，且它之间的关系是一一对应的；Operation：其中i是下标，e是表元素Init<span class="token punctuation">(</span><span class="token punctuation">)</span>:初始化操作IsEmpty<span class="token punctuation">(</span><span class="token punctuation">)</span>:判断是否为空Clear<span class="token punctuation">(</span><span class="token punctuation">)</span>:清空操作GetElem<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:根据下标获取元素Locate<span class="token punctuation">(</span>e<span class="token punctuation">)</span>:根据元素获取下标，为-1则表示返回失败；Insert<span class="token punctuation">(</span>e,i<span class="token punctuation">)</span>:在下标位置插入元素Delete<span class="token punctuation">(</span>i<span class="token punctuation">)</span>:删除下标元素，并且返回其值Lengtn<span class="token punctuation">(</span><span class="token punctuation">)</span>:获取个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h2><p>1.顺序存储结构定义：线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素，逻辑上相邻的俩个元素在对应得顺序表中它们得存储位置也相邻；</p><h2 id="链式存储结构"><a href="#链式存储结构" class="headerlink" title="链式存储结构"></a>链式存储结构</h2><p>1.链式存储结构定义：用一组任意存储单元存储线性表的数据元素，这组存储单元可以是连续的，也可以是不连续的，存储数据的叫数据域，而存储后继位置的叫指针域；</p><ul><li>单链表：链表的每个节点中只包含一个指针域，所以叫单链表；链表前可以有一个头节点，该节点一般不存储数据域，只存放第一个节点的指针，也可以在此存放链表长度。</li><li>循环链表：循环链表是在单链表中加了尾指针，尾指针指向头节点，使之形成一个闭环，循环链表在添加上更加方便了，添加数据首尾相连即可。</li></ul><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="数组和广义表"><a href="#数组和广义表" class="headerlink" title="数组和广义表"></a>数组和广义表</h1><h1 id="数和二叉树"><a href="#数和二叉树" class="headerlink" title="数和二叉树"></a>数和二叉树</h1><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h1 id="内排序"><a href="#内排序" class="headerlink" title="内排序"></a>内排序</h1><h1 id="外排序"><a href="#外排序" class="headerlink" title="外排序"></a>外排序</h1>]]></content>
       
       
       <categories>
@@ -1148,6 +1076,93 @@
             <tag> Unity </tag>
             
             <tag> UGUI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表相关-反转链表</title>
+      <link href="/posts/897.html"/>
+      <url>/posts/897.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：采用迭代的方式，采用双指针进行遍历,prev先行，cur后行，最后返回cur节点，思路如下</p><ul><li>head节前进一步，保留原next的引用</li><li>prev节点next指向cur节点，此处cur节点初始状态时清空引用，无需判空，博主写代码有这种习惯，但后面导致逻辑错误</li><li>cur节点前进一步</li><li>prev节点前进一步，赋值head节点的引用</li><li>遍历直到prev节点跑完整个流程</li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int val=0, ListNode next=null) { *         this.val = val; *         this.next = next; *     } * } */public class Solution {    public ListNode ReverseList(ListNode head) {        ListNode prev = head;        ListNode cur = default;        while(prev != default){            head = head.next;            //if(cur != null)不能加，博主写代码有这种习惯，导致后面逻辑错误            prev.next = cur;            cur = prev;            prev = head;        }                return cur;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学知识 </category>
+          
+          <category> 算法 </category>
+          
+          <category> 链表相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表相关-环形链表</title>
+      <link href="/posts/898.html"/>
+      <url>/posts/898.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="环形链表"><a href="#环形链表" class="headerlink" title="环形链表"></a>环形链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：采用快慢指针的方式，这道题之前和老师交流过，所以很快就解出来了，具体思路如如下</p><ul><li>首先还是要判空一下，小于俩个节点直接返回false</li><li>定义快指针节点prev，慢指针节点cur，这里需要注意的是，快指针初始定义并不是head，因为在后续结束条件判断中，如果prev == cur == head 节点，那么循环直接结束了</li><li>快指针prev走俩步，慢指针走一步，如果存在循环，那么prev在某一时刻必定会和cur重合，结束循环</li><li>需要注意的是，需要加上一个判空条件来保证退出循环</li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { *         val = x; *         next = null; *     } * } */public class Solution {    public bool HasCycle(ListNode head) {        if(head == null || head.next == null)                 return false;           ListNode prev = head.next;        ListNode cur = head;        while(prev != cur){            if(prev == null || prev.next == null)                return false;               prev = prev.next.next;            cur = cur.next;        }         return true;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学知识 </category>
+          
+          <category> 算法 </category>
+          
+          <category> 链表相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表相关-相交链表</title>
+      <link href="/posts/899.html"/>
+      <url>/posts/899.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="相交链表"><a href="#相交链表" class="headerlink" title="相交链表"></a>相交链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：暴力求解，这个是很简单的，内嵌遍历循环就可以了，最开始想到的就这这种办法，由于for循环自带空值判定，所以不需要判断也可以</p><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { val = x; } * } */public class Solution {    public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {        for(;headA!=null;headA = headA.next)        {            ListNode temp = headB;            for(;temp!=null;temp = temp.next)            {                if(headA==temp)                    return headA;            }        }        return default;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>3.解法思路二：双指针遍历，由于headA和headB的节点数是不相等了，但是在第一次相交后，节点数是必定相同的，因为保持了相同的引用，这是一种非常巧妙的解法，但是理解起来有点难，特别是双指针必定相交原因，强烈安利这位题主的解题思路，非常清晰</p><p>时间复杂度 O(a + b)O(a+b) ： 最差情况下（即 |a - b| = 1∣a−b∣=1 , c = 0c=0 ），此时需遍历 a + ba+b 个节点。<br>空间复杂度 O(1)O(1) ： 节点指针 A , B 使用常数大小的额外空间。</p><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/solution/intersection-of-two-linked-lists-shuang-zhi-zhen-l/">160. 相交链表（双指针，清晰图解） - 相交链表 - 力扣（LeetCode）</a></p><ul><li>经典判空</li><li>设置俩个临时变量储存AB俩个节点</li><li>进行循环变量，跳出条件是tempA==tempB</li><li>tempA节点和tempB节点同时向后移动，链表跑完则从头继续跑，长短链表都如此，此时考虑俩种情况<ul><li>有相交点：有交点则必定会相遇，就像俩个人在操场跑圈，俩个人从不同的起跑点出发，可能速度有慢有快，但只要一直跑，总会相遇，这种问题类似于快慢指针的问题。</li><li>无相交点：这就是这个解法有意思的地方，即使没有相交点，最后也是会相遇的，不过这个相交点变成了最后俩个人的结束点，也就是tempA == tempB == null，所以不会陷入死循环；</li></ul></li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { val = x; } * } */public class Solution {    public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {        if(headA == default || headB == default)            return default;        ListNode tempA = headA;        ListNode tempB = headB;        while(tempA!=tempB)        {            tempA = tempA!=null ? tempA.next : headA;            tempB = tempB!=null ? tempB.next : headB;        }        return tempA;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学知识 </category>
+          
+          <category> 算法 </category>
+          
+          <category> 链表相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
@@ -1403,33 +1418,6 @@
     
     
     <entry>
-      <title>Lua语言</title>
-      <link href="/posts/02900.html"/>
-      <url>/posts/02900.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程语言 </category>
-          
-          <category> Lua </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Lua </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Unity插件-Odin</title>
       <link href="/posts/1578.html"/>
       <url>/posts/1578.html</url>
@@ -1455,6 +1443,33 @@
             <tag> Odin </tag>
             
             <tag> 编辑器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Lua语言</title>
+      <link href="/posts/02900.html"/>
+      <url>/posts/02900.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程语言 </category>
+          
+          <category> Lua </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lua </tag>
             
         </tags>
       
@@ -1616,6 +1631,35 @@
     
     
     <entry>
+      <title>游戏架构设计</title>
+      <link href="/posts/2051.html"/>
+      <url>/posts/2051.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game-Play </category>
+          
+          <category> 技术架构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> 游戏框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Protobuf详解</title>
       <link href="/posts/1064.html"/>
       <url>/posts/1064.html</url>
@@ -1647,18 +1691,49 @@
     
     
     <entry>
-      <title>游戏架构设计</title>
-      <link href="/posts/2051.html"/>
-      <url>/posts/2051.html</url>
+      <title>数据结构链表实现</title>
+      <link href="/posts/833.html"/>
+      <url>/posts/833.html</url>
       
-        <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="单向链表实现"><a href="#单向链表实现" class="headerlink" title="单向链表实现"></a>单向链表实现</h1><h2 id="公共接口"><a href="#公共接口" class="headerlink" title="公共接口"></a>公共接口</h2><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">namespace AF{    public interface IListDS&lt;T&gt;     {        /// &lt;summary&gt;        /// 长度        /// &lt;/summary&gt;        int Length { get; }                /// &lt;summary&gt;        /// 索引获取        /// &lt;/summary&gt;        /// &lt;param name="index"&gt;&lt;/param&gt;        T this[int index] { get; }        /// &lt;summary&gt;        /// 清空        /// &lt;/summary&gt;        void Clear();        /// &lt;summary&gt;        /// 添加元素        /// &lt;/summary&gt;        /// &lt;param name="data"&gt;&lt;/param&gt;        void Add(T data);        /// &lt;summary&gt;        /// 插入元素        /// &lt;/summary&gt;        /// &lt;param name="data"&gt;&lt;/param&gt;        /// &lt;param name="index"&gt;&lt;/param&gt;        void Insert(T data,int index);        /// &lt;summary&gt;        /// 删除元素        /// &lt;/summary&gt;        /// &lt;param name="index"&gt;&lt;/param&gt;        T Delete(int index);        /// &lt;summary&gt;        /// 根据数据获取下标        /// &lt;/summary&gt;        /// &lt;param name="data"&gt;&lt;/param&gt;        /// &lt;returns&gt;&lt;/returns&gt;        int Loacte(T data);        /// &lt;summary&gt;        /// 根据下标获取数据        /// &lt;/summary&gt;        /// &lt;param name="index"&gt;&lt;/param&gt;        /// &lt;returns&gt;&lt;/returns&gt;        T GetElem(int index);        /// &lt;summary&gt;        /// 判断为空        /// &lt;/summary&gt;        /// &lt;returns&gt;&lt;/returns&gt;        bool IsEmpty();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Node节点类实现"><a href="#Node节点类实现" class="headerlink" title="Node节点类实现"></a>Node节点类实现</h2><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">namespace AF{    public class Node&lt;T&gt; : INode&lt;T&gt;    {        private T data;        private Node&lt;T&gt; next;        public T Data        {            get =&gt; data;            set =&gt; data = value;        }        public Node&lt;T&gt; Next        {            get =&gt; next;            set =&gt; next = value;        }        public bool HasNext()        {            return next != default;        }        public Node()        {                    }        public Node(T data)        {            this.data = data;        }        public Node(Node&lt;T&gt; next)        {            this.next = next;        }                public Node(T data,Node&lt;T&gt; next)        {            this.data = data;            this.next = next;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="LinkList实现"><a href="#LinkList实现" class="headerlink" title="LinkList实现"></a>LinkList实现</h2><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">using System;using System.Diagnostics;using System.Security.Policy;namespace AF{    public class LinkList&lt;T&gt; : IListDS&lt;T&gt;    {        private Node&lt;T&gt; head;                public Node&lt;T&gt; Head =&gt; head;                private int length;                public int Length { get =&gt; length; }        private Node&lt;T&gt; GetNodeByIndex(int index)        {            Node&lt;T&gt; temp = head;            for (int i = 1; i &lt;= index; i++)            {                temp = temp.Next;            }            return temp;        }        public T this[int index] =&gt; GetNodeByIndex(index).Data;        public void Clear()        {            head = null;            length = 0;        }        public void Add(T data)        {            Node&lt;T&gt; newNode = new Node&lt;T&gt;(data);                        //为空节点时            if (IsEmpty())            {                head = newNode;                length++;                return;            }                        Node&lt;T&gt; temp = head;            while (temp.HasNext())            {                temp = temp.Next;            }            length++;            temp.Next = newNode;        }        public void Insert(T data, int index)        {            Node&lt;T&gt; newNode = new Node&lt;T&gt;(data);            //插入改变的是头节点时            if (index == 0)            {                if (!IsEmpty())                    newNode.Next = head;                head = newNode;                length++;            }            else            {                //否则先获取上一个节点                Node&lt;T&gt; prevTemp = GetNodeByIndex(index - 1);                if (prevTemp.HasNext())                    newNode.Next = prevTemp.Next;                prevTemp.Next = newNode;                length++;            }        }        public T Delete(int index)        {            T data = default;            //删除的是头节点时            if (index == 0)            {                if (head == default)                     return default;                data = head.Data;                if (head.HasNext())                    head = head.Next;                else                    head = default;                length--;                                return data;            }                        Node&lt;T&gt; prevTemp = GetNodeByIndex(index-1);            if (!prevTemp.HasNext())                return default;            data = prevTemp.Next.Data;            if (prevTemp.Next.HasNext())                prevTemp.Next = prevTemp.Next.Next;            else                prevTemp.Next = default;            length--;                        return data;        }        public int Loacte(T data)        {            int index = 0;            if (IsEmpty())                return -1;            Node&lt;T&gt; temp = head;            while (temp.HasNext())            {                if (temp.Data.Equals(data))                    return index;                temp = temp.Next;                index ++;            }            return -1;        }        public T GetElem(int index)        {            return this[index];        }        public bool IsEmpty()        {            return head == default;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="循环链表实现"><a href="#循环链表实现" class="headerlink" title="循环链表实现"></a>循环链表实现</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">using System;using System.Collections.Generic;namespace AF{    public class LoopLinkList&lt;T&gt; : IListDS&lt;T&gt;    {        private Node&lt;T&gt; head;        private Node&lt;T&gt; rear;        public Node&lt;T&gt; Rear =&gt; rear;        private int length;                public int Length { get =&gt; length; }        public T this[int index] =&gt; GetNodeByIndex(index).Data;                private Node&lt;T&gt; GetNodeByIndex(int index)        {            Node&lt;T&gt; temp = head;            index %= length;            for (int i = 1; i &lt;= index; i++)            {                temp = temp.Next;            }            return temp;        }        public void Clear()        {            head = null;            rear = null;            length = 0;        }        public void Add(T data)        {            Node&lt;T&gt; newNode = new Node&lt;T&gt;(data);            if (head == default)            {                head = newNode;                head.Next = head;                rear = head;                length++;                return;            }                        newNode.Next = head;            rear.Next = newNode;            rear = newNode;            length++;        }        public void Insert(T data, int index)        {            Node&lt;T&gt; newNode = new Node&lt;T&gt;(data);            index %= length;                        if (index == 0)            {                //不为空节点时                if (!IsEmpty())                    newNode.Next = head;                else                {                    newNode.Next = newNode;                    rear = newNode;                }                head = newNode;                //只有一个节点时                if (rear == head.Next)                {                    rear = head.Next;                }                rear.Next = head;                                length++;                return;            }                     Node&lt;T&gt; prevTemp = GetNodeByIndex(index - 1);            if(prevTemp.HasNext())                newNode.Next = prevTemp.Next;            prevTemp.Next = newNode;            if (index == length - 1)                rear = newNode;            length++;        }        public T Delete(int index)        {            T data = default;            index %= length;            if (index == 0)            {                if (head == default)                     return default;                data = head.Data;                if (head.HasNext() &amp;&amp; head.Next != head)                {                    head = head.Next;                    rear.Next = head;                }                else                {                    head = default;                    rear = default;                }                length--;                return data;            }            Node&lt;T&gt; prevTemp = GetNodeByIndex(index - 1);            if (prevTemp.HasNext())                 return default;                        data = prevTemp.Data;                        if (prevTemp.Next != rear)                prevTemp.Next = prevTemp.Next.Next;            else            {                prevTemp.Next = head;                rear = prevTemp;            }            length--;                        return data;        }        public int Loacte(T data)        {            if (IsEmpty())                return -1;            int index = 0;            Node&lt;T&gt; temp = head;            do            {                if (temp.Data.Equals(data))                    return index;                temp = temp.Next;                index++;            } while (temp!=head);            return -1;        }        public T GetElem(int index)        {            return this[index];        }        public bool IsEmpty()        {            return head == default || rear == default;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="双向链表实现"><a href="#双向链表实现" class="headerlink" title="双向链表实现"></a>双向链表实现</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">using System;namespace AF{    public class EvenLinkList&lt;T&gt; : IListDS&lt;T&gt;    {        private Node&lt;T&gt; head;        public Node&lt;T&gt; Head;        private int length;        public int Length =&gt; length;        public T this[int index] =&gt; GetNodeByIndex(index).Data;                /// &lt;summary&gt;        /// 检测输入下标，不合法给出报错信息        /// &lt;/summary&gt;        /// &lt;param name="Index"&gt;输入的下标&lt;/param&gt;        /// &lt;param name="isLoop"&gt;是否循环遍历操作&lt;/param&gt;        /// &lt;param name="isAdd"&gt;添加元素链表可以为空&lt;/param&gt;        /// &lt;exception cref="Exception"&gt;链表越界问题&lt;/exception&gt;        private void CheckIndex(int Index,bool isLoop = false,bool isAdd =false)        {            if (Index &lt; 0 || (!isLoop &amp;&amp; Index &gt;= length) || (!isAdd &amp;&amp; IsEmpty()))            {                throw new System.Exception("下标越界或者链表为空");                return;            }        }                /// &lt;summary&gt;        /// 根据下标获取节点信息        /// &lt;/summary&gt;        /// &lt;param name="index"&gt;&lt;/param&gt;        /// &lt;returns&gt;&lt;/returns&gt;        private Node&lt;T&gt; GetNodeByIndex(int index)        {            CheckIndex(index,true);                        //防止多余的遍历            index %= length;            int mid = length / 2;            Node&lt;T&gt; temp = head;                        if(index&lt;=mid)                for (int i = 1; i &lt;= index; i++)                {                    temp = temp.Next;                }            else            {                int prevIndex = length - index;                for (int i = 1; i &lt;= prevIndex; i++)                {                    temp = temp.Prev;                }            }                        return temp;        }        public void Clear()        {            head = null;            length = 0;        }        public void Add(T data)        {            Node&lt;T&gt; newNode = new Node&lt;T&gt;(data);                        //为空的情况            if (IsEmpty())            {                head = newNode;                head.Next = head;                head.Prev = head;                length++;                return;            }            newNode.Prev = head.Prev;            newNode.Next = head;            head.Prev.Next = newNode;            head.Prev = newNode;            length++;        }        public void Insert(T data, int index)        {            CheckIndex(index,false,true);            if (index == 0 &amp;&amp; IsEmpty())            {                Add(data);                return;            }                        Node&lt;T&gt; newNode = new Node&lt;T&gt;(data);            Node&lt;T&gt; temp = GetNodeByIndex(index);            newNode.Prev = temp.Prev;            newNode.Next = temp;            temp.Prev.Next = newNode;            temp.Prev = newNode;            if (index == 0)                head = newNode;            length++;                    }        public T Delete(int index)        {            CheckIndex(index);            T data = default;            if (index == 0 &amp;&amp; length == 1)            {                data = head.Data;                head = default;                length--;                return data;            }                        Node&lt;T&gt; temp = GetNodeByIndex(index);            data = temp.Data;            temp.Prev.Next = temp.Next;            temp.Next.Prev = temp.Prev;            length--;            return data;        }        public int Loacte(T data)        {            if (IsEmpty())                return -1;                        int index = 0;            Node&lt;T&gt; temp = head;            do            {                if (temp.Data.Equals(data))                    return index;                temp = temp.Next;                index++;            } while (temp != head);            return -1;        }        public T GetElem(int index)        {            return this[index];        }        public bool IsEmpty()        {            return head == default;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
           
-          <category> Game-Play </category>
+          <category> 大学知识 </category>
           
-          <category> 技术架构 </category>
+          <category> cs基础 </category>
+          
+          <category> 数据结构和算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 线性链表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity插件-Slate</title>
+      <link href="/posts/1579.html"/>
+      <url>/posts/1579.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  之前一直使用的是Timeline，但是在做技能编辑器时，发现Timeline还是不适合，黑箱操作，并且在战斗同步上，无法提取出运行时供服务器使用，但是Slate对此支持特别好，完全开源，代码也很整洁，很适合扩展。</p><h1 id="核心结构"><a href="#核心结构" class="headerlink" title="核心结构"></a>核心结构</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="编辑器说明"><a href="#编辑器说明" class="headerlink" title="编辑器说明"></a>编辑器说明</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏引擎 </category>
+          
+          <category> Unity </category>
+          
+          <category> 插件 </category>
           
       </categories>
       
@@ -1667,7 +1742,11 @@
             
             <tag> Unity </tag>
             
-            <tag> 游戏框架 </tag>
+            <tag> Timeline </tag>
+            
+            <tag> Slate </tag>
+            
+            <tag> 战斗编辑器 </tag>
             
         </tags>
       

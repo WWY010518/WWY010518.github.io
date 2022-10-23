@@ -6,7 +6,7 @@
   <link href="https://wwy.wwywy.com/atom.xml" rel="self"/>
   
   <link href="https://wwy.wwywy.com/"/>
-  <updated>2022-08-10T01:02:11.531Z</updated>
+  <updated>2022-07-11T03:11:54.621Z</updated>
   <id>https://wwy.wwywy.com/</id>
   
   <author>
@@ -15,76 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Unity插件-Slate</title>
-    <link href="https://wwy.wwywy.com/posts/1579.html"/>
-    <id>https://wwy.wwywy.com/posts/1579.html</id>
-    <published>2022-08-09T13:00:00.000Z</published>
-    <updated>2022-08-10T01:02:11.531Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  之前一直使用的是Timeline，但是在做技能编辑器时，发现Timeline还是不适合，黑箱操作，并且在战斗同步上，无法提取出运行时供服务器使用，但是Slate对此支持特别好，完全开源，代码也很整洁，很适合扩展。</p><h1 id="核心结构"><a href="#核心结构" class="headerlink" title="核心结构"></a>核心结构</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="编辑器说明"><a href="#编辑器说明" class="headerlink" title="编辑器说明"></a>编辑器说明</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;  之前一直使用的是Timeline，但是在做技能编辑器时，发现Timeline还是不适合，黑箱操作，并且在战斗同步上，无法提取出运行时供服</summary>
-      
-    
-    
-    
-    <category term="游戏引擎" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
-    
-    <category term="Unity" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/"/>
-    
-    <category term="插件" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/%E6%8F%92%E4%BB%B6/"/>
-    
-    
-    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
-    
-    <category term="Timeline" scheme="https://wwy.wwywy.com/tags/Timeline/"/>
-    
-    <category term="Slate" scheme="https://wwy.wwywy.com/tags/Slate/"/>
-    
-    <category term="战斗编辑器" scheme="https://wwy.wwywy.com/tags/%E6%88%98%E6%96%97%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Luban工具详解</title>
-    <link href="https://wwy.wwywy.com/posts/2176.html"/>
-    <id>https://wwy.wwywy.com/posts/2176.html</id>
-    <published>2022-07-15T06:00:58.185Z</published>
-    <updated>2022-07-15T16:25:24.617Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;待写&quot;&gt;&lt;a href=&quot;#待写&quot; class=&quot;headerlink&quot; title=&quot;待写&quot;&gt;&lt;/a&gt;待写&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    <category term="Game-Play" scheme="https://wwy.wwywy.com/categories/Game-Play/"/>
-    
-    <category term="技术架构" scheme="https://wwy.wwywy.com/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
-    
-    <category term="工具链" scheme="https://wwy.wwywy.com/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/%E5%B7%A5%E5%85%B7%E9%93%BE/"/>
-    
-    
-    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
-    
-    <category term="Json" scheme="https://wwy.wwywy.com/tags/Json/"/>
-    
-    <category term="Excel" scheme="https://wwy.wwywy.com/tags/Excel/"/>
-    
-    <category term="Xml" scheme="https://wwy.wwywy.com/tags/Xml/"/>
-    
-    <category term="Luban" scheme="https://wwy.wwywy.com/tags/Luban/"/>
-    
-  </entry>
   
   <entry>
     <title>ILRuntiome热更新技术</title>
@@ -613,6 +543,64 @@
     
     
     <category term="C#" scheme="https://wwy.wwywy.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel编辑器工具</title>
+    <link href="https://wwy.wwywy.com/posts/2088.html"/>
+    <id>https://wwy.wwywy.com/posts/2088.html</id>
+    <published>2021-04-16T13:00:00.000Z</published>
+    <updated>2022-07-11T03:16:54.682Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Excel介绍"><a href="#Excel介绍" class="headerlink" title="Excel介绍"></a>Excel介绍</h1><p>1.Excel的本质：Excel表本质上也是一堆数据，只不过它有自己的存储读取规则，如果我们想要通过代码读取它，那么必须知道它的存储规则，官网是专门提供了对应的DLL文件用来解析Excel文件的；</p><p>2.获取Excel数据信息的意义：</p><ul><li>可以根据表中数据来动态的生成相关数据，如数据结构类、容器类、二进制数据类；</li><li>转成二进制数据也可以提升读取效率，提升数据安全性；</li></ul><h1 id="Excel官方工具使用"><a href="#Excel官方工具使用" class="headerlink" title="Excel官方工具使用"></a>Excel官方工具使用</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">//主要知识点：//1.FileStream读取文件流//2.IExcelDataReader类，从流中读取Excel数据//3.DataSet 数据集合类 将Excel数据转存进其中方便读取//4.DataTable 数据表类 表示Excel文件中的一个表//5.DataRow 数据行类 表示某张表中的一行数据[MenuItem("GameTool/读取Excel里的具体信息")]private static void ReadExcel(){    using (FileStream fs = File.Open(Application.dataPath + "/ArtRes/Excel/PlayerInfo.xlsx", FileMode.Open, FileAccess.Read))    {        IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(fs);        DataSet result = excelReader.AsDataSet();        for (int i = 0; i &lt; result.Tables.Count; i++)        {            //得到其中一张表的具体数据            DataTable table = result.Tables[i];            Debug.Log("表名：" + result.Tables[i].TableName);            Debug.Log("行数：" + result.Tables[i].Rows.Count);            Debug.Log("列数：" + result.Tables[i].Columns.Count);            //得到其中一行的数据            DataRow row = table.Rows[0];            //得到行中某一列的信息            Debug.Log(row[1].ToString());            DataRow row;            for (int j = 0; j &lt; table.Rows.Count; j++)            {                //得到每一行的信息                row = table.Rows[j];                Debug.Log("*********新的一行************");                for (int k = 0; k &lt; table.Columns.Count; k++)                {                    //得到每一列的信息                    Debug.Log(row[k].ToString());                }            }        }        fs.Close();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="制定规则"><a href="#制定规则" class="headerlink" title="制定规则"></a>制定规则</h1><p>1.Excel读取规则：</p><ul><li>数据类型生成要知道字段名，容器（一般字典）要知道主键，二进制要知道从哪行哪列开始；</li><li>第一行是字段名，第二行是数据类型，第三行容器可以再加一个key表示主键（也可以默认第一列），第四行是中文解释（给策划写的，不会生成进去）；</li><li>下方的表名作为生成的类型名；</li></ul><h1 id="Excel工具编写"><a href="#Excel工具编写" class="headerlink" title="Excel工具编写"></a>Excel工具编写</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Excel介绍&quot;&gt;&lt;a href=&quot;#Excel介绍&quot; class=&quot;headerlink&quot; title=&quot;Excel介绍&quot;&gt;&lt;/a&gt;Excel介绍&lt;/h1&gt;&lt;p&gt;1.Excel的本质：Excel表本质上也是一堆数据，只不过它有自己的存储读取规则，如果我们想要通过</summary>
+      
+    
+    
+    
+    <category term="Game-Play" scheme="https://wwy.wwywy.com/categories/Game-Play/"/>
+    
+    <category term="技术架构" scheme="https://wwy.wwywy.com/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="工具链" scheme="https://wwy.wwywy.com/categories/Game-Play/%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/%E5%B7%A5%E5%85%B7%E9%93%BE/"/>
+    
+    
+    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
+    
+    <category term="Excel" scheme="https://wwy.wwywy.com/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity进阶-ScriptableObject</title>
+    <link href="https://wwy.wwywy.com/posts/1548.html"/>
+    <id>https://wwy.wwywy.com/posts/1548.html</id>
+    <published>2021-04-13T13:00:00.000Z</published>
+    <updated>2022-07-09T16:17:19.201Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ScriptableObject概述"><a href="#ScriptableObject概述" class="headerlink" title="ScriptableObject概述"></a>ScriptableObject概述</h1><p>1.ScriptableObject说明：ScriptableObject是Unity提供的一个数据配置存储基类，它是一个可以用来保存大量数据的数据容器，就像是可以自定义的数据预制物资源文件，需要我们继承它来进行使用，它的主要作用是如下：</p><ul><li>数据复用（多个对象用同一个数据）</li><li>配置文件（配置游戏中的数据）</li><li>编辑模式下的数据持久化</li></ul><p>2.ScriptableObject优点：如下</p><ul><li>我们可以直接在Inspector窗口编辑配置数据，可以利用它来做配置文件；</li><li>处理重复数据，减少数据拷贝时造成的内存占用，可以利用它来做公共数据；</li><li>可以更方便的处理数据带来的多态行为；</li></ul><p>3.ScriptableObject持久化注意点：通过代码修改数据对象中内容，会影响数据文件，相当于达到了编辑器中数据持久化的目的(该数据持久化 只是在编辑模式下的持久,发布运行时并不会保存数据)；</p><h1 id="ScriptableObject数据文件创建"><a href="#ScriptableObject数据文件创建" class="headerlink" title="ScriptableObject数据文件创建"></a>ScriptableObject数据文件创建</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">1.自定义ScriptableObject数据容器        //1.继承ScriptableObject类        //2.在该类中声明成员（变量、方法等）        //注意：声明后，我们边可以在Inspector窗口中看到变化        //     我们可以在其中进行设置，但是这些设置都是默认数据，并没有真正使用他们        //     这些关联信息都是通过脚本文件对应的Unity配置文件meta进行记录的        //     目前该数据只是一个数据容器模板        //     有了它我们之后才能根据它的信息创建对应的数据资源文件2.根据自定义的ScriptableObject数据容器创建数据文件        //注意：        //该创建功能，其实就是根据自定义数据容器类创建了一个配置文件        //该文件中记录了对应的数据容器类信息，以及其中变量关联的信息        //之后我们在使用它时，本质上也是通过反射创建对象进行使用        //具体的方法有两种：        //1.为类添加CreateAssetMenu通过菜单创建资源特性        //[CreateAssetMenu(fileName = "默认文件名", menuName = "在Asset/Create菜单中显示的名字", order = 再Asset/Create菜单中的位置(多个时可以通过它来调整顺序))]        //2.利用ScriptableObject的静态方法创建数据对象        //书写创建数据资源文件的代码         MyData asset = ScriptableObject.CreateInstance&lt;MyData&gt;();        //通过编辑器API 根据数据创建一个数据资源文件        AssetDatabase.CreateAsset(asset, "Assets/Resources/MyDataTest.asset");        //保存创建的资源        AssetDatabase.SaveAssets();        //刷新界面        AssetDatabase.Refresh();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="ScriptableObject数据文件使用"><a href="#ScriptableObject数据文件使用" class="headerlink" title="ScriptableObject数据文件使用"></a>ScriptableObject数据文件使用</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">1.ScriptableObject数据文件的使用        //1.通过Inspector中的public变量进行关联        //1-1.创建一个数据文件        //1-2.在继承MonoBehaviour类中申明数据容器类型的成员        //    在Inspector窗口进行关联        //2.通过资源加载的信息关联        //加载数据文件资源        //注意：Resources、AB包、Addressables都支持加载继承ScriptableObject的数据文件        data = Resources.Load&lt;MyData&gt;("MyDataTest");        //注意：如果多个对象关联同一个数据容器文件，他们共享的是一个对象        //     因为是引用对象，所以在其中任何地方修改后，其它地方也会发生改变2.ScriptableObject的生命周期函数        //ScriptableObject和MonoBehavior很类似        //它也存在生命周期函数        //但是生命周期函数的数量更少        //主要做了解，一般我们使用较少        //Awake 数据文件创建时调用        //OnDestroy ScriptableObject 对象将被销毁时调用        //OnDisable ScriptableObject 对象销毁时、即将重新加载脚本程序集时 调用        //OnEnable ScriptableObject 创建或者加载对象时调用        //OnValidate 编辑器才会调用的函数，Unity在加载脚本或者Inspector窗口中更改值时调用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="ScriptableObject的非持久化和持久化"><a href="#ScriptableObject的非持久化和持久化" class="headerlink" title="ScriptableObject的非持久化和持久化"></a>ScriptableObject的非持久化和持久化</h1><p>1.ScriptableObject的非持久化数据说明：指的是不管在编辑器模式还是在发布后都 不会持久化的数据，我们可以根据自己的需求随时创建对应数据对象进行使用，就好像直接new一个数据结构类对象；</p><p>2.利用ScriptableObject生成非持久化的数据：利用ScriptableObject中的静态方法 CreateInstance&lt;&gt;()，通过这种方式创建出来的数据对象 它里面的默认值 不会受到脚本中设置的影响，该对象只存在于内存当中，可以被GC；</p><p>3.非持久化数据存在的意义：只是希望在运行时能有一组唯一的数据可以使用，但是这个数据又不太希望保存为数据资源文件浪费硬盘空间，那么ScriptableObject的非持久化数据就有了存在的意义（只在运行时使用，在编辑器模式下也不会保存在本地）</p><p>4.ScriptableObject真正意义的持久化：持久化（硬盘&lt;=&gt;内存），首先要理解的是ScriptableObject的主要意义并不是用来进行持久化的，但是我们也可以利用持久化的相关知识来进行运行时读取；</p><h1 id="ScriptableObject的应用"><a href="#ScriptableObject的应用" class="headerlink" title="ScriptableObject的应用"></a>ScriptableObject的应用</h1><h2 id="配置数据"><a href="#配置数据" class="headerlink" title="配置数据"></a>配置数据</h2><p>1.ScriptableObject配置说明：ScriptableObject适合用来作配置文件，结合List使用或者字典使用（集合类型遵守Unity规则，加上序列化标签），也可以在Excel中作配置，然后编辑器导出ScriptableObject文件；</p><h2 id="复用数据"><a href="#复用数据" class="headerlink" title="复用数据"></a>复用数据</h2><p>1.ScriptableObject复用数据说明：游戏实体中定义的数据是不同地址的，但是对于只用不变的数据，以面向对象的思想去声明是会存在内存浪费的，特别是像子弹这种类型，所以我们刻意利用ScriptableObject静态数据来进行共享使用，更加节约内存；</p><h2 id="数据带来的多态行为"><a href="#数据带来的多态行为" class="headerlink" title="数据带来的多态行为"></a>数据带来的多态行为</h2><p>1.ScriptableObject的多态：当数据不一样时带来的多态行为，依赖于抽象，而不依赖于实现，调用继承自ScriptableObject的数据类方法，但是实际调用的子类的多态方法（例如角色碰撞道具获得效果，基类只管获取道具的方法，具体是加血还是加攻击由子类决定）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;ScriptableObject概述&quot;&gt;&lt;a href=&quot;#ScriptableObject概述&quot; class=&quot;headerlink&quot; title=&quot;ScriptableObject概述&quot;&gt;&lt;/a&gt;ScriptableObject概述&lt;/h1&gt;&lt;p&gt;1.Scri</summary>
+      
+    
+    
+    
+    <category term="游戏引擎" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="Unity" scheme="https://wwy.wwywy.com/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/Unity/"/>
+    
+    
+    <category term="Unity" scheme="https://wwy.wwywy.com/tags/Unity/"/>
+    
+    <category term="ScriptableObject" scheme="https://wwy.wwywy.com/tags/ScriptableObject/"/>
     
   </entry>
   
