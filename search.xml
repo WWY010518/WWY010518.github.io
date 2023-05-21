@@ -57,9 +57,9 @@
             
             <tag> Unity </tag>
             
-            <tag> 热更新 </tag>
-            
             <tag> ILRuntimes </tag>
+            
+            <tag> 热更新 </tag>
             
         </tags>
       
@@ -88,9 +88,9 @@
       
         <tags>
             
-            <tag> AssetBundle </tag>
-            
             <tag> 热更新 </tag>
+            
+            <tag> AssetBundle </tag>
             
             <tag> YooAsset </tag>
             
@@ -392,15 +392,15 @@
       
         <tags>
             
+            <tag> Unity </tag>
+            
             <tag> Lua </tag>
             
-            <tag> Unity </tag>
+            <tag> 热更新 </tag>
             
             <tag> xLua </tag>
             
             <tag> toLua </tag>
-            
-            <tag> 热更新 </tag>
             
         </tags>
       
@@ -1171,35 +1171,6 @@
     
     
     <entry>
-      <title>链表相关-反转链表</title>
-      <link href="/posts/897.html"/>
-      <url>/posts/897.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：采用迭代的方式，采用双指针进行遍历,prev先行，cur后行，最后返回cur节点，思路如下</p><ul><li>head节前进一步，保留原next的引用</li><li>prev节点next指向cur节点，此处cur节点初始状态时清空引用，无需判空，博主写代码有这种习惯，但后面导致逻辑错误</li><li>cur节点前进一步</li><li>prev节点前进一步，赋值head节点的引用</li><li>遍历直到prev节点跑完整个流程</li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int val=0, ListNode next=null) { *         this.val = val; *         this.next = next; *     } * } */public class Solution {    public ListNode ReverseList(ListNode head) {        ListNode prev = head;        ListNode cur = default;        while(prev != default){            head = head.next;            //if(cur != null)不能加，博主写代码有这种习惯，导致后面逻辑错误            prev.next = cur;            cur = prev;            prev = head;        }                return cur;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 大学知识 </category>
-          
-          <category> 算法 </category>
-          
-          <category> 链表相关 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 链表 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>链表相关-环形链表</title>
       <link href="/posts/898.html"/>
       <url>/posts/898.html</url>
@@ -1229,11 +1200,11 @@
     
     
     <entry>
-      <title>链表相关-相交链表</title>
-      <link href="/posts/899.html"/>
-      <url>/posts/899.html</url>
+      <title>链表相关-反转链表</title>
+      <link href="/posts/897.html"/>
+      <url>/posts/897.html</url>
       
-        <content type="html"><![CDATA[<h1 id="相交链表"><a href="#相交链表" class="headerlink" title="相交链表"></a>相交链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：暴力求解，这个是很简单的，内嵌遍历循环就可以了，最开始想到的就这这种办法，由于for循环自带空值判定，所以不需要判断也可以</p><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { val = x; } * } */public class Solution {    public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {        for(;headA!=null;headA = headA.next)        {            ListNode temp = headB;            for(;temp!=null;temp = temp.next)            {                if(headA==temp)                    return headA;            }        }        return default;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>3.解法思路二：双指针遍历，由于headA和headB的节点数是不相等了，但是在第一次相交后，节点数是必定相同的，因为保持了相同的引用，这是一种非常巧妙的解法，但是理解起来有点难，特别是双指针必定相交原因，强烈安利这位题主的解题思路，非常清晰</p><p>时间复杂度 O(a + b)O(a+b) ： 最差情况下（即 |a - b| = 1∣a−b∣=1 , c = 0c=0 ），此时需遍历 a + ba+b 个节点。<br>空间复杂度 O(1)O(1) ： 节点指针 A , B 使用常数大小的额外空间。</p><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/solution/intersection-of-two-linked-lists-shuang-zhi-zhen-l/">160. 相交链表（双指针，清晰图解） - 相交链表 - 力扣（LeetCode）</a></p><ul><li>经典判空</li><li>设置俩个临时变量储存AB俩个节点</li><li>进行循环变量，跳出条件是tempA==tempB</li><li>tempA节点和tempB节点同时向后移动，链表跑完则从头继续跑，长短链表都如此，此时考虑俩种情况<ul><li>有相交点：有交点则必定会相遇，就像俩个人在操场跑圈，俩个人从不同的起跑点出发，可能速度有慢有快，但只要一直跑，总会相遇，这种问题类似于快慢指针的问题。</li><li>无相交点：这就是这个解法有意思的地方，即使没有相交点，最后也是会相遇的，不过这个相交点变成了最后俩个人的结束点，也就是tempA == tempB == null，所以不会陷入死循环；</li></ul></li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { val = x; } * } */public class Solution {    public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {        if(headA == default || headB == default)            return default;        ListNode tempA = headA;        ListNode tempB = headB;        while(tempA!=tempB)        {            tempA = tempA!=null ? tempA.next : headA;            tempB = tempB!=null ? tempB.next : headB;        }        return tempA;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：采用迭代的方式，采用双指针进行遍历,prev先行，cur后行，最后返回cur节点，思路如下</p><ul><li>head节前进一步，保留原next的引用</li><li>prev节点next指向cur节点，此处cur节点初始状态时清空引用，无需判空，博主写代码有这种习惯，但后面导致逻辑错误</li><li>cur节点前进一步</li><li>prev节点前进一步，赋值head节点的引用</li><li>遍历直到prev节点跑完整个流程</li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int val=0, ListNode next=null) { *         this.val = val; *         this.next = next; *     } * } */public class Solution {    public ListNode ReverseList(ListNode head) {        ListNode prev = head;        ListNode cur = default;        while(prev != default){            head = head.next;            //if(cur != null)不能加，博主写代码有这种习惯，导致后面逻辑错误            prev.next = cur;            cur = prev;            prev = head;        }                return cur;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -1283,6 +1254,35 @@
             <tag> 贪心算法 </tag>
             
             <tag> 动态规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表相关-相交链表</title>
+      <link href="/posts/899.html"/>
+      <url>/posts/899.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="相交链表"><a href="#相交链表" class="headerlink" title="相交链表"></a>相交链表</h1><p>1.LeetCode原题地址</p><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表 - 力扣（LeetCode）</a></p><p>2.解法思路一：暴力求解，这个是很简单的，内嵌遍历循环就可以了，最开始想到的就这这种办法，由于for循环自带空值判定，所以不需要判断也可以</p><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { val = x; } * } */public class Solution {    public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {        for(;headA!=null;headA = headA.next)        {            ListNode temp = headB;            for(;temp!=null;temp = temp.next)            {                if(headA==temp)                    return headA;            }        }        return default;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>3.解法思路二：双指针遍历，由于headA和headB的节点数是不相等了，但是在第一次相交后，节点数是必定相同的，因为保持了相同的引用，这是一种非常巧妙的解法，但是理解起来有点难，特别是双指针必定相交原因，强烈安利这位题主的解题思路，非常清晰</p><p>时间复杂度 O(a + b)O(a+b) ： 最差情况下（即 |a - b| = 1∣a−b∣=1 , c = 0c=0 ），此时需遍历 a + ba+b 个节点。<br>空间复杂度 O(1)O(1) ： 节点指针 A , B 使用常数大小的额外空间。</p><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/solution/intersection-of-two-linked-lists-shuang-zhi-zhen-l/">160. 相交链表（双指针，清晰图解） - 相交链表 - 力扣（LeetCode）</a></p><ul><li>经典判空</li><li>设置俩个临时变量储存AB俩个节点</li><li>进行循环变量，跳出条件是tempA==tempB</li><li>tempA节点和tempB节点同时向后移动，链表跑完则从头继续跑，长短链表都如此，此时考虑俩种情况<ul><li>有相交点：有交点则必定会相遇，就像俩个人在操场跑圈，俩个人从不同的起跑点出发，可能速度有慢有快，但只要一直跑，总会相遇，这种问题类似于快慢指针的问题。</li><li>无相交点：这就是这个解法有意思的地方，即使没有相交点，最后也是会相遇的，不过这个相交点变成了最后俩个人的结束点，也就是tempA == tempB == null，所以不会陷入死循环；</li></ul></li></ul><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">/** * Definition for singly-linked list. * public class ListNode { *     public int val; *     public ListNode next; *     public ListNode(int x) { val = x; } * } */public class Solution {    public ListNode GetIntersectionNode(ListNode headA, ListNode headB) {        if(headA == default || headB == default)            return default;        ListNode tempA = headA;        ListNode tempB = headB;        while(tempA!=tempB)        {            tempA = tempA!=null ? tempA.next : headA;            tempB = tempB!=null ? tempB.next : headB;        }        return tempA;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学知识 </category>
+          
+          <category> 算法 </category>
+          
+          <category> 链表相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
@@ -1631,37 +1631,6 @@
     
     
     <entry>
-      <title>定点数数学库</title>
-      <link href="/posts/2178.html"/>
-      <url>/posts/2178.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="定点数FInt"><a href="#定点数FInt" class="headerlink" title="定点数FInt"></a>定点数FInt</h1><p>基本思路：解决浮点数的精度问题，基本想法是对数学库进行放大倍数，放大1000，这里可以对底层进行优化，使用位运算来直接操作二进制进行放大缩小，这里可以放大1024倍，也就是1&lt;&lt;10，使用完之后在缩小1024倍还原即可;<br>乘法还原正负不同问题：按照上面的流程，乘法运算后绝对值相同的正负数值经过还原后会出现不对等的问题，比如500乘FInt(0.3f)的RawInt值是是14，但是500乘FInt(-0.3f)的RawInt值却是-15，这是因为二进制中，正数由原码表示，负数由补码表示，补码是在原码的反码上再加一得来的，要简单的解决这一个问题可以对值进行取反运算再取反，让已经实现好的底层去解决；</p><h1 id="定点向量FVector3"><a href="#定点向量FVector3" class="headerlink" title="定点向量FVector3"></a>定点向量FVector3</h1><h1 id="常用运算FCalc"><a href="#常用运算FCalc" class="headerlink" title="常用运算FCalc"></a>常用运算FCalc</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> Game-Play </category>
-          
-          <category> 第三方库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 帧同步 </tag>
-            
-            <tag> 第三方库 </tag>
-            
-            <tag> 定点数数学库 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>确定性物理库</title>
       <link href="/posts/2179.html"/>
       <url>/posts/2179.html</url>
@@ -1685,6 +1654,37 @@
             <tag> 第三方库 </tag>
             
             <tag> 确定性物理库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>定点数数学库</title>
+      <link href="/posts/2178.html"/>
+      <url>/posts/2178.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="定点数FInt"><a href="#定点数FInt" class="headerlink" title="定点数FInt"></a>定点数FInt</h1><p>基本思路：解决浮点数的精度问题，基本想法是对数学库进行放大倍数，放大1000，这里可以对底层进行优化，使用位运算来直接操作二进制进行放大缩小，这里可以放大1024倍，也就是1&lt;&lt;10，使用完之后在缩小1024倍还原即可;<br>乘法还原正负不同问题：按照上面的流程，乘法运算后绝对值相同的正负数值经过还原后会出现不对等的问题，比如500乘FInt(0.3f)的RawInt值是是14，但是500乘FInt(-0.3f)的RawInt值却是-15，这是因为二进制中，正数由原码表示，负数由补码表示，补码是在原码的反码上再加一得来的，要简单的解决这一个问题可以对值进行取反运算再取反，让已经实现好的底层去解决；</p><h1 id="定点向量FVector3"><a href="#定点向量FVector3" class="headerlink" title="定点向量FVector3"></a>定点向量FVector3</h1><h1 id="常用运算FCalc"><a href="#常用运算FCalc" class="headerlink" title="常用运算FCalc"></a>常用运算FCalc</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game-Play </category>
+          
+          <category> 第三方库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 帧同步 </tag>
+            
+            <tag> 第三方库 </tag>
+            
+            <tag> 定点数数学库 </tag>
             
         </tags>
       
